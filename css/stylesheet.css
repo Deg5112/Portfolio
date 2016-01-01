@@ -1,0 +1,316 @@
+body{
+    position: relative;
+    height: 100vh;
+}
+
+div#navDropDown {
+    border: 1px solid black;
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    bottom: 90%;
+    transition: 2s;
+    text-align: center;
+}
+
+div#navDropDown li a {
+    color: white;
+}
+
+div#navDropDown ul{
+    list-style-type: none;
+}
+
+.dropDownActive{
+    bottom: 70% !important;
+}
+
+.dropDownUnactive{
+    bottom: 90% !important;
+}
+
+@media screen and (max-width: 767px) {
+    .navbar-brand{
+        margin-left: 15px;
+    }
+}
+div#nav-collapse {
+    height: 100% !important;
+}
+.navbar-toggle{
+    border: 1px solid rgb(0, 0, 0);
+    margin-right: 25px;
+    margin-top: 15px;
+}
+
+.navbar-toggle .icon-bar {
+    border: 1px solid black;
+}
+
+nav .container-fluid:first-child{
+    padding: 0;
+    height: 100%;
+}
+.navbar-brand {
+    float: left;
+    height: 100%;
+    background-color: black;
+
+}
+
+.navbar-brand span {
+    color: white;
+    background-color: black;
+    border-bottom: 3px solid white;
+    font-size: 1.3em;
+    line-height: 35px;
+}
+
+nav#my-navbar {
+    background-color: #dcdcdc;
+    box-shadow: 1px 1px 11px #6E6161;
+}
+ul.nav.navbar-nav {
+    width: 87%;
+    height: 100%;
+}
+
+ul.nav.navbar-nav li a:hover {
+    background-color: #D87272;
+}
+
+.navbar-nav>li>a {
+    color: black;
+    font-size: 1.2em;
+    height: 100%;
+    line-height: 48px;
+    padding: 10px 25px;
+}
+
+nav#my-navbar{
+    height: 68px;
+
+}
+
+ul.nav.navbar-nav li {
+    background-color: white;
+    border: 1px solid #dcdcdc;
+    height: 100%;
+}
+body >div:first-child {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+div#brandCircle {
+    border: 1px solid black;
+    display: inline-block;
+    border-radius: 50%;
+    width: 130px;
+    text-align: center;
+    height: 130px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 1px 1px 1px 800px black;
+    background-color: black;
+    font-size: 3.3em;
+
+
+}
+
+.navbar-inner {
+    height: 100%;
+}
+
+div#landingContainer {
+    position: relative;
+    height: 100%;
+    background-image: url('images/background1.jpeg');
+    background-size: cover;
+    font-family: sans-serif;
+
+}
+
+#bottomContainer a .btn:hover {
+    background-color: #fc5a2f;
+}
+
+
+div#bottomContainer {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -26%);
+    color: black;
+}
+
+div#bottomContainer {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -40%);
+    color: white;
+    text-shadow: -2px 1px black;
+    text-align: center;
+}
+
+#bottomContainer h2 {
+    font-size: 3.5em;
+    position: relative;
+    opacity: 0;
+}
+
+#bottomContainer p {
+    font-size: 2.3em;
+    position: relative;
+    opacity: 0;
+}
+
+#bottomContainer a .btn {
+    opacity: 0;
+    color: white;
+    background-color: black;
+    font-size: 1.4em;
+    padding: 1% 4%;
+    border-radius: 100px;
+    position: relative;
+    outline-style: none;
+}
+/*brand circle animation*/
+@-webkit-keyframes boxShrink {
+    0%{
+        top: 50%;
+        box-shadow: 1px 1px 1px 800px black;
+        background-color: black;
+        width: 130px;
+        height: 130px;
+        font-size: 3.3em;
+    }
+
+    10%{
+        top: 50%;
+        box-shadow: 1px 1px 1px 800px black;
+        background-color: black;
+        width: 145px;
+        height: 145px;
+        font-size: 3.3em;
+    }
+
+    15%{
+        top: 50%;
+        box-shadow: 1px 1px 1px 300px black;
+        background-color: black;
+        width: 145px;
+        height: 145px;
+        font-size: 3.3em;
+    }
+
+    25%{
+        top: 50%;
+        box-shadow: 1px 1px 1px 0 black;
+        background-color: black;
+        width: 145px;
+        height: 145px;
+        font-size: 3.3em;
+    }
+
+    50%{
+        top: 50%;
+        box-shadow: 1px 1px 1px 0 black;
+        background-color: black;
+        width: 145px;
+        height: 145px;
+        font-size: 3.3em;
+    }
+
+    60%{
+        top: 50%;
+        box-shadow: 1px 1px 1px 0 black;
+        background-color: black;
+        width: 145px;
+        height: 145px;
+        font-size: 3.3em;
+    }
+
+
+
+    90%{
+        top: 20%;
+        box-shadow: 1px 1px 1px 0 black;
+        background-color: black;
+        width: 115px;
+        height: 115px;
+        font-size: 2.5em;
+    }
+
+
+    100%{
+        box-shadow: 1px 1px 1px 0 black;
+        top: 20%;
+        background-color: black;
+        width: 115px;
+        height: 115px;
+        font-size: 2.5em;
+    }
+}
+
+.introAnimate{
+    -webkit-animation: boxShrink 2.8s linear forwards;
+}
+
+@-webkit-keyframes introHeaderAnimate {
+    from{
+        right: 300px;
+        bottom: 20px;
+        opacity: 0;
+    }
+
+    to{
+        right: 0;
+        opacity: 1;
+        bottom: 20px;
+    }
+}
+
+@-webkit-keyframes introParagraphAnimate {
+    from{
+        left: 300px;
+        opacity: 0;
+        top: 20px;
+    }
+    to{
+        left: 0;
+        top: 20px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes introButtonAnimate {
+    from{
+        top: 100px;
+        opacity: 0;
+    }
+    to{
+        top: 50px;
+        opacity: 1;
+    }
+}
+
+.introHeaderAnimate{
+    -webkit-animation: introHeaderAnimate .9s ease-out forwards;
+}
+
+.introParagraphAnimate{
+    -webkit-animation: introParagraphAnimate  .9s ease-out forwards;
+}
+
+.introButtonAnimate{
+    -webkit-animation: introButtonAnimate .9s ease-out forwards;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #FFFFFF;
+}

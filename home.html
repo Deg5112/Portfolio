@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>David's Portfolio</title>
+    <meta name="description" content="portolio">
+    <meta name="keywords" content="David Goodman, Portfolio, Developer">
+    <meta name="author" content="David Goodman">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+</head>
+<body>
+<header id="header"><!--header-->
+    <nav class="navbar navbar-fixed-top" id="my-navbar"><!--nav-->
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <div class="navbar-header"><!--navbar header for button and brand-->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <a href="index.html" class="navbar-brand active"><span>DG</span></a>
+                </div><!--navheader end-->
+                <div class="collapse navbar-collapse" id="nav-collapse">
+                    <!--navbar navigation-->
+                    <ul class="nav navbar-nav">
+                        <ul>
+                            <li id="about"><a>About</a></li>
+                            <li id="work"><a>Work</a></li>
+                            <li id="skills"><a>Skills</a></li>
+                            <li id="experience"><a>Experience</a></li>
+                            <li id="contact"><a>contact</a></li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav><!--nav end-->
+    <div id="navDropDown">
+        <li id="about"><a>About</a></li>
+        <li id="work"><a>Work</a></li>
+        <li id="skills"><a>Skills</a></li>
+        <li id="experience"><a>Experience</a></li>
+        <li id="contact"><a>contact</a></li>
+    </div>
+</header><!--header End-->
+<!--jumbotron-->
+<!--<div class="jumbotron text-center">&lt;!&ndash;jumbotron begin&ndash;&gt;-->
+    <!--<div class="container">-->
+        <!--<h1>David's Portfolio</h1>-->
+        <!--<p >A look at who he is, what he's done, and where he's heading</p>-->
+    <!--</div>&lt;!&ndash;end container begin&ndash;&gt;-->
+<!--</div>&lt;!&ndash;end jumbotron&ndash;&gt;-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+    $(function(){
+       $('.navbar-toggle').click(function(){
+           var elClass = $('#navDropDown').attr('class');
+           if(elClass !== 'dropDownActive'){
+               $('#navDropDown').removeClass('dropDownUnactive').addClass('dropDownActive');
+           }else{
+               $('#navDropDown').removeClass('dropDownActive').addClass('dropDownUnactive');
+           }
+
+
+       });
+    });
+
+</script>
+</body>
+</html>

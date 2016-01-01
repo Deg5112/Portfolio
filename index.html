@@ -4,22 +4,39 @@
     <meta charset="UTF-8">
     <title>David Goodman</title>
     <link type="text/css" rel="stylesheet" href="css/stylesheet.css">
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<style>
+
+
+
+</style>
 </head>
+
 <body ng-app='portfolio'>
 
-<div id="introContainer" ng-controller="introController as iC">
+<div ng-controller="landingController" id="landingContainer" >
+    <div id="brandCircle"><div id="inner">DG</div></div>
 
-    <p>{{firstString}}</p>
-    <p>{{secondString}}</p>
+    <div id="bottomContainer">
+
+        <h2>David Goodman</h2>
+
+        <p> Full Stack Web Developer, step inside and take a look at his work. </p>
+
+        <a href="home.html"><button type="button" class="btn">Enter</button></a>
+    </div>
 
 </div>
 
 
 
 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-route.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-animate.min.js"></script>
 <script type="text/javascript" src="javascript/angularModule.js"></script>
+
 </body>
 </html>
