@@ -125,6 +125,20 @@ div#brandCircle {
 
 }
 
+div#inner {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+div#inner{
+    position: relative;
+}
+div#inner span {
+    color: white;
+    border-bottom: 3px solid white;
+}
+
 .navbar-inner {
     height: 100%;
 }
@@ -132,10 +146,8 @@ div#brandCircle {
 div#landingContainer {
     position: relative;
     height: 100%;
-    background-image: url('images/background1.jpeg');
     background-size: cover;
     font-family: sans-serif;
-
 }
 
 #bottomContainer a .btn:hover {
