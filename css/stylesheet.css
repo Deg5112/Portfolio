@@ -253,13 +253,13 @@ div#bottomContainer {
 
 
 
-    90%{
+    80%{
         top: 20%;
         box-shadow: 1px 1px 1px 0 black;
         background-color: black;
-        width: 115px;
-        height: 115px;
-        font-size: 2.5em;
+        width: 85px;
+        height: 85px;
+        font-size: 1.8em;
     }
 
 
@@ -267,14 +267,14 @@ div#bottomContainer {
         box-shadow: 1px 1px 1px 0 black;
         top: 20%;
         background-color: black;
-        width: 115px;
-        height: 115px;
-        font-size: 2.5em;
+        width: 85px;
+        height: 85px;
+        font-size: 1.8em;
     }
 }
 
 .introAnimate{
-    -webkit-animation: boxShrink 2.8s linear forwards;
+    -webkit-animation: boxShrink 4s linear forwards;
 }
 
 @-webkit-keyframes introHeaderAnimate {
