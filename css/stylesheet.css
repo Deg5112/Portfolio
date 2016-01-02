@@ -89,9 +89,10 @@ div#about p{
     line-height: 1.6em;
 }
 
-header{
-    position: relative;
+header {
+    position: fixed;
     height: 68px;
+    width: 100%;
 }
 
 .jumbotron{
@@ -99,7 +100,7 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    height: 388px;
+    height: 420px;
     z-index: -1;
     margin-bottom: 0;
 }
