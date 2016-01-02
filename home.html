@@ -41,7 +41,7 @@
 
                     <ul class="iconNav">
                         <li>
-                            <a href=''  target="_blank" class="btn btn-social-icon btn-linkedin">
+                            <a href='https://www.linkedin.com/in/deg5112'  target="_blank" class="btn btn-social-icon btn-linkedin">
                                 <span class="fa fa-linkedin"></span>
                             </a>
                         </li>
@@ -78,7 +78,9 @@
 <div class="container" id="about">
     <div class="row">
         <div class="col-md-12">
-            <h2 class="text-center aboutHeaderAnimationClass">About<span id="line-break" class="hidden-xs hidden-sm"></span></h2>
+
+                <h2 class="text-center aboutHeaderAnimationClass"><span id="aboutSpan">About <span id="aboutSpanUnderline"></span></span><span id="line-break" class="hidden-xs hidden-sm"></span></h2>
+
 
 
                 <div class="row paragraphContainer">
@@ -104,6 +106,10 @@
 </div>
 </section>
 
+<section id="work">
+
+</section>
+
 
 
 
@@ -111,16 +117,37 @@
 <script>
     $(function(){
         var paragraphBool = true;
-        $(window).scroll(function(){
 
-           var scrollTop = $(this).scrollTop();
+        checkScrollTop();
+
+        function checkScrollTop(){
+            var scrollTop = $(this).scrollTop();
             if(scrollTop>20 && paragraphBool) {
 
                 console.log('end!');
                 $('.paragraphContainer .col-md-6:first-child').animate({left: '5%'}, 850, function () {
                     $('#line-break').addClass('paragraphBreakAnimationClass');
                     $('.paragraphContainer .col-md-6:first-child').animate({left: '0%'}, 325);
-                    $('.paragraphContainer .col-md-6:nth-child(2)').animate({right: '0%'}, 700);
+                    $('.paragraphContainer .col-md-6:nth-child(2)').animate({right: '0%'}, 700, function(){
+                        $('#aboutSpanUnderline').addClass('aboutHeaderUnderlineClass');
+                    });
+                });
+                paragraphBool = false;
+            }
+        }
+
+        $(window).scroll(function(){
+           var scrollTop = $(this).scrollTop();
+            if(scrollTop>20 && paragraphBool) {
+
+                console.log('end!');
+                $('.paragraphContainer .col-md-6:first-child').animate({left: '5%'}, 850, function () {
+
+                    $('#line-break').addClass('paragraphBreakAnimationClass');
+                    $('.paragraphContainer .col-md-6:first-child').animate({left: '0%'}, 325);
+                    $('.paragraphContainer .col-md-6:nth-child(2)').animate({right: '0%'}, 700, function(){
+                        $('#aboutSpanUnderline').addClass('aboutHeaderUnderlineClass');
+                    });
                 });
                 paragraphBool = false;
             }
