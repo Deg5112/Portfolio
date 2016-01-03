@@ -1,9 +1,30 @@
 var app = angular.module('portfolio', ['ngAnimate']);
 
-app.controller('workController', function($scope, $log){
+app.service('getScrollTopService', function(){
+    var self = this;
+    self.imagesBool = null;
+    self.returnScrollTop = function(scrollTop){
+        //console.log(scrollTop);
+
+        if(scrollTop>500){
+            self.imagesBool = true;
+            //console.log(self.imagesBool);
+
+        }
+        else{
+            self.imagesBool = false;
+            //console.log(self.imagesBool);
+
+        }
+    };
+});
+
+
+app.controller('workController', function($scope, $log, getScrollTopService){
         var self = this;
         self.activeButton = null;
         self.filter = null;
+        //self.imageBool=true;
         self.imgArray = [
             {src: 'mboutique.png', alt:'WEBSITE'},
             {src: 'memorymatch.png', alt:'GAME'},
@@ -14,12 +35,36 @@ app.controller('workController', function($scope, $log){
             {src:'apartmentShark.png', alt:'APP'}
         ];
 
+        self.clearArray = function(){
+            self.imgArray = [];
+            self.imgArray = [
+                {src: 'mboutique.png', alt:'WEBSITE'},
+                {src: 'memorymatch.png', alt:'GAME'},
+                {src: 'SGT.png', alt:'APP'},
+                {src:'calculator.png', alt:'APP'},
+                {src:'tictactoe.png', alt:'GAME'},
+                {src:'blog.png', alt:'WEBSITE'},
+                {src:'apartmentShark.png', alt:'APP'}
+            ];
+        };
+
         self.updateActiveButton = function(num){
             self.activeButton = num;
             $log.info(self.activeButton);
+            $scope.digest();
         };
 
+
+
+
+
 });
+
+
+
+
+
+
 
 
 //app.config(function($routeProvider){

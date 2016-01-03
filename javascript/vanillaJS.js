@@ -24,7 +24,9 @@ $(function(){
     }
 
     $(window).scroll(function(){
+
         var scrollTop = $(this).scrollTop();
+        console.log(scrollTop);
         if(scrollTop>20 && paragraphBool) {
 
             console.log('end!');
@@ -37,6 +39,11 @@ $(function(){
                 });
             });
             paragraphBool = false;
+        }
+
+        if(scrollTop > 760){
+            console.log('true');
+            $('#workSpanUnderline').addClass('aboutHeaderUnderlineClass');
         }
     });
 

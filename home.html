@@ -1,6 +1,6 @@
 <!--TODO if view width is greater than a certain size, take the active class off the collapse navbar you made-->
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="portfolio">
 <head>
     <meta charset="UTF-8">
     <title>David's Portfolio</title>
@@ -12,15 +12,16 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/stylesheet.css">
+
     <link rel="stylesheet" href="bootstrapSocial.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-animate.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="javascript/vanillaJS.js"></script>
     <script src="javascript/angularModule.js"></script>
+    <link rel="stylesheet" href="css/stylesheet.css">
 </head>
-<body ng-app="portfolio">
+<body scroll>
 <header id="header"><!--header-->
     <nav class="navbar navbar-fixed-top" id="my-navbar"><!--nav-->
         <div class="navbar-inner">
@@ -40,7 +41,7 @@
                     <ul class="nav navbar-nav">
                             <li ><a>About</a></li>
                             <li ><a>Work</a></li>
-                            <li ><a>Skills</a></li>
+                            <li ><a>Experience</a></li>
                             <li ><a>contact</a></li>
                     </ul>
 
@@ -66,7 +67,7 @@
         <ul>
             <li><a>About</a></li>
             <li><a>Work</a></li>
-            <li><a>Skills</a></li>
+            <li><a>Experience</a></li>
             <li><a>contact</a></li>
         </ul>
     </div>
@@ -118,19 +119,19 @@
     </div><!--end jumbotron-->
 </section>
 
-<section id="work" ng-controller="workController as wC">
+<section id="work" ng-controller="workController as wC" >
 
     <div class="container">
 
         <div class = 'row'>
-                <h2 class="text-center">Work</h2>
+                <h2 class="text-center"><h2 class="text-center"><span>Work<span id="workSpanUnderline"></span></span></h2>
             <div class="col-md-4 col-md-offset-4 filterContainer">
 <!--ng-click="select($index)" ng-class="{sel: $index == selected}-->
                 <div class="row">
-                    <div class = "col-md-3"><button  type="button"   ng-click=" wC.filter=null; wC.updateActiveButton(1);" ng-class="1===wC.activeButton ? 'active' : 'notActive'">All</button></div>
-                    <div class = "col-md-3"><button  type="button"   ng-click=" wC.filter='APP'; wC.updateActiveButton(2);" ng-class="2===wC.activeButton ? 'active' : 'notActive'">APP</button></div>
-                    <div class = "col-md-3"><button  type="button" ng-click=" wC.filter='GAME'; wC.updateActiveButton(3);" ng-class="3===wC.activeButton ? 'active' : 'notActive'">GAME</button></div>
-                    <div class = "col-md-3"><button  type="button"  ng-click=" wC.filter='WEBSITE'; wC.updateActiveButton(4);" ng-class="4===wC.activeButton ? 'active' : 'notActive'">WEBSITE</button></div>
+                    <div class = "col-md-3"><button  id= 'firstButton' type="button"   ng-click=" wC.filter=null; wC.updateActiveButton(1); wC.clearArray();" ng-class="1===wC.activeButton ? 'buttonActive' : 'notActive'">All</button></div>
+                    <div class = "col-md-3"><button  type="button"   ng-click=" wC.filter='APP'; wC.updateActiveButton(2); wC.clearArray();" ng-class="2===wC.activeButton ? 'buttonActive' : 'notActive'">APP</button></div>
+                    <div class = "col-md-3"><button  type="button" ng-click=" wC.filter='GAME'; wC.updateActiveButton(3); wC.clearArray();" ng-class="3===wC.activeButton ? 'buttonActive' : 'notActive'">GAME</button></div>
+                    <div class = "col-md-3"><button id="lastButton" type="button"  ng-click=" wC.filter='WEBSITE'; wC.updateActiveButton(4); wC.clearArray();" ng-class="4===wC.activeButton ? 'buttonActive' : 'notActive'">WEBSITE</button></div>
                 </div><!--row end-->
 
             </div>
@@ -138,14 +139,24 @@
 
         </div><!--row end-->
 
-        <div class="row imgRow">
-            <div class="col-xs-6 col-md-4 imgCol" ng-repeat="i in wC.imgArray | filter:wC.filter">
+        <div class="row imgRow" >
+            <div class="col-xs-6 col-md-4 imgCol slide" ng-repeat="i in wC.imgArray | filter:wC.filter" >
                 <img class='project' ng-src="images/{{i.src}}">
             </div>
         </div><!--row end-->
 
     </div>
 
+</section>
+
+<section><h2 class="text-center"><span>Technical Skills<span id="workSpanUnderline"></section>
+
+<section id="contact">
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center"><h2 class="text-center"><span>Contact<span id="workSpanUnderline"></span></span></h2>
+        </div>
+    </div>
 </section>
 
 
