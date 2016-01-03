@@ -36,6 +36,7 @@ app.controller('workController', function($scope, $log, getScrollTopService){
         ];
 
         self.clearArray = function(){
+
             self.imgArray = [];
             self.imgArray = [
                 {src: 'mboutique.png', alt:'WEBSITE'},
@@ -51,7 +52,6 @@ app.controller('workController', function($scope, $log, getScrollTopService){
         self.updateActiveButton = function(num){
             self.activeButton = num;
             $log.info(self.activeButton);
-            $scope.digest();
         };
 
 

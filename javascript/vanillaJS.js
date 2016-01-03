@@ -4,8 +4,13 @@ $(function(){
     checkScrollTop();
 
     function checkScrollTop(){
+        var aboutSpanTop = $('#aboutSpan').offset().top;
+        console.log(aboutSpanTop);
         var scrollTop = $(this).scrollTop();
-        if(scrollTop>20 && paragraphBool) {
+        console.log(scrollTop);
+        var differenceBetween = aboutSpanTop - scrollTop;
+
+        if(differenceBetween < 644 && paragraphBool) {
 
             console.log('end!');
             $('.paragraphContainer .col-md-6:first-child').animate({left: '5%'}, 850, function () {
@@ -25,11 +30,16 @@ $(function(){
 
     $(window).scroll(function(){
 
+        var aboutSpanTop = $('#aboutSpan').offset().top;
+        console.log(aboutSpanTop);
         var scrollTop = $(this).scrollTop();
         console.log(scrollTop);
-        if(scrollTop>20 && paragraphBool) {
+        var differenceBetween = aboutSpanTop - scrollTop;
 
-            console.log('end!');
+
+        if(differenceBetween < 644 && paragraphBool) {
+
+            console.log('equal');
             $('.paragraphContainer .col-md-6:first-child').animate({left: '5%'}, 850, function () {
 
                 $('#line-break').addClass('paragraphBreakAnimationClass');

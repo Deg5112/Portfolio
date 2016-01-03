@@ -80,10 +80,59 @@
     </div><!--end container begin-->
 </div><!--end jumbotron-->
 
+<!--work section-->
+<section id="work" ng-controller="workController as wC" >
+
+    <div class="container">
+
+        <div class = 'row'>
+            <h2 class="text-center"><h2 class="text-center"><span>Work<span id="workSpanUnderline"></span></span></h2>
+                <div class="col-md-4 col-md-offset-4 filterContainer">
+                    <!--ng-click="select($index)" ng-class="{sel: $index == selected}-->
+                    <div class="row">
+                        <div class = "col-md-3"><button  id= 'firstButton' type="button"   ng-click=" wC.filter=null; wC.updateActiveButton(1); wC.clearArray();" ng-class="1===wC.activeButton ? 'buttonActive' : 'notActive'">All</button></div>
+                        <div class = "col-md-3"><button  type="button"   ng-click=" wC.filter='APP'; wC.updateActiveButton(2); wC.clearArray();" ng-class="2===wC.activeButton ? 'buttonActive' : 'notActive'">APP</button></div>
+                        <div class = "col-md-3"><button  type="button" ng-click=" wC.filter='GAME'; wC.updateActiveButton(3); wC.clearArray();" ng-class="3===wC.activeButton ? 'buttonActive' : 'notActive'">GAME</button></div>
+                        <div class = "col-md-3"><button id="lastButton" type="button"  ng-click=" wC.filter='WEBSITE'; wC.updateActiveButton(4); wC.clearArray();" ng-class="4===wC.activeButton ? 'buttonActive' : 'notActive'">WEBSITE</button></div>
+                    </div><!--row end-->
+
+                </div>
+
+
+        </div><!--row end-->
+
+        <div class="row imgRow" >
+            <div class="col-xs-6 col-md-4 imgCol slide" ng-repeat="i in wC.imgArray | filter:wC.filter" >
+                <img class='project' ng-src="images/{{i.src}}">
+            </div>
+        </div><!--row end-->
+
+    </div>
+
+</section>
+
+<section id="getInTouch">
+    <div class="container">
+        <div class="col-md-6"><p class="getInTouchParagraphAnimationClass">Looking for a developer? <span id="getInTouchUnderline" class="getInTouchUnderlineAnimationClass"></span></p></div>
+        <div class="col-md-6"><span class="glyphicon glyphicon-arrow-right arrowMoveClass"></span><button type="button" class="pull-right btn btn-success">Get In Touch</button></div>
+    </div>
+</section >
+
+
+
+<section>
+    <div class="jumbotron text-center"><!--jumbotron begin-->
+        <div class="container">
+            <h1></h1>
+            <p></p>
+        </div><!--end container begin-->
+    </div><!--end jumbotron-->
+</section>
+
 <section id="aboutSection">
-<div class="container" id="about">
-    <div class="row">
-        <div class="col-md-12">
+    <div class="container" id="about">
+        <div class="row">
+            <div class="col-md-12">
 
                 <h2 class="text-center aboutHeaderAnimationClass"><span id="aboutSpan">About <span id="aboutSpanUnderline"></span></span><span id="line-break" class="hidden-xs hidden-sm"></span></h2>
 
@@ -105,49 +154,12 @@
                         </p>
                     </div>
                 </div>
+            </div>
         </div>
     </div>
-</div>
 </section>
 
-<section>
-    <div class="jumbotron text-center"><!--jumbotron begin-->
-        <div class="container">
-            <h1></h1>
-            <p></p>
-        </div><!--end container begin-->
-    </div><!--end jumbotron-->
-</section>
 
-<section id="work" ng-controller="workController as wC" >
-
-    <div class="container">
-
-        <div class = 'row'>
-                <h2 class="text-center"><h2 class="text-center"><span>Work<span id="workSpanUnderline"></span></span></h2>
-            <div class="col-md-4 col-md-offset-4 filterContainer">
-<!--ng-click="select($index)" ng-class="{sel: $index == selected}-->
-                <div class="row">
-                    <div class = "col-md-3"><button  id= 'firstButton' type="button"   ng-click=" wC.filter=null; wC.updateActiveButton(1); wC.clearArray();" ng-class="1===wC.activeButton ? 'buttonActive' : 'notActive'">All</button></div>
-                    <div class = "col-md-3"><button  type="button"   ng-click=" wC.filter='APP'; wC.updateActiveButton(2); wC.clearArray();" ng-class="2===wC.activeButton ? 'buttonActive' : 'notActive'">APP</button></div>
-                    <div class = "col-md-3"><button  type="button" ng-click=" wC.filter='GAME'; wC.updateActiveButton(3); wC.clearArray();" ng-class="3===wC.activeButton ? 'buttonActive' : 'notActive'">GAME</button></div>
-                    <div class = "col-md-3"><button id="lastButton" type="button"  ng-click=" wC.filter='WEBSITE'; wC.updateActiveButton(4); wC.clearArray();" ng-class="4===wC.activeButton ? 'buttonActive' : 'notActive'">WEBSITE</button></div>
-                </div><!--row end-->
-
-            </div>
-
-
-        </div><!--row end-->
-
-        <div class="row imgRow" >
-            <div class="col-xs-6 col-md-4 imgCol slide" ng-repeat="i in wC.imgArray | filter:wC.filter" >
-                <img class='project' ng-src="images/{{i.src}}">
-            </div>
-        </div><!--row end-->
-
-    </div>
-
-</section>
 
 <section><h2 class="text-center"><span>Technical Skills<span id="workSpanUnderline"></section>
 

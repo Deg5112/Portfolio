@@ -23,6 +23,50 @@ section#work button:hover {
     border-radius: 0 5px 5px 0 !important;
 }
 
+section#getInTouch {
+    background-color: black;
+    padding: 3% 0;
+    font-family: sans-serif;
+    color: white;
+    position: relative;
+}
+
+
+#getInTouch button {
+    color: white;
+    width: 39%;
+    padding: 2%;
+    font-family: sans-serif;
+    border-color: #737373;
+    border-radius: 5px;
+    font-size: 1.3em;
+}
+
+section#getInTouch span {
+    font-size: 1.8em;
+}
+
+
+
+span#getInTouchUnderline {
+    position: absolute;
+    background-color: white;
+    border: 1px solid white;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 6.2em;
+    transform-origin: 0 0;
+
+}
+
+
+
+section#getInTouch p {
+    font-size: 1.5em;
+    position: relative;
+    left: 4em;
+}
 
 
 
@@ -45,9 +89,6 @@ section#work button:hover {
     border-color: #737373;
 }
 
-section#work {
-    height: 1170px;
-}
 
 section#work > .container:first-child {
     position: relative;
@@ -60,11 +101,9 @@ section#work > .container:first-child {
 
 .row.imgRow {
     margin-top: 1em;
+    margin-bottom: 5em;
 }
 
-/**{*/
-    /*border:1px solid black*/
-/*}*/
 
 .filterContainer, .filterContainer .row > div{
     padding: 0;
@@ -83,7 +122,7 @@ span#aboutSpan {
 .project{
     position: relative;
     width: 100%;
-    height: 233px;
+    height: 250px;
 }
 
 .slide{
@@ -116,7 +155,6 @@ span#aboutSpan {
 .slide.ng-leave-active{
     opacity: 0;
     left: -300px;
-
 }
 
 
@@ -179,7 +217,8 @@ div#about .row .col-md-12 {
     position: relative;
     height: 63%;
     opacity: 1;
-    top: 23%;
+    top: 18%;
+}
 }
 
 .paragraphContainer .col-md-6{
@@ -527,6 +566,8 @@ div#bottomContainer {
     -webkit-animation: boxShrink 4s linear forwards;
 }
 
+
+
 @-webkit-keyframes introHeaderAnimate {
     from{
         right: 300px;
@@ -571,7 +612,7 @@ div#bottomContainer {
         opacity: 0;
     }
     to{
-        top: 20%;
+        top: 15%;
         opacity: 1;
     }
 }
@@ -619,6 +660,54 @@ div#bottomContainer {
         -webkit-transform: scale(1);
 
     }
+}
+
+@-webkit-keyframes arrowMove {
+    from{
+        left: -60%;
+        transform: scale(0) rotateZ(0);
+
+    }
+    to{
+        left: 55%;
+        transform: scale(1) rotateZ(360deg);
+    }
+}
+
+@-webkit-keyframes getInTouchUnderline {
+    from{
+        transform: scale(0);
+
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes getInTouchParagraphAnimation {
+    from{
+
+        bottom: -2em;
+        opacity: 0;
+    }
+    to{
+
+        bottom: 0em;
+        opacity: 1;
+
+    }
+}
+
+.getInTouchParagraphAnimationClass{
+    -webkit-animation: getInTouchParagraphAnimation 1.2s cubic-bezier(.21,1.28,.71,1.43) forwards;
+}
+
+.getInTouchUnderlineAnimationClass{
+    -webkit-animation: getInTouchUnderline 2s  forwards;
+}
+
+.arrowMoveClass{
+    -webkit-animation: arrowMove 3s forwards;
 }
 
 .aboutHeaderUnderlineClass{
