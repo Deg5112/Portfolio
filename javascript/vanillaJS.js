@@ -9,9 +9,13 @@ $(function(){
 
             console.log('end!');
             $('.paragraphContainer .col-md-6:first-child').animate({left: '5%'}, 850, function () {
+
                 $('#line-break').addClass('paragraphBreakAnimationClass');
+
                 $('.paragraphContainer .col-md-6:first-child').animate({left: '0%'}, 325);
+
                 $('.paragraphContainer .col-md-6:nth-child(2)').animate({right: '0%'}, 700, function(){
+
                     $('#aboutSpanUnderline').addClass('aboutHeaderUnderlineClass');
                 });
             });

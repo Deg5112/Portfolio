@@ -1,6 +1,23 @@
-var app = angular.module('portfolio', ['ngRoute', 'ngAnimate']);
+var app = angular.module('portfolio', ['ngAnimate']);
 
-app.controller('landingController', function($scope, $log){
+app.controller('workController', function($scope, $log){
+        var self = this;
+        self.activeButton = null;
+        self.filter = null;
+        self.imgArray = [
+            {src: 'mboutique.png', alt:'WEBSITE'},
+            {src: 'memorymatch.png', alt:'GAME'},
+            {src: 'SGT.png', alt:'APP'},
+            {src:'calculator.png', alt:'APP'},
+            {src:'tictactoe.png', alt:'GAME'},
+            {src:'blog.png', alt:'WEBSITE'},
+            {src:'apartmentShark.png', alt:'APP'}
+        ];
+
+        self.updateActiveButton = function(num){
+            self.activeButton = num;
+            $log.info(self.activeButton);
+        };
 
 });
 
