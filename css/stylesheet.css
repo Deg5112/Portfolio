@@ -276,7 +276,6 @@ section#work > .container:first-child {
 
 .filterContainer, .filterContainer .row > div{
     padding: 0;
-    margin-top: 2%;
 }
 
 button.btn.btn-info.filterButton {
