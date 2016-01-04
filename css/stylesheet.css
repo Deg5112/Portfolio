@@ -60,7 +60,7 @@ div#smallDiv {
     overflow: hidden;
     position: relative;
     left: 50%;
-    transform: translate(-48%, 36%);
+    -webkit-transform: translate(-48%, 36%);
 }
 
 h5 {
@@ -77,17 +77,17 @@ h5 {
     bottom: 0;
     left: 0;
     right: 0;
-    transition: 2s;
-    transform: scale(0);
-    transform-origin: 50% 50%;
+    -webkit-transition: 2s;
+    -webkit-transform: scale(0);
+    -webkit-transform-origin: 50% 50%;
 }
 
 @-webkit-keyframes experienceUnderlineAnimation{
     from{
-        transform: scale(0);
+        -webkit-transform: scale(0);
     }
     to{
-        transform: scale(1);
+        -webkit-transform: scale(1);
     }
 }
 
@@ -100,9 +100,9 @@ h5 {
     text-align: center;
     border: 1px solid black;
     border-radius: 5px;
-    transition: 1.5s;
-    transform: scale(1);
-    transform-origin: 50% 0;
+    -webkit-transition: 1.5s;
+    -webkit-transform: scale(1);
+    -webkit-transform-origin: 50% 0;
     background-color: white;
     box-shadow: 0px 0px 10px black;
     height: 60px;
@@ -225,7 +225,7 @@ span#getInTouchUnderline {
     left: 0;
     right: 0;
     width: 6.2em;
-    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
 
 }
 
@@ -299,8 +299,7 @@ span#aboutSpan {
 
 .slide{
   position: relative;
-    transition: 0.7s;
-
+    -webkit-transition: 0.7s;
 }
 
 .slide.ng-enter{
@@ -309,14 +308,14 @@ span#aboutSpan {
 }
 
 .slide.ng-enter-stagger{
-    transition-delay:.2s;
-    transition-duration: 0s;
+    -webkit-transition-delay:.2s;
+    -webkit-transition-duration: 0s;
 }
 
 .slide.ng-enter-active{
     opacity: 1;
     left: 0;
-    transition-timing-function: cubic-bezier(.21,1.28,.71,1.43);
+    -webkit-transition-timing-function: cubic-bezier(.21,1.28,.71,1.43);
 }
 
 .slide.ng-leave {
@@ -336,7 +335,7 @@ span#aboutSpanUnderline {
     top: 100%;
     left: 0;
     right: 0;
-    transform: scale(0);
+    -webkit-transform: scale(0);
 }
 
 ul.nav.navbar-nav li:first-child {
@@ -369,7 +368,7 @@ span#line-break {
     right: 50%;
     top: 200%;
     opacity: 0;
-    transform-origin: 0 0 ;
+    -webkit-transform-origin: 0 0 ;
 }
 
 
@@ -411,7 +410,7 @@ h2{
     font-family: sans-serif;
     position: relative;
     font-weight: 300;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
     left: 50%;
 }
 
@@ -425,7 +424,7 @@ span#workSpanUnderline {
     top: 100%;
     left: 0;
     right: 0;
-    transform: scale(0);
+    -webkit-transform: scale(0);
 }
 
 div#about p{
@@ -463,7 +462,7 @@ ul.iconNav {
     position: absolute;
     right: 3%;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
 }
 
 ul.iconNav li {
@@ -478,7 +477,7 @@ div#navDropDown {
     width: 100%;
     height: 135px;
     top: -98%;
-    transition: .8s;
+    -webkit-transition: .8s;
     text-align: center;
     background-color: black;
     border-radius: 0 0 5px 5px;
@@ -497,7 +496,7 @@ div#navDropDown ul {
     list-style-type: none;
     position: relative;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
 }
 
 .dropDownActive{
@@ -589,7 +588,7 @@ div#brandCircle {
     position: relative;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
     box-shadow: 1px 1px 1px 800px black;
     background-color: black;
     font-size: 3.3em;
@@ -600,7 +599,7 @@ div#brandCircle {
 div#inner {
     position: relative;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
 }
 
 div#inner{
@@ -631,7 +630,7 @@ div#bottomContainer {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -26%);
+    -webkit-transform: translate(-50%, -26%);
     color: black;
 }
 
@@ -639,7 +638,7 @@ div#bottomContainer {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -40%);
+    -webkit-transform: translate(-50%, -40%);
     color: white;
     text-shadow: -2px 1px black;
     text-align: center;
@@ -817,11 +816,11 @@ div#bottomContainer {
 
 @-webkit-keyframes lineBreakAnimation {
     from{
-        transform: scale(0);
+        -webkit-transform: scale(0);
         opacity: 0;
     }
     to{
-        transform: scale(1);
+        -webkit-transform: scale(1);
         opacity: 1;
     }
 }
@@ -841,22 +840,22 @@ div#bottomContainer {
 @-webkit-keyframes arrowMove {
     from{
         left: -60%;
-        transform: scale(0) rotateZ(0);
+        -webkit-transform: scale(0) rotateZ(0);
 
     }
     to{
         left: 55%;
-        transform: scale(1) rotateZ(360deg);
+        -webkit-transform: scale(1) rotateZ(360deg);
     }
 }
 
 @-webkit-keyframes getInTouchUnderline {
     from{
-        transform: scale(0);
+        -webkit-transform: scale(0);
 
     }
     to{
-        transform: scale(1);
+        -webkit-transform: scale(1);
     }
 }
 
@@ -932,7 +931,7 @@ div#bottomContainer {
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -40%);
+        -webkit-transform: translate(-50%, -40%);
         color: white;
         text-shadow: -2px 1px black;
         text-align: center;
