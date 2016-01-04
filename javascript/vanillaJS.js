@@ -9,7 +9,7 @@ $(function(){
         var count = 0;
 
         setInterval(function(){
-            if(count < 5){
+            if(count < 10){
                 var experience = $('#experience').offset().top;
                 var getInTouch = $('#getInTouch').offset().top;
                 var aboutSpanTop = $('#aboutSpan').offset().top;
@@ -37,7 +37,7 @@ $(function(){
                     $('.glyphicon-arrow-right').addClass('arrowMoveClass');
                 }
 
-                if(differenceBetweenExperience < 500){
+                if(differenceBetweenExperience < 250){
                     experienceAnimate();
                 }
                 count+=1;
