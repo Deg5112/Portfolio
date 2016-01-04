@@ -2,6 +2,10 @@ body{
     position: relative;
 }
 
+html{
+    overflow-x: hidden;
+}
+
 #experience li {
     font-size: 1.2em;
 }
@@ -345,8 +349,18 @@ ul.nav.navbar-nav li:first-child {
 }
 
 .paragraphContainer .col-md-6:nth-child(2){
+    /*position: relative;*/
+    /*opacity: 0;*/
     right: -100%;
 }
+
+@-webkit-keyframes leftParagraph {
+    from{
+
+    }
+
+}
+
 
 span#line-break {
     position: absolute;
@@ -792,7 +806,7 @@ div#bottomContainer {
 
 @-webkit-keyframes leftAboutParagraphAnimation {
     from{
-        right: 100px;
+        right: -100px;
         opacity: 0;
     }
     to{
