@@ -591,10 +591,9 @@ div#brandCircle {
     -webkit-transform: translate(-50%,-50%);
     box-shadow: 1px 1px 1px 800px black;
     background-color: black;
-    font-size: 3.3em;
-
-
+    font-size: 3vw;
 }
+
 
 div#inner {
     position: relative;
@@ -677,7 +676,7 @@ div#bottomContainer {
         background-color: black;
         width: 145px;
         height: 145px;
-        font-size: 3.3em;
+        font-size: 3vw;
     }
 
     10%{
@@ -686,7 +685,7 @@ div#bottomContainer {
         background-color: black;
         width: 145px;
         height: 145px;
-        font-size: 3.3em;
+        font-size: 3vw;
     }
 
     15%{
@@ -695,7 +694,7 @@ div#bottomContainer {
         background-color: black;
         width: 145px;
         height: 145px;
-        font-size: 3.3em;
+        font-size: 3vw;
     }
 
     25%{
@@ -704,7 +703,7 @@ div#bottomContainer {
         background-color: black;
         width: 145px;
         height: 145px;
-        font-size: 3.3em;
+        font-size: 3vw;
     }
 
 
@@ -715,7 +714,7 @@ div#bottomContainer {
         background-color: black;
         width: 145px;
         height: 145px;
-        font-size: 3.3em;
+        font-size: 3vw;
     }
 
 
@@ -726,7 +725,7 @@ div#bottomContainer {
         background-color: black;
         width: 85px;
         height: 85px;
-        font-size: 1.8em;
+        font-size: 2vw;
     }
 
 
@@ -736,7 +735,7 @@ div#bottomContainer {
         background-color: black;
         width: 85px;
         height: 85px;
-        font-size: 1.8em;
+        font-size: 2vw;
     }
 }
 
