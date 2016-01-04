@@ -83,22 +83,20 @@ app.controller('workController', function($scope, $log, getScrollTopService){
 //});
 
 
-$(function(){
-
-
-
-    $('#brandCircle').on('webkitAnimationEnd', function(){
-        console.log('end!');
-        $('#bottomContainer > h2').addClass('introHeaderAnimate');
-        $('#bottomContainer > p').addClass('introParagraphAnimate');
-        $('#bottomContainer > a .btn').addClass('introButtonAnimate');
-    });
-    $('#brandCircle').on('webkitAnimationStart', function(){
-       console.log('start');
-    });
-
-   $('#brandCircle').addClass('introAnimate');
-
-
-});
+//$(function(){
+//
+//
+//
+//    $('#brandCircle').on('webkitAnimationEnd', function(){
+//        console.log('end!');
+//        $('#bottomContainer > h2').addClass('introHeaderAnimate');
+//        $('#bottomContainer > p').addClass('introParagraphAnimate');
+//        $('#bottomContainer > a .btn').addClass('introButtonAnimate');
+//    });
+//
+//
+//   $('#brandCircle').addClass('introAnimate');
+//
+//
+//});
 

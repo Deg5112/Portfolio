@@ -1,4 +1,20 @@
 $(function(){
+
+
+        $('#brandCircle').on('webkitAnimationEnd', function(){
+            console.log('end!');
+            $('#bottomContainer > h2').addClass('introHeaderAnimate');
+            $('#bottomContainer > p').addClass('introParagraphAnimate');
+            $('#bottomContainer > a .btn').addClass('introButtonAnimate');
+        });
+
+        $('#brandCircle').addClass('introAnimate');
+
+
+
+
+
+
     var paragraphBool = true;
 
     checkScrollTop();

@@ -219,7 +219,7 @@ div#about .row .col-md-12 {
     opacity: 1;
     top: 18%;
 }
-}
+
 
 .paragraphContainer .col-md-6{
     position: relative;
@@ -466,12 +466,15 @@ div#bottomContainer {
     font-size: 3.5em;
     position: relative;
     opacity: 0;
+    right: 300px;
+    bottom: 20px;
 }
 
 #bottomContainer p {
     font-size: 2.3em;
     position: relative;
     opacity: 0;
+    left: 200px;
 }
 
 #bottomContainer a .btn {
@@ -490,8 +493,8 @@ div#bottomContainer {
         top: 50%;
         box-shadow: 1px 1px 1px 800px black;
         background-color: black;
-        width: 130px;
-        height: 130px;
+        width: 145px;
+        height: 145px;
         font-size: 3.3em;
     }
 
@@ -522,14 +525,7 @@ div#bottomContainer {
         font-size: 3.3em;
     }
 
-    50%{
-        top: 50%;
-        box-shadow: 1px 1px 1px 0 black;
-        background-color: black;
-        width: 145px;
-        height: 145px;
-        font-size: 3.3em;
-    }
+
 
     60%{
         top: 50%;
@@ -570,27 +566,24 @@ div#bottomContainer {
 
 @-webkit-keyframes introHeaderAnimate {
     from{
-        right: 300px;
-        bottom: 20px;
+        left: 0%;
         opacity: 0;
     }
 
     to{
-        right: 0;
+        left: 50%;
         opacity: 1;
-        bottom: 20px;
+
     }
 }
 
 @-webkit-keyframes introParagraphAnimate {
     from{
-        left: 300px;
+        left: 200px;
         opacity: 0;
-        top: 20px;
     }
     to{
-        left: 0;
-        top: 20px;
+        left: 0px;
         opacity: 1;
     }
 }
