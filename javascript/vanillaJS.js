@@ -15,8 +15,8 @@ $(function(){
         var differenceBetween = aboutSpanTop - scrollTop;
         var differenceBetweenGetInTouch = getInTouch - scrollTop;
         if(differenceBetween < 644 && paragraphBool) {
-
             console.log('equal');
+            $('#about h2').addClass('aboutHeaderAnimationClass');
             $('.paragraphContainer .col-md-6:first-child').animate({left: '5%'}, 850, function () {
 
                 $('#line-break').addClass('paragraphBreakAnimationClass');
@@ -75,16 +75,15 @@ $(function(){
         var differenceBetween = aboutSpanTop - scrollTop;
         var differenceBetweenGetInTouch = getInTouch - scrollTop;
         if(differenceBetween < 644 && paragraphBool) {
-
-            console.log('equal');
+            $('#about h2').addClass('aboutHeaderAnimationClass');
             $('.paragraphContainer .col-md-6:first-child').animate({left: '5%'}, 850, function () {
-
                 $('#line-break').addClass('paragraphBreakAnimationClass');
                 $('.paragraphContainer .col-md-6:first-child').animate({left: '0%'}, 325);
                 $('.paragraphContainer .col-md-6:nth-child(2)').animate({right: '0%'}, 700, function(){
                     $('#aboutSpanUnderline').addClass('aboutHeaderUnderlineClass');
                 });
             });
+
             paragraphBool = false;
         }
         if(differenceBetweenGetInTouch < 615){
