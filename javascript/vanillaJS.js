@@ -6,21 +6,15 @@ $(function(){
 
 
     $(window).scroll(function(){
-        console.log('scrolled!');
         var experience = $('#experience').offset().top;
-
         var getInTouch = $('#getInTouch').offset().top;
-            console.log(getInTouch);
         var aboutSpanTop = $('#aboutSpan').offset().top;
         var scrollTop = $(this).scrollTop();
-        console.log(scrollTop);
         var differenceBetween = aboutSpanTop - scrollTop;
         var differenceBetweenGetInTouch = getInTouch - scrollTop;
         var differenceBetweenExperience = experience - scrollTop;
 
-
         if(differenceBetween < 600 && paragraphBool) { //about
-            console.log('equal');
             $('#about h2').addClass('aboutHeaderAnimationClass');
             $('.paragraphContainer .col-md-6:first-child').animate({left: '5%'}, 850, function () {
 
@@ -52,7 +46,7 @@ $(function(){
     });
 
 
-    $('.navbar-toggle').click(function(){
+    $('.navbar-toggle').on('click tap', function(){
         var elClass = $('#navDropDown').attr('class');
         if(elClass !== 'dropDownActive'){
             $('#navDropDown').removeClass('dropDownUnactive').addClass('dropDownActive');
@@ -73,8 +67,6 @@ $(function(){
         $('#brandCircle').addClass('introAnimate');
     }
 
-
-
     function experienceAnimate(){
         $('#experienceSpan').animate({
             top: '0em',
@@ -89,7 +81,6 @@ $(function(){
                     $('#experience .col-md-4:nth-child(3) .container-fluid').addClass('addHeight3');
                 }, 770);
             });
-
         });
         //cards bounce up, and on bounce down, the other animation happens
     }
