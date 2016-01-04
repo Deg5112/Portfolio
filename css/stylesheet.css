@@ -2,6 +2,19 @@ body{
     position: relative;
 }
 
+#experience li {
+    font-size: 1.2em;
+}
+
+#aboutSection img {
+    width: 26%;
+    float: left;
+    height: 9em;
+    border-radius: 5px;
+    margin-right: 2%;
+    margin-top: 1%;
+}
+
 #experienceSpan{
     position: relative;
     top: 2em;
@@ -9,7 +22,32 @@ body{
 }
 
 #experience .col-md-4 {
+    position: relative;
     margin-top: 1em;
+    top: 4em;
+}
+
+#experience .col-md-4:nth-child(2){
+    -webkit-animation-delay: .3s;
+}
+
+#experience .col-md-4:nth-child(3){
+    -webkit-animation-delay: .5s;
+}
+
+
+
+@-webkit-keyframes experienceBounce {
+    from{
+        top: 4em;
+    }
+    to{
+        top: 0em;
+    }
+}
+
+.bounce{
+    -webkit-animation: experienceBounce .8s cubic-bezier(.42,0,.2,2) forwards;
 }
 
 div#smallDiv {
@@ -62,6 +100,45 @@ h5 {
     transform-origin: 50% 0;
     background-color: white;
     box-shadow: 0px 0px 10px black;
+    height: 60px;
+    overflow: hidden;
+}
+
+@-webkit-keyframes experienceHeightAnimation{
+    from{
+        height: 60px;
+    }
+    to{
+        height: 235px;
+    }
+}
+
+@-webkit-keyframes experienceHeightAnimation2{
+    from{
+        height: 60px;
+    }
+    to{
+        height: 150px;
+    }
+}
+
+@-webkit-keyframes experienceHeightAnimation3{
+    from{
+        height: 60px;
+    }
+    to{
+        height: 195px;
+    }
+}
+
+.addHeight2{
+    -webkit-animation:experienceHeightAnimation2 1s forwards ;
+}
+.addHeight3{
+    -webkit-animation:experienceHeightAnimation3 1s forwards ;
+}
+.addHeight{
+    -webkit-animation:experienceHeightAnimation 1s forwards ;
 }
 
 #experience .container {
@@ -71,6 +148,7 @@ h5 {
 
 #experience{
     background: -webkit-linear-gradient(#dcdcdc, rgba(228, 228, 228, 0.39));
+    height: 507px;
 }
 
 
@@ -842,12 +920,24 @@ div#bottomContainer {
     section#aboutSection {
         height: 600px;
     }
+    #experience{
+        height: 902px;
+    }
+    #work button{
+        padding: 1em;
+        border-radius: 5px !important;
+    }
+
+    .filterContainer .row > .col-md-3 {
+        margin: 0;
+    }
 }
 
 @media screen and (max-width: 768px) {
     section#aboutSection {
         height: 700px;
     }
+
 }
 
 @media screen and (max-width: 508px) {
