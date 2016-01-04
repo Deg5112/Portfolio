@@ -1,58 +1,19 @@
 $(function(){
-
-
-        $('#brandCircle').on('webkitAnimationEnd', function(){
-            console.log('end!');
-            $('#bottomContainer > h2').addClass('introHeaderAnimate');
-            $('#bottomContainer > p').addClass('introParagraphAnimate');
-            $('#bottomContainer > a .btn').addClass('introButtonAnimate');
-        });
-
-        $('#brandCircle').addClass('introAnimate');
-
-
-
-
-
-
     var paragraphBool = true;
 
+    introAnimation();
     checkScrollTop();
+    $('#workSpanUnderline').addClass('aboutHeaderUnderlineClass');
 
-    function checkScrollTop(){
-        var aboutSpanTop = $('#aboutSpan').offset().top;
-        console.log(aboutSpanTop);
-        var scrollTop = $(this).scrollTop();
-        console.log(scrollTop);
-        var differenceBetween = aboutSpanTop - scrollTop;
-
-        if(differenceBetween < 644 && paragraphBool) {
-
-            console.log('end!');
-            $('.paragraphContainer .col-md-6:first-child').animate({left: '5%'}, 850, function () {
-
-                $('#line-break').addClass('paragraphBreakAnimationClass');
-
-                $('.paragraphContainer .col-md-6:first-child').animate({left: '0%'}, 325);
-
-                $('.paragraphContainer .col-md-6:nth-child(2)').animate({right: '0%'}, 700, function(){
-
-                    $('#aboutSpanUnderline').addClass('aboutHeaderUnderlineClass');
-                });
-            });
-            paragraphBool = false;
-        }
-    }
 
     $(window).scroll(function(){
-
+        var getInTouch = $('#getInTouch').offset().top;
+            console.log(getInTouch);
         var aboutSpanTop = $('#aboutSpan').offset().top;
-        console.log(aboutSpanTop);
         var scrollTop = $(this).scrollTop();
         console.log(scrollTop);
         var differenceBetween = aboutSpanTop - scrollTop;
-
-
+        var differenceBetweenGetInTouch = getInTouch - scrollTop;
         if(differenceBetween < 644 && paragraphBool) {
 
             console.log('equal');
@@ -66,10 +27,10 @@ $(function(){
             });
             paragraphBool = false;
         }
-
-        if(scrollTop > 760){
-            console.log('true');
-            $('#workSpanUnderline').addClass('aboutHeaderUnderlineClass');
+        if(differenceBetweenGetInTouch < 615){
+            $('#getInTouch p').addClass('getInTouchParagraphAnimationClass');
+            $('#getInTouchUnderline').addClass('getInTouchUnderlineAnimationClass');
+            $('.glyphicon-arrow-right').addClass('arrowMoveClass');
         }
     });
 
@@ -92,4 +53,46 @@ $(function(){
 
 
     });
+    function introAnimation(){
+        $('#brandCircle').on('webkitAnimationEnd', function(){
+            console.log('end!');
+            $('#bottomContainer > h2').addClass('introHeaderAnimate');
+            $('#bottomContainer > p').addClass('introParagraphAnimate');
+            $('#bottomContainer > a .btn').addClass('introButtonAnimate');
+        });
+
+        $('#brandCircle').addClass('introAnimate');
+    }
+
+    function checkScrollTop(){
+        console.log(paragraphBool);
+
+        var getInTouch = $('#getInTouch').offset().top;
+        console.log(getInTouch);
+        var aboutSpanTop = $('#aboutSpan').offset().top;
+        var scrollTop = $(this).scrollTop();
+        console.log(scrollTop);
+        var differenceBetween = aboutSpanTop - scrollTop;
+        var differenceBetweenGetInTouch = getInTouch - scrollTop;
+        if(differenceBetween < 644 && paragraphBool) {
+
+            console.log('equal');
+            $('.paragraphContainer .col-md-6:first-child').animate({left: '5%'}, 850, function () {
+
+                $('#line-break').addClass('paragraphBreakAnimationClass');
+                $('.paragraphContainer .col-md-6:first-child').animate({left: '0%'}, 325);
+                $('.paragraphContainer .col-md-6:nth-child(2)').animate({right: '0%'}, 700, function(){
+                    $('#aboutSpanUnderline').addClass('aboutHeaderUnderlineClass');
+                });
+            });
+            paragraphBool = false;
+        }
+        if(differenceBetweenGetInTouch < 615){
+            $('#getInTouch p').addClass('getInTouchParagraphAnimationClass');
+            $('#getInTouchUnderline').addClass('getInTouchUnderlineAnimationClass');
+            $('.glyphicon-arrow-right').addClass('arrowMoveClass');
+        }
+    }
 });
+
+//docReady end

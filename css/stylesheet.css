@@ -258,6 +258,7 @@ header {
     position: fixed;
     height: 68px;
     width: 100%;
+    z-index: 300;
 }
 
 .jumbotron{
