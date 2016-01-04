@@ -5,7 +5,8 @@ $(function(){
     $('#workSpanUnderline').addClass('aboutHeaderUnderlineClass');
 
 
-    $(window).scroll(function(){
+    $(document).on('scroll touchmove', function(){
+        console.log('hello!');
         var experience = $('#experience').offset().top;
         var getInTouch = $('#getInTouch').offset().top;
         var aboutSpanTop = $('#aboutSpan').offset().top;
