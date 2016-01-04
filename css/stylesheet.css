@@ -2,7 +2,56 @@ body{
     position: relative;
 }
 
+#experienceSpan{
+    position: relative;
+    top: 2em;
+    opacity: 0;
+}
 
+#experience .col-md-4 {
+    margin-top: 1em;
+}
+
+div#smallDiv {
+    width: 0%;
+    overflow: hidden;
+    position: relative;
+    left: 50%;
+    transform: translate(-48%, 36%);
+}
+
+h5 {
+    font-size: 1.45em;
+    color: rgba(0, 0, 0, 0.63);
+    font-family: sans-serif;
+    width: 200px;
+
+}
+
+#experienceUnderline {
+    position: absolute;
+    border: 2px solid #FFB84D;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: 2s;
+    transform: scale(0);
+    transform-origin: 50% 50%;
+}
+
+@-webkit-keyframes experienceUnderlineAnimation{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+
+.transformClass{
+    -webkit-animation: experienceUnderlineAnimation 1.4s forwards;
+}
 
 #experience .col-md-4 .container-fluid {
     text-align: center;

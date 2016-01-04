@@ -1,5 +1,19 @@
 $(function(){
     var paragraphBool = true;
+    experienceAnimate();
+
+    function experienceAnimate(){
+        $('#experienceSpan').animate({
+            top: '0em',
+            opacity: 1
+        }, 2000,function(){
+            $('#experienceUnderline').addClass('transformClass');
+            $('#smallDiv').animate({width: '15em'}, 2000);
+        });
+
+
+    }
+
 
     introAnimation();
     checkScrollTop();
