@@ -571,6 +571,7 @@ ul.nav.navbar-nav li {
     background-color: white;
     border: 1px solid #dcdcdc;
     height: 100%;
+    cursor: pointer;
 }
 #landingController{
     position: absolute;
