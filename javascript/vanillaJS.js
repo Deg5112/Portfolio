@@ -3,43 +3,40 @@ $(function(){
     introAnimation();
     //checkScrollTop();
     $('#workSpanUnderline').addClass('aboutHeaderUnderlineClass');
-    var count = 1;
+
 
     $(window).on('scroll touchmove', function(){
-        $('#test a').text(count);
-        count +=1;
-        //var experience = $('#experience').offset().top;
-        //var getInTouch = $('#getInTouch').offset().top;
-        //var aboutSpanTop = $('#aboutSpan').offset().top;
-        //var scrollTop = $(this).scrollTop();
-        //console.log(scrollTop);
-        //var differenceBetween = aboutSpanTop - scrollTop;
-        //var differenceBetweenGetInTouch = getInTouch - scrollTop;
-        //var differenceBetweenExperience = experience - scrollTop;
-        //
-        //if(differenceBetween < 600 && paragraphBool) { //about
-        //    $('#about h2').addClass('aboutHeaderAnimationClass');
-        //    $('.paragraphContainer .col-md-6:first-child').animate({left: '5%'}, 850, function () {
-        //
-        //        $('#line-break').addClass('paragraphBreakAnimationClass');
-        //        $('.paragraphContainer .col-md-6:first-child').animate({left: '0%'}, 325);
-        //        $('.paragraphContainer .col-md-6:nth-child(2)').animate({right: '0%', opacity: '1'}, 700, function(){
-        //            $('#aboutSpanUnderline').addClass('aboutHeaderUnderlineClass');
-        //        });
-        //    });
-        //    paragraphBool = false;
-        //}
-        //if(differenceBetweenGetInTouch < 615){
-        //    $('#getInTouch p').addClass('getInTouchParagraphAnimationClass');
-        //    $('#getInTouchUnderline').addClass('getInTouchUnderlineAnimationClass');
-        //    $('.glyphicon-arrow-right').addClass('arrowMoveClass');
-        //}
-        //
-        //if(differenceBetweenExperience < 250){
-        //    experienceAnimate();
-        //}
-        //
 
+        var experience = $('#experience').offset().top;
+        var getInTouch = $('#getInTouch').offset().top;
+        var aboutSpanTop = $('#aboutSpan').offset().top;
+        var scrollTop = $(this).scrollTop();
+        console.log(scrollTop);
+        var differenceBetween = aboutSpanTop - scrollTop;
+        var differenceBetweenGetInTouch = getInTouch - scrollTop;
+        var differenceBetweenExperience = experience - scrollTop;
+
+        if(differenceBetween < 600 && paragraphBool) { //about
+            $('#about h2').addClass('aboutHeaderAnimationClass');
+            $('.paragraphContainer .col-md-6:first-child').animate({left: '5%'}, 850, function () {
+
+                $('#line-break').addClass('paragraphBreakAnimationClass');
+                $('.paragraphContainer .col-md-6:first-child').animate({left: '0%'}, 325);
+                $('.paragraphContainer .col-md-6:nth-child(2)').animate({right: '0%', opacity: '1'}, 700, function(){
+                    $('#aboutSpanUnderline').addClass('aboutHeaderUnderlineClass');
+                });
+            });
+            paragraphBool = false;
+        }
+        if(differenceBetweenGetInTouch < 615){
+            $('#getInTouch p').addClass('getInTouchParagraphAnimationClass');
+            $('#getInTouchUnderline').addClass('getInTouchUnderlineAnimationClass');
+            $('.glyphicon-arrow-right').addClass('arrowMoveClass');
+        }
+
+        if(differenceBetweenExperience < 250){
+            experienceAnimate();
+        }
 
     });
 
