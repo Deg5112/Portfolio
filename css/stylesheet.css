@@ -7,6 +7,96 @@ html{
     overflow-x: hidden;
 }
 
+section#contact {
+    position: relative;
+}
+
+#contact .row{
+    height: 100%;
+}
+#contact .col-md-6:nth-child(2) {
+    background-image: url("../images/jumbo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+}
+
+#jumbo2 {
+    background-image: url("../images/jumbo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+}
+
+form{
+    margin-bottom: 9vh;
+}
+
+
+#contact p {
+    font-size: 1.3em;
+    text-align: center;
+    font-family: sans-serif;
+    text-align: center;
+    margin: 4% auto 3% auto;
+    width: 80%;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+figcaption {
+    color: black;
+    font-family: sans-serif;
+}
+
+figure{
+    text-align: center;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+form .btn {
+    width: 100%;
+}
+
+#contact h2 {
+    margin: 5% 0 2% 0;
+}
+
+footer {
+    height: 16vh;
+    background-color: #dcdcdc;
+    text-align: center;
+    position: relative;
+}
+
+footer .row, footer .row div{
+    position: relative;
+    height: 100%;
+}
+
+footer p {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.3em;
+}
+
 #experience li {
     font-size: 1.2em;
 }
@@ -29,7 +119,7 @@ html{
 #experience .col-md-4 {
     position: relative;
     margin-top: 1em;
-    top: 4em;
+    top: 2em;
 }
 
 #experience .col-md-4:nth-child(2){
@@ -44,7 +134,7 @@ html{
 
 @-webkit-keyframes experienceBounce {
     from{
-        top: 4em;
+        top: 2em;
     }
     to{
         top: 0em;
@@ -52,7 +142,7 @@ html{
 }
 
 .bounce{
-    -webkit-animation: experienceBounce .8s cubic-bezier(.42,0,.2,2) forwards;
+    -webkit-animation: experienceBounce .5s cubic-bezier(.42,0,.2,2) forwards;
 }
 
 div#smallDiv {
@@ -147,13 +237,13 @@ h5 {
 }
 
 #experience .container {
-    margin-top: 2em;
+    margin-top: 1em;
     padding-bottom: 5em;
 }
 
 #experience{
     background: -webkit-linear-gradient(#dcdcdc, rgba(228, 228, 228, 0.39));
-    height: 507px;
+
 }
 
 
@@ -265,12 +355,12 @@ section#work > .container:first-child {
 }
 
 .imgCol {
-    padding: 0;
+    padding: 15px 15px;
 }
 
 .row.imgRow {
     margin-top: 1em;
-    margin-bottom: 5em;
+
 }
 
 
@@ -328,9 +418,27 @@ span#aboutSpan {
     left: -300px;
 }
 
+#contact .row:nth-child(2) .col-md-6 {
+    background-color: #FFD79A;
+    color: black;
+}
+
 
 span#aboutSpanUnderline {
     position: absolute;
+    border: 2px solid #FFB84D;
+    top: 100%;
+    left: 0;
+    right: 0;
+    -webkit-transform: scale(0);
+}
+
+#contact span:first-child {
+    position: relative;
+}
+
+span#contactSpanUnderline {
+    position: absolute !important;
     border: 2px solid #FFB84D;
     top: 100%;
     left: 0;
@@ -452,6 +560,8 @@ header {
     margin-bottom: 0;
 }
 
+
+
 ul.iconNav li a{
     font-size: 1.6em;
     color: black;
@@ -460,14 +570,16 @@ ul.iconNav {
     list-style-type: none;
     display: inline;
     position: absolute;
-    right: 3%;
+    right: 0%;
     top: 50%;
     -webkit-transform: translateY(-50%);
+    width: 150px;
+    padding-left: 0;
 }
 
 ul.iconNav li {
     display: inline;
-    padding: 0 2%;
+    margin: 0 5%;
 }
 
 
@@ -475,8 +587,8 @@ div#navDropDown {
     border: 1px solid black;
     position: absolute;
     width: 100%;
-    height: 135px;
-    top: -98%;
+    height: 202px;
+    top: -195% ;
     -webkit-transition: .8s;
     text-align: center;
     background-color: black;
@@ -484,8 +596,8 @@ div#navDropDown {
 }
 
 div#navDropDown li {
-    padding: 0.7%;
-    font-size: 1.1em;
+    padding: 1.2%;
+    font-size: 1.25em;
 }
 
 div#navDropDown li a {
@@ -504,7 +616,7 @@ div#navDropDown ul {
 }
 
 .dropDownUnactive{
-    top: -98% !important;
+    top: -195% !important;
 }
 .navbar-header{
     position: relative;
@@ -560,7 +672,7 @@ ul.nav.navbar-nav li a:hover {
     padding: 10px 25px;
 }
 
-nav#my-navbar{
+nav#navbar{
     position: relative;
     height: 100%;
     background-color: #dcdcdc;
@@ -649,7 +761,7 @@ div#bottomContainer {
     position: relative;
     opacity: 0;
     right: 300px;
-    bottom: 20px;
+    bottom: 10px;
 }
 
 #bottomContainer p {
@@ -969,9 +1081,7 @@ div#bottomContainer {
     section#aboutSection {
         height: 600px;
     }
-    #experience{
-        height: 902px;
-    }
+
     #work button{
         padding: 1em;
         border-radius: 5px !important;
@@ -979,6 +1089,10 @@ div#bottomContainer {
 
     .filterContainer .row > .col-md-3 {
         margin: 0;
+    }
+
+    section#contact {
+        height: 750px;
     }
 }
 

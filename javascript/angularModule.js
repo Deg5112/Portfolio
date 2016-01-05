@@ -26,26 +26,26 @@ app.controller('workController', function($scope, $log, getScrollTopService){
         self.filter = null;
         //self.imageBool=true;
         self.imgArray = [
-            {src: 'mboutique.png', alt:'WEBSITE'},
-            {src: 'memorymatch.png', alt:'GAME'},
-            {src: 'SGT.png', alt:'APP'},
-            {src:'calculator.png', alt:'APP'},
-            {src:'tictactoe.png', alt:'GAME'},
-            {src:'blog.png', alt:'WEBSITE'},
-            {src:'apartmentShark.png', alt:'APP'}
+            {src: 'mboutique.png', alt:'WEBSITE', title: 'MBoutique', message: 'small business website', href:'http://deg5112.github.io/mboutique/' },
+            {src: 'memorymatch.png', alt:'GAME', title: 'Memory Match', message: "concentration game themed after HBO's 'Silicon Valley'", href:'http://deg5112.github.io/memory_match/'  },
+            {src: 'SGT.png', alt:'APP', title: 'Student Grade Table', message: 'Education Grade Table App for administrators', href:'http://deg5112.github.io/SGT/' },
+            {src:'calculator.png', alt:'APP', title: 'Calculator', message: 'project I worked on to better understand logic & object oriented programming', href:'http://deg5112.github.io/calculator/' },
+            {src:'tictactoe.png', alt:'GAME', title: 'TicTacToe', message: 'Hack-a-thon tictactoe group project', href:'http://deg5112.github.io/hacka-tictactoe-athon/' },
+            {src:'blog.png', alt:'WEBSITE', title: 'Blog', message: 'A blog with a log-in system tied to a backend database', href:'' },
+            {src:'apartmentShark.png', alt:'APP', title: 'apartmentShark', message: 'web application to track and manage your apartment hunt', href:'' }
         ];
 
         self.clearArray = function(){
 
             self.imgArray = [];
             self.imgArray = [
-                {src: 'mboutique.png', alt:'WEBSITE'},
-                {src: 'memorymatch.png', alt:'GAME'},
-                {src: 'SGT.png', alt:'APP'},
-                {src:'calculator.png', alt:'APP'},
-                {src:'tictactoe.png', alt:'GAME'},
-                {src:'blog.png', alt:'WEBSITE'},
-                {src:'apartmentShark.png', alt:'APP'}
+                {src: 'mboutique.png', alt:'WEBSITE', title: 'MBoutique', message: 'small business website' },
+                {src: 'memorymatch.png', alt:'GAME', title: 'Memory Match', message: "concentration game themed after HBO's 'Silicon Valley'" },
+                {src: 'SGT.png', alt:'APP', title: 'Student Grade Table', message: 'Education Grade Table App for administrators'},
+                {src:'calculator.png', alt:'APP', title: 'Calculator', message: 'built to better understand logic & object oriented programming'},
+                {src:'tictactoe.png', alt:'GAME', title: 'TicTacToe', message: 'Hack-a-thon tictactoe group project'},
+                {src:'blog.png', alt:'WEBSITE', title: 'Blog', message: 'A blog with a log-in system tied to a backend database'},
+                {src:'apartmentShark.png', alt:'APP', title: 'apartmentShark', message: 'Final Project from LearningFuze Bootcamp'}
             ];
         };
 

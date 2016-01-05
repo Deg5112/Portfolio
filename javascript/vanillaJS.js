@@ -1,4 +1,16 @@
 $(function(){
+
+    $('#contactSpanUnderline').addClass('aboutHeaderUnderlineClass');
+
+    //$('nav a').click(function(){
+    //
+    //});
+
+
+
+
+
+
     var paragraphBool = true;
     introAnimation();
     //checkScrollTop();

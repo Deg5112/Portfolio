@@ -21,7 +21,7 @@
 <body scroll>
 
 <header id="header"><!--header-->
-    <nav class="navbar navbar-fixed-top" id="my-navbar"><!--nav-->
+    <nav class="navbar navbar-fixed-top" id="navbar"><!--nav-->
         <div class="navbar-inner">
             <div class="container-fluid">
                 <div class="navbar-header"><!--navbar header for button and brand-->
@@ -37,11 +37,10 @@
                 <div class="collapse navbar-collapse" id="nav-collapse">
                     <!--navbar navigation-->
                     <ul class="nav navbar-nav">
-                            <li ><a>About</a></li>
-                            <li ><a>Work</a></li>
-                            <li ><a>Experience</a></li>
-                            <li ><a>contact</a></li>
-
+                        <li ><a href="#work">Work</a></li>
+                        <li ><a href="#experience">Experience</a></li>
+                        <li ><a href="#aboutSection">About</a></li>
+                        <li ><a href="#contact">contact</a></li>
                     </ul>
 
                     <ul class="iconNav">
@@ -64,11 +63,10 @@
     </nav><!--nav end-->
     <div id="navDropDown">
         <ul>
-            <li><a>About</a></li>
-            <li><a>Work</a></li>
-            <li><a>Experience</a></li>
-            <li><a>contact</a></li>
-            <li id="test"><a></a></li>
+            <li ><a href="#work">Work</a></li>
+            <li ><a href="#experience">Experience</a></li>
+            <li ><a href="#aboutSection">About</a></li>
+            <li ><a href="#contact">contact</a></li>
         </ul>
     </div>
 </header><!--header End-->
@@ -104,7 +102,15 @@
 
         <div class="row imgRow" >
             <div class="col-xs-6 col-md-4 imgCol slide" ng-repeat="i in wC.imgArray | filter:wC.filter" >
+                <a ng-href="{{i.href}}" target="_blank">
+                <figure>
+                    <h4>{{i.title}}</h4>
                 <img class='project' ng-src="images/{{i.src}}">
+                    <figcaption>
+                        <p>{{i.message}}</p>
+                    </figcaption>
+                </figure>
+                </a>
             </div>
         </div><!--row end-->
 
@@ -171,6 +177,7 @@
 
 </section>
 
+
 <section id="aboutSection">
     <div class="container" id="about">
         <div class="row">
@@ -180,19 +187,18 @@
 
                 <div class="row paragraphContainer">
                     <div class="col-md-6">
-                        <p><img src="images/david.jpg">David started out his career in technology sales, and spent time in both customer facing, and technical
-                            pre-sales roles. Over the 3 year period of being in tech-sales, he found himself gravitating towards the
-                            technical side of the industry. After moving to Southern California in in 2014, he found out about
-                            learningFuze web development 12 week-immersion boot camp. Since he picked up his first book on javascript
-                            he hasn't taken a day off of programming since.
+                        <p><img src="images/david.jpg">I started out his career in technology sales, and spent time in both customer facing, and technical
+                            pre-sales roles. Over the 3 year period of being in tech-sales, I found myself gravitating towards the
+                            technical side of the industry. After moving to Southern California in in 2014, I found out about
+                            learningFuze web development 12 week-immersion boot camp. Since I picked up my first book on javascript
+                            I haven't taken a day off of programming since.
                         </p>
                     </div>
                     <div class="col-md-6">
                         <p>
-                            He prides himself on making mobile-response, interactive, and
-                            user-friendly, websites and web-applications. David has come to realize the only one that can push himself
-                            harder than anybody else, is himself. By the end of 2016, his goal is to expand his current programming knowledge
-                            into native mobile applications, as well as master newer front and backend frameworks
+                            Programming has became my most passionate hobby. Making mobile-response, interactive, and
+                            user-friendly, websites and web-applications is where I started out in. By the end of 2016, his goal is to expand his current programming knowledge
+                            into native mobile applications, as well as master newer front and backend frameworks.
                         </p>
                     </div>
                 </div>
@@ -201,20 +207,73 @@
     </div>
 </section>
 
-<section id="contact">
-    <div class="container">
-        <div class="row">
-            <h2 class="text-center"><h2 class="text-center"><span>Contact<span id="workSpanUnderline"></span></span></h2>
+<section id="contact" class="" >
+<div class="container">
+        <div class="row ">
+
+                    <div class="col-md-6 col-xs-12 ">
+                        <div class="row">
+                            <h2 class="text-center"><span>Contact<span id="contactSpanUnderline"></span></span></h2>
+                        </div>
+
+                        <p>
+                            If you have questions or would like to get in touch, please feel free to reach out, and lets get to work
+                        </p>
+                        <form class="form-horizontal" role="form">
+
+                            <div class="form-group">
+
+                                <div class="col-sm-10 col-sm-offset-1">
+
+                                    <input type="text" class="form-control" id="name" placeholder="Name">
+
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10 col-sm-offset-1">
+                                    <input type="email" class="form-control" id="email" placeholder="E-mail">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10 col-sm-offset-1">
+                                    <textarea rows='7' type="password" class="form-control" id="" placeholder="Your Message"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-offset-1 col-sm-10">
+                                    <button type="submit" class="btn btn-success">Send</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="col-md-6 hidden-xs hidden-sm ">
+                    </div>
         </div>
-    </div>
+</div>
+</section>
+<section id="jumbo2" class="hidden-md hidden-lg">
+
 </section>
 
-<footer></footer>
+<footer>
+    <div class="row">
+        <div class="col-md-12">
+            <div>
+                <p>&copy; David Goodman</p>
+            </div>
+        </div>
+    </div>
+</footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-animate.min.js"></script>
 <script src="javascript/vanillaJS.js"></script>
 <script src="javascript/angularModule.js"></script>
+<script src="javascript/smoothScroll.js"></script>
 </body>
 </html>
