@@ -52,6 +52,9 @@ a:link {
 figcaption {
     color: black;
     font-family: sans-serif;
+    font-size: 1.2em;
+    width: 80%;
+    margin: 0 auto;
 }
 
 figure{
@@ -355,7 +358,7 @@ section#work > .container:first-child {
 }
 
 .imgCol {
-    padding: 15px 15px;
+    padding: 0;
 }
 
 .row.imgRow {
