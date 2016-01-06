@@ -10,7 +10,7 @@ html{
 
 section#contact {
     position: relative;
-    background: -webkit-linear-gradient(white, rgba(121, 81, 25, 0.38));
+    background: -webkit-linear-gradient(white, rgba(121, 81, 25, 0.51));
 }
 
 #contact .row{
@@ -80,12 +80,13 @@ form .btn {
 }
 
 #contact h2 {
-    margin: 5% 0 2% 0;
+     margin: 10% 0 2% 0;
 }
 
 footer {
     height: 16vh;
-    background-color: #dcdcdc;
+    color: white;
+    background-color: black;
     text-align: center;
     position: relative;
 }
@@ -247,7 +248,7 @@ h5 {
 }
 
 #experience{
-    background: -webkit-linear-gradient(#dcdcdc, rgba(228, 228, 228, 0.39));
+    background: -webkit-linear-gradient(#dcdcdc, rgba(228, 228, 228, 0.15));
 
 }
 
@@ -458,20 +459,17 @@ ul.nav.navbar-nav li:first-child {
 
 .paragraphContainer .col-md-6:first-child{
     left: -100%;
+    opacity: 0;
 }
 
 .paragraphContainer .col-md-6:nth-child(2){
     /*position: relative;*/
-    /*opacity: 0;*/
+    opacity: 0;
     right: -100%;
-}
-
-@-webkit-keyframes leftParagraph {
-    from{
-
-    }
 
 }
+
+
 
 
 span#line-break {
@@ -486,7 +484,7 @@ span#line-break {
 
 
 section#aboutSection {
-    background: -webkit-linear-gradient(#dcdcdc, rgba(228, 228, 228, 0.39));
+    background-color: white;
     position: relative;
     height: 480px;
     font-family: sans-serif;
@@ -546,6 +544,7 @@ div#about p{
     font-family: sans-serif;
     font-size: 1.3em;
     line-height: 1.6em;
+
 }
 
 header {
@@ -1098,7 +1097,7 @@ div#bottomContainer {
 
     section#contact {
         height: 750px;
-        background: -webkit-linear-gradient(rgba(121, 81, 25, 0.38), white);
+        background: -webkit-linear-gradient(rgba(121, 81, 25, 0.51), white);
 
     }
 }

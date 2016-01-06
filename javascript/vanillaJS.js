@@ -18,7 +18,7 @@ $(function(){
 
 
     $(window).on('scroll touchmove', function(){
-
+        var contact = $('')
         var experience = $('#experience').offset().top;
         var getInTouch = $('#getInTouch').offset().top;
         var aboutSpanTop = $('#aboutSpan').offset().top;
@@ -30,7 +30,7 @@ $(function(){
 
         if(differenceBetween < 600 && paragraphBool) { //about
             $('#about h2').addClass('aboutHeaderAnimationClass');
-            $('.paragraphContainer .col-md-6:first-child').animate({left: '5%'}, 850, function () {
+            $('.paragraphContainer .col-md-6:first-child').animate({left: '5%', opacity: 1}, 850, function () {
 
                 $('#line-break').addClass('paragraphBreakAnimationClass');
                 $('.paragraphContainer .col-md-6:first-child').animate({left: '0%'}, 325);
