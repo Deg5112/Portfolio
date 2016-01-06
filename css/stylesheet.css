@@ -7,8 +7,10 @@ html{
     overflow-x: hidden;
 }
 
+
 section#contact {
     position: relative;
+    background: -webkit-linear-gradient(white, rgba(121, 81, 25, 0.38));
 }
 
 #contact .row{
@@ -1096,6 +1098,8 @@ div#bottomContainer {
 
     section#contact {
         height: 750px;
+        background: -webkit-linear-gradient(rgba(121, 81, 25, 0.38), white);
+
     }
 }
 
