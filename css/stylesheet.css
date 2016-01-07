@@ -7,9 +7,13 @@ html{
     overflow-x: hidden;
 }
 
-/**{*/
-    /*border: 1px solid black;*/
-/*}*/
+
+span.glyphicon.glyphicon-arrow-down {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
 .input-group-addon {
     top: 0;
@@ -218,6 +222,7 @@ h5 {
     box-shadow: 0px 0px 10px black;
     height: 60px;
     overflow: hidden;
+    position: relative;
 }
 
 @-webkit-keyframes experienceHeightAnimation{
@@ -262,9 +267,12 @@ h5 {
     padding-bottom: 5em;
 }
 
-#experience{
-    background: -webkit-linear-gradient(#dcdcdc, rgba(228, 228, 228, 0.15));
 
+
+
+#experience {
+    background: -webkit-linear-gradient(#dcdcdc, rgba(228, 228, 228, 0.15));
+    padding-bottom: 10vh;
 }
 
 

@@ -1,5 +1,44 @@
 $(function(){
 
+    $('#experience .col-md-4').click(function(){
+        smallExperienceAnimate(this);
+    });
+
+
+    function smallExperienceAnimate(element){
+        var width = window.outerWidth;
+        $('#experience .col-md-4 .container-fluid .glyphicon.glyphicon-arrow-down').css('display', 'inline-block');
+
+        if(width<=992){
+            $('#experience .col-md-4:first-child .container-fluid').removeClass('addHeight');
+            $('#experience .col-md-4:nth-child(2) .container-fluid').removeClass('addHeight2');
+            $('#experience .col-md-4:nth-child(3) .container-fluid').removeClass('addHeight3');
+            console.log('true');
+
+            if(element===$('#experience .col-md-4:first-child')[0] ){
+
+                    $('#experience .col-md-4:first-child .container-fluid').addClass('addHeight');
+                $('#experience .col-md-4:first-child .container-fluid .glyphicon.glyphicon-arrow-down').css('display', 'none');
+            }
+            if(element===$('#experience .col-md-4:nth-child(2)')[0] ){
+
+                    $('#experience .col-md-4:nth-child(2) .container-fluid').addClass('addHeight2');
+                $('#experience .col-md-4:nth-child(2) .container-fluid .glyphicon.glyphicon-arrow-down').css('display', 'none');
+
+            }
+            if(element===$('#experience .col-md-4:nth-child(3)')[0] ){
+
+                    $('#experience .col-md-4:nth-child(3) .container-fluid').addClass('addHeight3');
+                $('#experience .col-md-4:nth-child(3)  .container-fluid .glyphicon.glyphicon-arrow-down').css('display', 'none');
+
+            }
+        }
+    }
+
+
+
+
+
     $('form button').click(function(){
        var name = $('form .form-group:first-child input').val();
         var email = $('form .form-group:nth-child(2) input').val();
@@ -117,16 +156,22 @@ $(function(){
         }, 2000,function(){
             $('#experienceUnderline').addClass('transformClass');
             $('#smallDiv').animate({width: '15em'}, 800, function(){
-                $('#experience .col-md-4').addClass('bounce');
-                setTimeout(function(){
-                    $('#experience .col-md-4:first-child .container-fluid').addClass('addHeight');
-                    $('#experience .col-md-4:nth-child(2) .container-fluid').addClass('addHeight2');
-                    $('#experience .col-md-4:nth-child(3) .container-fluid').addClass('addHeight3');
-                }, 770);
+                var width = window.outerWidth;
+                console.log('width', width);
+                if(width>992){
+                    $('#experience .col-md-4').addClass('bounce');
+                    setTimeout(function(){
+                        $('#experience .col-md-4:first-child .container-fluid').addClass('addHeight');
+                        $('#experience .col-md-4:nth-child(2) .container-fluid').addClass('addHeight2');
+                        $('#experience .col-md-4:nth-child(3) .container-fluid').addClass('addHeight3');
+                    }, 770);
+                }
             });
         });
         //cards bounce up, and on bounce down, the other animation happens
     }
+
+
 });
 
 //docReady end
