@@ -253,13 +253,13 @@ h5 {
 }
 
 .addHeight2{
-    -webkit-animation:experienceHeightAnimation2 1s forwards ;
+    -webkit-animation:experienceHeightAnimation2 .5s forwards ;
 }
 .addHeight3{
-    -webkit-animation:experienceHeightAnimation3 1s forwards ;
+    -webkit-animation:experienceHeightAnimation3 .5s forwards ;
 }
 .addHeight{
-    -webkit-animation:experienceHeightAnimation 1s forwards ;
+    -webkit-animation:experienceHeightAnimation .5s forwards ;
 }
 
 #experience .container {
