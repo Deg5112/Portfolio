@@ -1,13 +1,12 @@
 <?php
 require_once('email_config.default.php');
 require('phpmailer/PHPMailer/PHPMailerAutoload.php');
-$mail = new PHPMailer;
-$mail->SMTPDebug = 3;
-
+$name = $_POST['name'];
 $email = $_POST['email'];
-$subject = $_POST['subject'];
 $message = $_POST['message'];
-                           // Enable verbose debug output
+
+$mail = new PHPMailer;
+$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
@@ -25,28 +24,40 @@ $options = array(
         'allow_self_signed' => true
     )
 );
-
 $mail->smtpConnect($options);
 $mail->From = 'davidgoodmandeveloper@gmail.com';
 $mail->FromName = 'David Goodman';
-$mail->addAddress($email);     // Add a recipient
+$mail->addAddress('davidgoodmandeveloper@gmail.com', 'David');     // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
-$mail->addReplyTo('davidgoodmandeveloper@gmail.com', 'David');
-$mail->addCC('davidgoodmandeveloper@gmail.com');
+$mail->addReplyTo($email, $name);
+//$mail->addCC('cc@example.com');
 //$mail->addBCC('bcc@example.com');
 
 //$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
-$mail->isHTML(true);                                  // Set email format to HTML
+$mail->isHTML(true);
 
-$mail->Subject = $subject;
-$mail->Body    = $message;
-//$mail->AltBody = $message;
+                               // Set email format to HTML
+
+$mail->Subject = 'Thank you for reaching out - David Goodman';
+$mail->Body    =
+"<pre style='font-family: times; font-size: 16px'>
+<b>Message</b>: '$message'
+
+Hi $name,
+
+Thanks so much for getting in touch, I will respond to you as soon as possible,
+
+David Goodman
+Web Developer
+<pre>";
+
+$mail->AltBody = $message;
 
 if(!$mail->send()) {
-    print_r('Message could not be sent.');
-    print_r('Mailer Error: ' . $mail->ErrorInfo);
+    echo 'Message could not be sent.';
+    echo 'Mailer Error: ' . $mail->ErrorInfo;
 } else {
-    print_r('Message has been sent');
+    echo 'Message has been sent';
 }
 ?>

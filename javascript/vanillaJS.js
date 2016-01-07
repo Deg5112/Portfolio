@@ -1,5 +1,29 @@
 $(function(){
 
+    $('form button').click(function(){
+       var name = $('form .form-group:first-child input').val();
+        var email = $('form .form-group:nth-child(2) input').val();
+        var message = $('form .form-group:nth-child(3) textarea').val();
+        console.log(name, email, message);
+        $.ajax({
+            method: 'POST',
+            dataType: 'json',
+            url: 'http://localhost:8888/lfz/Portfolio/php_mailer/mail_example/mail_withmailer.php',
+            data: {name: name, email: email, message: message},
+            success: function(response){
+                if(response.success){
+                    console.log(true);
+                }else{
+                    console.log(false);
+                }
+            },
+            error: function(response){
+                console.log(response);
+            }
+        });
+        return;
+    });
+
     $('#contactSpanUnderline').addClass('aboutHeaderUnderlineClass');
 
     //$('nav a').click(function(){
@@ -18,7 +42,7 @@ $(function(){
 
 
     $(window).on('scroll touchmove', function(){
-        var contact = $('')
+
         var experience = $('#experience').offset().top;
         var getInTouch = $('#getInTouch').offset().top;
         var aboutSpanTop = $('#aboutSpan').offset().top;
