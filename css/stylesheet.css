@@ -7,6 +7,21 @@ html{
     overflow-x: hidden;
 }
 
+/**{*/
+    /*border: 1px solid black;*/
+/*}*/
+
+.input-group-addon {
+    top: 0;
+}
+
+.form-group:nth-child(3) .col-md-2,  .form-group:nth-child(3) .col-md-3 {
+    padding: 0;
+}
+
+.form-group:nth-child(3) .col-md-3 {
+    padding-left: 15px;
+}
 
 section#contact {
     position: relative;
