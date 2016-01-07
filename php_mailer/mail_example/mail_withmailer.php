@@ -36,12 +36,12 @@ $mail->addReplyTo($email, $name);
 //$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);
-
-                               // Set email format to HTML
+$link1 = "<a href='https://www.linkedin.com/profile/view?id=AAIAAAVkYgIBqxwIqudQ6kJ2xpG6hcBNFVp0b8M&trk=nav_responsive_tab_profile'><img style='width: 50px; height: 50px' src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Linkedin_icon.svg/2000px-Linkedin_icon.svg.png'></a>";
+$link2 = "<a href='https://github.com/deg5112'><img style='width: 100px; height: 50px' src='http://www.aha.io/assets/integration_logos/github-bb449e0ffbacbcb7f9c703db85b1cf0b.png'></a>";
 
 $mail->Subject = 'Thank you for reaching out - David Goodman';
 $mail->Body    =
-"<pre style='font-family: times; font-size: 16px'>
+"<pre style='font-family:times; font-size: 16px'>
 <b>Message</b>: '$message'
 
 Hi $name,
@@ -50,6 +50,7 @@ Thanks so much for getting in touch, I will respond to you as soon as possible,
 
 David Goodman
 Web Developer
+$link1  $link2
 <pre>";
 
 $mail->AltBody = $message;
