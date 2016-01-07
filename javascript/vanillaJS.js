@@ -1,6 +1,6 @@
 $(function(){
 
-    $('#experience .col-md-4').click(function(){
+    $('#experience .col-md-4').on('click tap', function(){
         smallExperienceAnimate(this);
     });
 
@@ -39,7 +39,7 @@ $(function(){
 
 
 
-    $('form button').click(function(){
+    $('form button').on('click tap', function(){
        var name = $('form .form-group:first-child input').val();
         var email = $('form .form-group:nth-child(2) input').val();
         var message = $('form .form-group:nth-child(3) textarea').val();
