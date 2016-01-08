@@ -46,10 +46,11 @@ section#contact {
 }
 
 #jumbo2 {
-    background-image: url("../images/jumbo.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
     height: 400px;
+}
+
+#jumbo2 img {
+    height: 100%;
 }
 
 form{
