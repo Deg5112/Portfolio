@@ -1,4 +1,18 @@
 $(function(){
+    var width = window.outerWidth;
+    if(width>992){
+        $('.glyphicon.glyphicon-arrow-down').hide();
+    }
+    $(window).resize(function(){
+        var width = window.outerWidth;
+        if(width>992){
+            $('.glyphicon.glyphicon-arrow-down').hide();
+        }
+    });
+    $(window).load(function(){
+        $('#loading').hide();
+    });
+
 
     $('#experience .col-md-4').on('click tap', function(){
         smallExperienceAnimate(this);
@@ -78,9 +92,7 @@ $(function(){
     introAnimation();
     //checkScrollTop();
     $('#workSpanUnderline').addClass('aboutHeaderUnderlineClass');
-
-
-    $(window).on('scroll touchmove', function(){
+    function checkDistance(){
 
         var experience = $('#experience').offset().top;
         var getInTouch = $('#getInTouch').offset().top;
@@ -103,15 +115,21 @@ $(function(){
             });
             paragraphBool = false;
         }
+
         if(differenceBetweenGetInTouch < 615){
             $('#getInTouch p').addClass('getInTouchParagraphAnimationClass');
             $('#getInTouchUnderline').addClass('getInTouchUnderlineAnimationClass');
             $('.glyphicon-arrow-right').addClass('arrowMoveClass');
         }
 
-        if(differenceBetweenExperience < 250){
+        if(differenceBetweenExperience < 550){
             experienceAnimate();
         }
+    }
+
+    $(window).on('scroll touchmove', function(){
+
+      checkDistance();
 
     });
 

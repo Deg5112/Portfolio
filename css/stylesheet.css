@@ -3,8 +3,32 @@ body{
     overflow-x: hidden;
 }
 
+
+
 html{
     overflow-x: hidden;
+}
+
+.col-md-4.col-md-offset-4.filterContainer .row {
+    padding: 0 15px;
+}
+
+div#loading {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #001e31;
+    z-index: 1000;
+    position: fixed;
+}
+
+#loading img {
+    vertical-align: middle;
+    position: absolute;
+    width: 15%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 
@@ -927,7 +951,7 @@ div#bottomContainer {
         opacity: 0;
     }
     to{
-        top: 15%;
+        top: 10%;
         opacity: 1;
     }
 }
@@ -1120,7 +1144,7 @@ div#bottomContainer {
     }
 
     section#contact {
-        height: 750px;
+        height: 664px;
         background: -webkit-linear-gradient(rgba(121, 81, 25, 0.51), white);
 
     }
