@@ -26,13 +26,13 @@ app.controller('workController', function($scope, $log, getScrollTopService){
         self.filter = null;
         //self.imageBool=true;
         self.imgArray = [
-            {src: 'mboutique.png', alt:'WEBSITE', title: 'MBoutique', message: 'small business website', href:'http://deg5112.github.io/mboutique/' },
-            {src: 'memorymatch.png', alt:'GAME', title: 'Memory Match', message: "concentration game themed after HBO's 'Silicon Valley'", href:'http://deg5112.github.io/memory_match/'  },
-            {src: 'SGT.png', alt:'APP', title: 'Student Grade Table', message: 'Education Grade Table App for administrators', href:'http://deg5112.github.io/SGT/' },
-            {src:'calculator.png', alt:'APP', title: 'Calculator', message: 'project I worked on to better understand logic & object oriented programming', href:'http://deg5112.github.io/calculator/' },
-            {src:'tictactoe.png', alt:'GAME', title: 'TicTacToe', message: 'Hack-a-thon tictactoe group project', href:'http://deg5112.github.io/hacka-tictactoe-athon/' },
-            {src:'blog.png', alt:'WEBSITE', title: 'Blog', message: 'A blog with a log-in system tied to a backend database', href:'' },
-            {src:'apartmentShark.png', alt:'APP', title: 'apartmentShark', message: 'web application to track and manage your apartment hunt', href:'' }
+            {src: 'mboutique.png', alt:'WEBSITE', title: 'MBoutique', message: 'small business website', href:'http://deg5112.github.io/mboutique/', features: '', git: 'https://github.com/Deg5112/Mboutique_Project.git' },
+            {src: 'memorymatch.png', alt:'GAME', title: 'Memory Match', message: "concentration game themed after HBO's 'Silicon Valley'", href:'http://deg5112.github.io/memory_match/', features: '',  git: 'https://github.com/Deg5112/Memory_Match_Game_Project.git'  },
+            {src: 'SGT.png', alt:'APP', title: 'Student Grade Table', message: 'Education Grade Table App for administrators', href:'http://deg5112.github.io/SGT/', features: '', git: 'https://github.com/Deg5112/Student_Grade_Table_Project.git' },
+            {src:'calculator.png', alt:'APP', title: 'Calculator', message: 'project I worked on to better understand logic & object oriented programming', href:'http://deg5112.github.io/calculator/', features: '', git: 'https://github.com/Deg5112/calculator.git' },
+            {src:'tictactoe.png', alt:'GAME', title: 'TicTacToe', message: 'Hack-a-thon tictactoe group project', href:'http://deg5112.github.io/hacka-tictactoe-athon/', features: '', git: 'https://github.com/Deg5112/hacka-tictactoe-athon.git' },
+            {src:'blog.png', alt:'WEBSITE', title: 'Blog', message: 'A blog with a log-in system tied to a backend database', href:'', features: '', git: 'https://github.com/Deg5112/Blog.git' },
+            {src:'apartmentShark.png', alt:'APP', title: 'apartmentShark', message: 'web application to track and manage your apartment hunt', href:'', features: '', git: 'https://github.com/Deg5112/Final_Project.git' }
         ];
 
         self.clearArray = function(){

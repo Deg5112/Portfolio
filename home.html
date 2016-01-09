@@ -84,21 +84,18 @@
 
 <!--work section-->
 <section id="work" ng-controller="workController as wC" >
-
     <div class="container">
 
         <div class = 'row'>
             <h2 class="text-center"><span>Work<span id="workSpanUnderline"></span></span></h2>
 
                 <div class="col-md-4 col-md-offset-4 filterContainer">
-                    <!--ng-click="select($index)" ng-class="{sel: $index == selected}-->
                     <div class="row">
                         <div class = "col-xs-3 col-md-3"><button  id= 'firstButton' type="button"   ng-click=" wC.filter=null; wC.updateActiveButton(1); wC.clearArray();" ng-class="1===wC.activeButton ? 'buttonActive' : 'notActive'">All</button></div>
                         <div class = "col-xs-3 col-md-3"><button  type="button"   ng-click=" wC.filter='APP'; wC.updateActiveButton(2); wC.clearArray();" ng-class="2===wC.activeButton ? 'buttonActive' : 'notActive'">APP</button></div>
                         <div class = "col-xs-3 col-md-3"><button  type="button" ng-click=" wC.filter='GAME'; wC.updateActiveButton(3); wC.clearArray();" ng-class="3===wC.activeButton ? 'buttonActive' : 'notActive'">GAME</button></div>
                         <div class = "col-xs-3 col-md-3"><button id="lastButton" type="button"  ng-click=" wC.filter='WEBSITE'; wC.updateActiveButton(4); wC.clearArray();" ng-class="4===wC.activeButton ? 'buttonActive' : 'notActive'">WEBSITE</button></div>
                     </div><!--row end-->
-
                 </div>
 
 
@@ -113,13 +110,13 @@
                     <figcaption>
                         <div class="row">
                             <div class="col-xs-4">
-                                <button class=' btn btnone' type="button">Github</button>
+                                <a href="{{i.git}}" target="_blank"><button class=' btn btnone workbtn' type="button">source code<span class="fa fa-github btngit"></span></button></a>
                             </div>
                             <div class="col-xs-4">
-                                <button class=' btn btntwo ' type="button">About</button>
+                                <button class=' btn btntwo workbtn' type="button">About</button>
                             </div>
                             <div class="col-xs-4">
-                                <button class=' btn btnthree' type="button">Demo</button>
+                                <a href="{{i.href}}" target="_blank"><button class=' btn btnthree workbtn' type="button">Demo</button></a>
                             </div>
                         </div>
                     </figcaption>
@@ -201,7 +198,7 @@
 
                 <div class="row paragraphContainer">
                     <div class="col-md-6">
-                        <p><img src="images/david.jpg">I started out his career in technology sales, and spent time in both customer facing, and technical
+                        <p><img src="images/david.jpg">Hello, my name is David and I started out my career in technology sales, and spent time in both customer facing, and technical
                             pre-sales roles. Over the 3 year period of being in tech-sales, I found myself gravitating towards the
                             technical side of the industry. After moving to Southern California in in 2014, I found out about
                             learningFuze web development 12 week-immersion boot camp. Since I picked up my first book on javascript
@@ -210,8 +207,8 @@
                     </div>
                     <div class="col-md-6">
                         <p>
-                            Programming has became my most passionate hobby. Making mobile-response, interactive, and
-                            user-friendly, websites and web-applications is where I started out in. By the end of 2016, his goal is to expand his current programming knowledge
+                            Programming has become my most passionate hobby. Making mobile-response, interactive, and
+                            user-friendly, websites and web-applications is where I started out in. By the end of 2016, my goal is to expand my current programming knowledge
                             into native mobile applications, as well as master newer front and backend frameworks.
                         </p>
                     </div>
@@ -256,26 +253,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-group">
-                                <div class="col-sm-12 col-sm-offset-1">
-                                    <div class="row">
-                                            <div class="col-xs-3 col-sm-3 col-md-3">
-                                                <div class="input-group" id="group1">
-                                                    <span class="input-group-addon glyphicon glyphicon-phone" id="sizing-addon1"></span>
-                                                    <input type="tel" id='phone1' class="form-control" name="phone1" placeholder="" maxlength="3">
-                                                    <span id="mobileSpan">( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   )</span>
-                                                </div>
 
-                                            </div>
-                                            <div class="col-xs-2 col-md-2">
-                                                <input type="tel" id='phone2' class="form-control" name="phone2" placeholder="" maxlength="3">
-                                            </div>
-                                            <div class="col-xs-2 col-md-2">
-                                                <input type="tel" id='phone3' class="form-control" name="phone3" placeholder="" maxlength="4">
-                                            </div>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="col-sm-10 col-sm-offset-1">
 
                             <div class="form-group input-group">

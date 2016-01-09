@@ -7,36 +7,51 @@ html{
     overflow-x: hidden;
 }
 
+a{
+    color: black !important;
+}
+
+.workbtn {
+    background-color: white;
+    color: black;
+    box-shadow: 1px 1px 23px -4px black;
+    font-family: sans-serif;
+}
+
+.btngit {
+    font-size: 1.3em;
+    margin-left: 3%;
+    margin-top: 1%;
+}
+
 .btnthree {
     border-radius: 0 5px 5px 0 !important;
-    background-color: #4ea74e;
-    color: white;
-    font-family: sans-serif;
+
 }
 
 .btnthree:hover {
     border-radius: 0 5px 5px 0 !important;
+    background-color: #4ea74e !important;
+    border-color: #4ea74e !important;
 }
 
 .btntwo {
     border-radius: 0 0 0 0 !important;
-    background-color:#3db3d7 ;
-    color: white;
-    font-family: sans-serif;
+}
 
+.btntwo:hover {
+    background-color: #3db3d7 !important;
+    border-color: #3db3d7 !important;
 }
 
 .btnone {
-    background-color: black;
-    color:white;
     border-radius: 5px 0 0 5px !important;
-    font-family: sans-serif;
 }
 .btnone:hover {
-    background-color: gray;
-    color:black;
-
+    background-color: rgba(134, 134, 134, 0.7) !important ;
+    color:white;
     border-radius: 5px 0 0 5px !important;
+    border-color: rgba(134, 134, 134, 0.7) !important ;
 }
 
 figcaption .col-xs-4 {
@@ -196,7 +211,7 @@ footer p {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 1.3em;
+    font-size: 1.2em;
 }
 
 #experience li {
@@ -204,9 +219,9 @@ footer p {
 }
 
 #aboutSection img {
-    width: 26%;
+    width: 141px;
     float: left;
-    height: 9em;
+    height: 163px;
     border-radius: 5px;
     margin-right: 2%;
     margin-top: 1%;
@@ -589,9 +604,10 @@ span#line-break {
 section#aboutSection {
     background-color: white;
     position: relative;
-    height: 480px;
+    /*height: 480px;*/
     font-family: sans-serif;
     font-weight: 300;
+    padding: 12% 0;
 }
 
 div#about .row:first-child {
@@ -1002,11 +1018,11 @@ div#bottomContainer {
 
 @-webkit-keyframes aboutHeaderAnimation {
     from{
-        top: 30%;
+        margin-top: 40px;
         opacity: 0;
     }
     to{
-        top: 10%;
+        margin-top: 0;
         opacity: 1;
     }
 }

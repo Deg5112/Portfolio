@@ -2,7 +2,7 @@ var paragraphBool = null;
 $(function(){
 
     $('form input').on('focus', function(){
-       $('#mobileSpan').toggle();
+       $('#mobileSpan').hide();
         $('#formMessage').text('');
     });
 
@@ -19,7 +19,7 @@ $(function(){
         }
     });
     $(window).load(function(){
-        $('#loading').hide();
+        $('#loading').fadeOut();
     });
 
     $('#experience .col-md-4').on('click tap', function(){
