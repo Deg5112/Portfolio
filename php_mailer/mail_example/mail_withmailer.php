@@ -44,7 +44,7 @@ $mail->Subject = 'Thank you for reaching out - David Goodman';
 $mail->Body    =
 "<pre style='font-family:times; font-size: 16px'>
 <b>Your Message:</b> '$message'
-<p>Phone:</p>
+<b>Phone:</b> ($phone1)-$phone2-$phone3
 
 Hi $name,
 
@@ -56,7 +56,7 @@ davidgoodmandeveloper@gmail.com
 952-693-3823
 
 $link1 $link2
-<pre>";
+</pre>";
 
 $mail->AltBody = $message;
 

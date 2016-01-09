@@ -3,10 +3,21 @@ body{
     overflow-x: hidden;
 }
 
-
-
 html{
     overflow-x: hidden;
+}
+
+#group1 {
+    position: relative;
+}
+
+span#mobileSpan {
+    position: absolute;
+    z-index: 4;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(27, 26, 26, 0.47);
 }
 
 .col-md-4.col-md-offset-4.filterContainer .row {
