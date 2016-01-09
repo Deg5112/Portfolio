@@ -1,7 +1,7 @@
 var paragraphBool = null;
 $(function(){
 
-    $('#phone1').on('focus', function(){
+    $('form input').on('focus', function(){
        $('#mobileSpan').remove();
     });
 
@@ -29,27 +29,29 @@ $(function(){
     $('form button').on('click tap', function(){
        var name = $('form .form-group:first-child input').val();
         var email = $('form .form-group:nth-child(2) input').val();
-        var phone1 = $('#phone1');
-        var phone2 = $('#phone2');
-        var phone3 = $('phone3');
+        var phone1 = $('#phone1').val();
+        var phone2 = $('#phone2').val();
+        var phone3 = $('#phone3').val();
         var message = $('#textArea').val();
-        console.log(name, email, message);
+
         $.ajax({
             method: 'POST',
             dataType: 'json',
             url: 'http://localhost:8888/lfz/Portfolio/php_mailer/mail_example/mail_withmailer.php',
             data: {name: name, email: email, message: message, phone1: phone1, phone2: phone2, phone3: phone3},
             success: function(response){
-                if(response.success){
-                    console.log(true);
-                }else{
-                    console.log(false);
-                }
+
             },
             error: function(response){
-                console.log(response);
+
             }
         });
+        name = $('form .form-group:first-child input').val('');
+        email = $('form .form-group:nth-child(2) input').val('');
+        phone1 = $('#phone1').val('');
+        phone2 = $('#phone2').val('');
+        phone3 = $('#phone3').val('');
+        message = $('#textArea').val('');
 
     });
 
