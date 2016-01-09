@@ -2,7 +2,7 @@ var paragraphBool = null;
 $(function(){
 
     $('form input').on('focus', function(){
-       $('#mobileSpan').hide();
+       $('#mobileSpan').toggle();
         $('#formMessage').text('');
     });
 
@@ -53,7 +53,8 @@ $(function(){
         phone2 = $('#phone2').val('');
         phone3 = $('#phone3').val('');
         message = $('#textArea').val('');
-        $('#mobileSpan').show();
+        $('#mobileSpan').toggle();
+
 
         $('#formMessage').text('Thank you, your message has been sent');
     });

@@ -7,6 +7,46 @@ html{
     overflow-x: hidden;
 }
 
+.btnthree {
+    border-radius: 0 5px 5px 0 !important;
+    background-color: #4ea74e;
+    color: white;
+    font-family: sans-serif;
+}
+
+.btnthree:hover {
+    border-radius: 0 5px 5px 0 !important;
+}
+
+.btntwo {
+    border-radius: 0 0 0 0 !important;
+    background-color:#3db3d7 ;
+    color: white;
+    font-family: sans-serif;
+
+}
+
+.btnone {
+    background-color: black;
+    color:white;
+    border-radius: 5px 0 0 5px !important;
+    font-family: sans-serif;
+}
+.btnone:hover {
+    background-color: gray;
+    color:black;
+
+    border-radius: 5px 0 0 5px !important;
+}
+
+figcaption .col-xs-4 {
+    padding: 0;
+}
+
+figcaption button {
+    width: 100%;
+}
+
 #group1 {
     position: relative;
 }
@@ -104,6 +144,7 @@ form{
 
 a:link {
     text-decoration: none;
+    color: black;
 }
 
 figcaption {
@@ -324,7 +365,9 @@ h5 {
     margin-top: 0;
 }
 
-
+#work{
+    padding-bottom: 1%;
+}
 
 section#work button:hover {
     cursor: pointer;
@@ -364,6 +407,7 @@ section#getInTouch {
     border-color: #737373;
     border-radius: 5px;
     font-size: 1.3em;
+
 }
 
 section#getInTouch span {
