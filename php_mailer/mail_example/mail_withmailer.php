@@ -39,7 +39,7 @@ $mail->addAttachment('../../-The David Eric Goodman Resume-.doc');         // Ad
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);
 $link1 = "<a href='https://www.linkedin.com/profile/view?id=AAIAAAVkYgIBqxwIqudQ6kJ2xpG6hcBNFVp0b8M&trk=nav_responsive_tab_profile'><img style='width: 45px; height: 45px;' src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Linkedin_icon.svg/2000px-Linkedin_icon.svg.png'></a>";
-$link2 = "<a href='https://github.com/deg5112'><img style='width: 125px; height: 60px; margin-bottom: -10px' src='http://www.aha.io/assets/integration_logos/github-bb449e0ffbacbcb7f9c703db85b1cf0b.png'></a>";
+$link2 = "<a href='https://github.com/deg5112'><img style='width: 125px; height: 60px; margin-bottom: -7px;' src='http://www.aha.io/assets/integration_logos/github-bb449e0ffbacbcb7f9c703db85b1cf0b.png'></a>";
 $mail->Subject = 'Thank you for reaching out - David Goodman';
 $mail->Body    =
 "<pre style='font-family:times; font-size: 16px'>
@@ -54,7 +54,6 @@ David Goodman
 Web Developer
 davidgoodmandeveloper@gmail.com
 952-693-3823
-
 $link1 $link2
 </pre>";
 

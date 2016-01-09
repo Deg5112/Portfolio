@@ -2,7 +2,8 @@ var paragraphBool = null;
 $(function(){
 
     $('form input').on('focus', function(){
-       $('#mobileSpan').remove();
+       $('#mobileSpan').hide();
+        $('#formMessage').text('');
     });
 
     var width = window.outerWidth;
@@ -43,7 +44,7 @@ $(function(){
 
             },
             error: function(response){
-
+                console.log(response);
             }
         });
         name = $('form .form-group:first-child input').val('');
@@ -52,7 +53,9 @@ $(function(){
         phone2 = $('#phone2').val('');
         phone3 = $('#phone3').val('');
         message = $('#textArea').val('');
+        $('#mobileSpan').show();
 
+        $('#formMessage').text('Thank you, your message has been sent');
     });
 
 
