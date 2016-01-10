@@ -50,13 +50,13 @@
 
                     <ul class="iconNav">
                         <li>
-                            <a href='https://www.linkedin.com/in/deg5112'  target="_blank" class="btn btn-social-icon btn-linkedin">
+                            <a href='https://www.linkedin.com/in/deg5112'  rel="external" class="btn btn-social-icon btn-linkedin">
                                 <span class="fa fa-linkedin"></span>
                             </a>
                         </li>
                         &nbsp;|&nbsp;
                         <li>
-                            <a href='https://github.com/Deg5112' target="_blank" class="btn btn-social-icon btn-github">
+                            <a href='https://github.com/Deg5112' rel="external" class="btn btn-social-icon btn-github">
                                 <span class="fa fa-github"></span>
                             </a>
                         </li>
@@ -106,20 +106,20 @@
 
         <div class="row imgRow" >
             <div class="col-xs-12 col-sm-6 col-md-4 imgCol slide" ng-repeat="i in wC.imgArray | filter:wC.filter" >
-                <a ng-href="{{i.href}}" target="_blank">
+                <a ng-href="{{i.href}}" rel="external">
                 <figure>
                     <h4>{{i.title}}</h4>
                 <img class='project' ng-src="images/{{i.src}}">
                     <figcaption>
                         <div class="row">
                             <div class="col-xs-12 col-md-4">
-                                <a href="{{i.git}}" target="_blank"><button class=' btn btnone workbtn' type="button"><span class="fa fa-github btngit"></span>source code</button></a>
+                                <a href="{{i.git}}" rel="external"><button class=' btn btnone workbtn' type="button"><span class="fa fa-github btngit"></span>source code</button></a>
                             </div>
                             <div class="col-xs-12 col-md-4">
                                 <button class=' btn btntwo workbtn' type="button" ng-click="wC.openModal($index)">About</button>
                             </div>
                             <div class="col-xs-12 col-md-4">
-                                <a href="{{i.href}}" target="_blank"><button class=' btn btnthree workbtn' type="button">Demo</button></a>
+                                <a href="{{i.href}}" rel="external"><button class=' btn btnthree workbtn' type="button">Demo</button></a>
                             </div>
                         </div>
                     </figcaption>
