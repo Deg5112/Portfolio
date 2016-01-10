@@ -14,7 +14,7 @@ a{
 .workbtn {
     background-color: white;
     color: black;
-    box-shadow: 1px 1px 23px -4px black;
+    box-shadow: 1px 1px 20px -5px black;
     font-family: sans-serif;
 }
 
@@ -479,7 +479,7 @@ section#work > .container:first-child {
 }
 
 .imgCol {
-    padding: 0;
+    padding: 5px;
 }
 
 .row.imgRow {
@@ -724,7 +724,7 @@ div#navDropDown li {
 }
 
 div#navDropDown li a {
-    color: white;
+    color: white !important;
 }
 
 div#navDropDown ul {

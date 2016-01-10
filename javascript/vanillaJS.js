@@ -1,5 +1,12 @@
 var paragraphBool = null;
 $(function(){
+    $('.navbar-nav a, #navDropDown a').click(function(){
+       var text = $(this).text().toLowerCase();
+        smoothScroll(text);
+    });
+
+
+
 
     $('form input').on('focus', function(){
        $('#mobileSpan').hide();
@@ -133,6 +140,13 @@ function experienceAnimate(){
     //cards bounce up, and on bounce down, the other animation happens
 }
 
+function smoothScroll(text){
+    var id = '#' + text;
+    var offset = $(id).offset().top;
+    $('html, body').animate({scrollTop: offset-100}, 2000);
+    $('#navDropDown').removeClass('dropDownActive').addClass('dropDownUnactive');
+}
+
 function smallExperienceAnimate(element){
     var width = window.outerWidth;
     $('#experience .col-md-4 .container-fluid .glyphicon.glyphicon-arrow-down').css('display', 'inline-block');
@@ -197,4 +211,5 @@ function checkDistance(){
         experienceAnimate();
     }
 }
+
 
