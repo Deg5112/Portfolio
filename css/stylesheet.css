@@ -42,6 +42,7 @@ span.glyphicon.glyphicon-remove {
     top: 5%;
     border: 1px solid white;
     padding: 1%;
+    cursor: pointer;
 }
 
 
@@ -187,6 +188,37 @@ span.glyphicon.glyphicon-arrow-down {
     top: 0;
 }
 
+
+.transition{
+    position: relative;
+    top: 100px;
+    opacity: 0;
+    transition: 2s;
+}
+
+.formTransition{
+    top: 0;
+    opacity: 1;
+}
+
+.form-group:first-child{
+    transition-delay: .2s;
+}
+
+.form-group:nth-child(2){
+    transition-delay: .4s;
+}
+
+.transition:nth-child(3){
+    transition-delay: .6s;
+}
+
+.transition:nth-child(4){
+    transition-delay: .8s;
+}
+
+
+
 .form-group:nth-child(3) .col-md-2,  .form-group:nth-child(3) .col-md-3 {
     padding: 0;
 }
@@ -277,6 +309,7 @@ form .btn {
 
 #contact h2 {
      margin: 10% 0 2% 0;
+    opacity: 0;
 }
 
 footer {
@@ -534,6 +567,12 @@ section#getInTouch p {
     font-size: 1.5em;
     position: relative;
     left: 4em;
+    opacity: 0;
+
+}
+
+button:focus {
+    outline-style: none !important;
 }
 
 
@@ -700,9 +739,6 @@ div#about .row:first-child {
 
 }
 
-div#about {
-    height: 100%;
-}
 
 div#about .row .col-md-12 {
     height: 94%;
@@ -1193,6 +1229,21 @@ div#bottomContainer {
     }
 }
 
+@-webkit-keyframes contactHeaderAnimate {
+    from{
+        top: 150px;
+        opacity: 0;
+    }
+    to{
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+.contactHeaderAnimationClass{
+    -webkit-animation: contactHeaderAnimate 1.5s forwards;
+}
+
 .getInTouchParagraphAnimationClass{
     -webkit-animation: getInTouchParagraphAnimation 1.2s cubic-bezier(.21,1.28,.71,1.43) forwards;
 }
@@ -1286,9 +1337,7 @@ div#bottomContainer {
     html{
         overflow-x: hidden;
     }
-    section#aboutSection {
-        height: 600px;
-    }
+
 
     #modal .row .col-md-6 {
         overflow: auto;

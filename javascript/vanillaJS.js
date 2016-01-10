@@ -1,5 +1,7 @@
 var paragraphBool = null;
 $(function(){
+    checkDistance();
+
     $('.navbar-nav a, #navDropDown a').click(function(){
        var text = $(this).text().toLowerCase();
         smoothScroll(text);
@@ -75,7 +77,6 @@ $(function(){
 
     paragraphBool = true;
     introAnimation();
-    //checkScrollTop();
     $('#workSpanUnderline').addClass('aboutHeaderUnderlineClass');
 
 
@@ -107,10 +108,18 @@ $(function(){
         }
 
     });
+
+    $('#getInTouch button').on('click tap', function(){
+        getInTouchButtonScroll();
+    });
+
 });
 
 //Docready end
-
+function getInTouchButtonScroll(){
+    var offset = $('#contact').offset().top;
+    $('html, body').animate({scrollTop: offset-100}, 2000);
+}
 
 
 function introAnimation(){
@@ -148,10 +157,12 @@ function experienceAnimate(){
 
 function smoothScroll(text){
     var id = '#' + text;
-    var offset = $(id).offset().top;
-    $('html, body').animate({scrollTop: offset-100}, 2000);
+    var offset = $(id).offset().top -100;
+    $('html, body').animate({scrollTop: offset}, 2000);
     $('#navDropDown').removeClass('dropDownActive').addClass('dropDownUnactive');
 }
+
+
 
 function smallExperienceAnimate(element){
     var width = window.outerWidth;
@@ -188,16 +199,17 @@ function checkDistance(){
     var experience = $('#experience').offset().top;
     var getInTouch = $('#getInTouch').offset().top;
     var aboutSpanTop = $('#aboutSpan').offset().top;
+    var contact = $('#contact').offset().top;
     var scrollTop = $(this).scrollTop();
-    console.log(scrollTop);
     var differenceBetween = aboutSpanTop - scrollTop;
     var differenceBetweenGetInTouch = getInTouch - scrollTop;
     var differenceBetweenExperience = experience - scrollTop;
+    var differenceBetweenContact = contact - scrollTop;
 
-    if(differenceBetween < 600 && paragraphBool) { //about
+
+    if(differenceBetween < 400 && paragraphBool) { //about
         $('#about h2').addClass('aboutHeaderAnimationClass');
         $('.paragraphContainer .col-md-6:first-child').animate({left: '5%', opacity: 1}, 850, function () {
-
             $('#line-break').addClass('paragraphBreakAnimationClass');
             $('.paragraphContainer .col-md-6:first-child').animate({left: '0%'}, 325);
             $('.paragraphContainer .col-md-6:nth-child(2)').animate({right: '0%', opacity: '1'}, 700, function(){
@@ -205,6 +217,7 @@ function checkDistance(){
             });
         });
         paragraphBool = false;
+
     }
 
     if(differenceBetweenGetInTouch < 615){
@@ -213,9 +226,18 @@ function checkDistance(){
         $('.glyphicon-arrow-right').addClass('arrowMoveClass');
     }
 
-    if(differenceBetweenExperience < 550){
+    if(differenceBetweenExperience < 400){
         experienceAnimate();
     }
+
+    if(differenceBetweenContact < 400){
+        contactAnimate();
+    }
+}
+
+function contactAnimate(){
+    $('#contact h2').addClass('contactHeaderAnimationClass').css('opacity', 1);
+    $('.transition').addClass('formTransition');
 }
 
 

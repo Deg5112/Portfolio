@@ -44,7 +44,6 @@ $mail->Subject = 'Thank you for reaching out - David Goodman';
 $mail->Body    =
 "<pre style='font-family:times; font-size: 16px'>
 <b>Your Message:</b> '$message'
-<b>Phone:</b> ($phone1)-$phone2-$phone3
 
 Hi $name,
 
