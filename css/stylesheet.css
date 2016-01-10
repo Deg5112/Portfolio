@@ -3,6 +3,55 @@ body{
     overflow-x: hidden;
 }
 
+.modalShowClass {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.83);
+    width: 100%;
+    z-index: 1000;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+
+#modal .row .col-md-6 {
+    border: 1px solid white;
+    height: 50vh;
+    position: relative;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+#modal p {
+    margin: 0 0 10px;
+    border: 1px solid green;
+    color: white;
+}
+
+#modal .container {
+    border: 1px solid white;
+    height: 100vh;
+}
+
+#modal .row {
+    border: 1px solid white;
+    height: 100vh;
+}
+
+#modal .row .col-md-6 {
+    border: 1px solid white;
+    height: 50vh;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.modalHideClass{
+    display: none;
+}
+
+
+
 html{
     overflow-x: hidden;
 }
@@ -1075,7 +1124,7 @@ div#bottomContainer {
 @-webkit-keyframes arrowMove {
     from{
         left: -60%;
-        -webkit-transform: scale(0) rotateZ(0);
+        -webkit-transform: scale(0) rotateZ(0deg);
 
     }
     to{

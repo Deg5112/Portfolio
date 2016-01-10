@@ -83,7 +83,9 @@
 </div><!--end jumbotron-->
 
 <!--work section-->
-<section id="work" ng-controller="workController as wC" >
+<section id="work" ng-controller="workController as wC" ng-init="modalBool = false" >
+
+
     <div class="container">
 
         <div class = 'row'>
@@ -113,7 +115,7 @@
                                 <a href="{{i.git}}" target="_blank"><button class=' btn btnone workbtn' type="button">source code<span class="fa fa-github btngit"></span></button></a>
                             </div>
                             <div class="col-xs-4">
-                                <button class=' btn btntwo workbtn' type="button">About</button>
+                                <button class=' btn btntwo workbtn' type="button" ng-click="wC.openModal($index)">About</button>
                             </div>
                             <div class="col-xs-4">
                                 <a href="{{i.href}}" target="_blank"><button class=' btn btnthree workbtn' type="button">Demo</button></a>
@@ -124,6 +126,23 @@
                 </a>
             </div>
         </div><!--row end-->
+
+        <div id='modal' ng-class="wC.modalActive ? 'modalShowClass' : 'modalHideClass'">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="i.modalImg">
+                    </div>
+                    <div class="col-md-6">
+                        <p>{{wC.modalText1}}</p>
+                        <p>{{wC.modalText2}}</p>
+                        <p>{{wC.modalText3}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
 
     </div>
 
