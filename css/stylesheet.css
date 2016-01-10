@@ -45,6 +45,10 @@ span.glyphicon.glyphicon-remove {
     cursor: pointer;
 }
 
+#modal .col-md-6:first-child{
+    overflow: hidden !important;
+}
+
 
 #modal img {
     width: 125%;
