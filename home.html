@@ -104,20 +104,20 @@
         </div><!--row end-->
 
         <div class="row imgRow" >
-            <div class="col-xs-6 col-md-4 imgCol slide" ng-repeat="i in wC.imgArray | filter:wC.filter" >
+            <div class="col-xs-12 col-sm-6 col-md-4 imgCol slide" ng-repeat="i in wC.imgArray | filter:wC.filter" >
                 <a ng-href="{{i.href}}" target="_blank">
                 <figure>
                     <h4>{{i.title}}</h4>
                 <img class='project' ng-src="images/{{i.src}}">
                     <figcaption>
                         <div class="row">
-                            <div class="col-xs-4">
-                                <a href="{{i.git}}" target="_blank"><button class=' btn btnone workbtn' type="button">source code<span class="fa fa-github btngit"></span></button></a>
+                            <div class="col-xs-12 col-md-4">
+                                <a href="{{i.git}}" target="_blank"><button class=' btn btnone workbtn' type="button"><span class="fa fa-github btngit"></span>source code</button></a>
                             </div>
-                            <div class="col-xs-4">
+                            <div class="col-xs-12 col-md-4">
                                 <button class=' btn btntwo workbtn' type="button" ng-click="wC.openModal($index)">About</button>
                             </div>
-                            <div class="col-xs-4">
+                            <div class="col-xs-12 col-md-4">
                                 <a href="{{i.href}}" target="_blank"><button class=' btn btnthree workbtn' type="button">Demo</button></a>
                             </div>
                         </div>
@@ -127,16 +127,21 @@
             </div>
         </div><!--row end-->
 
-        <div id='modal' ng-class="wC.modalActive ? 'modalShowClass' : 'modalHideClass'">
+        <div id='modal' ng-class="wC.modalActive ? 'modalShowClass' : 'modalHideClass'" ng-click="wC.modalRemove()">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <img src="i.modalImg">
+                        <img ng-src="{{wC.modalSrc}}">
                     </div>
                     <div class="col-md-6">
-                        <p>{{wC.modalText1}}</p>
-                        <p>{{wC.modalText2}}</p>
-                        <p>{{wC.modalText3}}</p>
+                        <span class="glyphicon glyphicon-remove"></span>
+
+                        <div id="modalParagraphContainer">
+                            <h2>{{wC.modalTitle}}</h2>
+                            <p>{{wC.modalText1}}</p>
+                            <p>{{wC.modalText2}}</p>
+                            <p>{{wC.modalText3}}</p>
+                        </div>
                     </div>
                 </div>
             </div>
