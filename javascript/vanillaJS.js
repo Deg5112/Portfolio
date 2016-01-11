@@ -195,7 +195,8 @@ function smallExperienceAnimate(element){
 }
 
 function checkDistance(){
-
+    var footer = $('footer').offset().top;
+    console.log('footer offset', footer);
     var experience = $('#experience').offset().top;
     var getInTouch = $('#getInTouch').offset().top;
     var aboutSpanTop = $('#aboutSpan').offset().top;
@@ -205,6 +206,9 @@ function checkDistance(){
     var differenceBetweenGetInTouch = getInTouch - scrollTop;
     var differenceBetweenExperience = experience - scrollTop;
     var differenceBetweenContact = contact - scrollTop;
+    var differenceBetweenFooter = footer - scrollTop;
+    console.log('footer difference', differenceBetweenFooter);
+
 
 
     if(differenceBetween < 400 && paragraphBool) { //about
@@ -232,6 +236,10 @@ function checkDistance(){
 
     if(differenceBetweenContact < 400){
         contactAnimate();
+    }
+    if(differenceBetweenFooter < 697){
+        console.log('whoop!');
+        $('footer span').addClass('footerTransition');
     }
 }
 

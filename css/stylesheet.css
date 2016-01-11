@@ -22,8 +22,9 @@ body{
     top: 50%;
     transform: translateY(-50%);
     overflow: auto;
-
 }
+
+
 
 #modal h2{
     color: white;
@@ -316,25 +317,50 @@ form .btn {
     opacity: 0;
 }
 
+
 footer {
-    height: 16vh;
-    color: white;
     background-color: black;
-    text-align: center;
-    position: relative;
+    color: white;
 }
 
-footer .row, footer .row div{
-    position: relative;
-    height: 100%;
+footer .col-md-4 {
+    padding: 2% 15px 1% 15px;
 }
 
-footer p {
+footer span {
+    color: rgba(251, 251, 251, 0.87);
+    font-size: 1.5em !important;
+    border: 1px solid rgba(136, 136, 136, 0.63);
+    border-radius: 50%;
+    padding: 8px;
+    margin: 0 2%;
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.2em;
+    bottom: 30px;
+    opacity: 0;
+    transition: 1s;
 }
+
+#footerSpan1{
+
+    transition-delay: .1s;
+}
+
+#footerSpan2{
+
+    transition-delay: .3s;
+}
+
+#footerSpan3{
+
+    transition-delay: .6s;
+}
+
+.footerTransition{
+    bottom: 0px;
+    opacity: 1;
+}
+
+
 
 #experience li {
     font-size: 1.2em;
@@ -379,6 +405,8 @@ footer p {
         top: 0em;
     }
 }
+
+
 
 .bounce{
     -webkit-animation: experienceBounce .5s cubic-bezier(.42,0,.2,2) forwards;
@@ -1243,6 +1271,22 @@ div#bottomContainer {
         opacity: 1;
     }
 }
+
+@-webkit-keyframes footerAnimation {
+    from{
+
+        top: 30px;
+        opacity: 0;
+    }
+    to{
+
+        bottom: 0px;
+        opacity: 1;
+
+    }
+}
+
+
 
 .contactHeaderAnimationClass{
     -webkit-animation: contactHeaderAnimate 1.5s forwards;
