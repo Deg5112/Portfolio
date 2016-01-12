@@ -1,8 +1,10 @@
 var paragraphBool = null;
 $(function(){
     checkDistance();
+    scrollSpy();
 
     $('.navbar-nav a, #navDropDown a').click(function(){
+
        var text = $(this).text().toLowerCase();
         smoothScroll(text);
     });
@@ -76,13 +78,13 @@ $(function(){
 
 
     paragraphBool = true;
-    introAnimation();
+
     $('#workSpanUnderline').addClass('aboutHeaderUnderlineClass');
 
 
     $(window).on('scroll touchmove', function(){
-
       checkDistance();
+        scrollSpy();
 
     });
 
@@ -122,16 +124,7 @@ function getInTouchButtonScroll(){
 }
 
 
-function introAnimation(){
-    $('#brandCircle').on('webkitAnimationEnd', function(){
-        console.log('end!');
-        $('#bottomContainer > h2').addClass('introHeaderAnimate');
-        $('#bottomContainer > p').addClass('introParagraphAnimate');
-        $('#bottomContainer > a .btn').addClass('introButtonAnimate');
-    });
 
-    $('#brandCircle').addClass('introAnimate');
-}
 
 function experienceAnimate(){
     $('#experienceSpan').animate({
@@ -158,8 +151,12 @@ function experienceAnimate(){
 function smoothScroll(text){
     var id = '#' + text;
     var offset = $(id).offset().top -100;
-    $('html, body').animate({scrollTop: offset}, 2000);
+    $('html, body').animate({scrollTop: offset}, 2000, function(){
+        $('.navbar-nav li a').removeClass('navActive');
+    });
     $('#navDropDown').removeClass('dropDownActive').addClass('dropDownUnactive');
+
+
 }
 
 
@@ -195,8 +192,8 @@ function smallExperienceAnimate(element){
 }
 
 function checkDistance(){
+    var work = $('#work').offset().top;
     var footer = $('footer').offset().top;
-    console.log('footer offset', footer);
     var experience = $('#experience').offset().top;
     var getInTouch = $('#getInTouch').offset().top;
     var aboutSpanTop = $('#aboutSpan').offset().top;
@@ -207,11 +204,13 @@ function checkDistance(){
     var differenceBetweenExperience = experience - scrollTop;
     var differenceBetweenContact = contact - scrollTop;
     var differenceBetweenFooter = footer - scrollTop;
-    console.log('footer difference', differenceBetweenFooter);
-
+    var differenceBetweenWork = work - scrollTop;
 
 
     if(differenceBetween < 400 && paragraphBool) { //about
+
+        console.log('about');
+
         $('#about h2').addClass('aboutHeaderAnimationClass');
         $('.paragraphContainer .col-md-6:first-child').animate({left: '5%', opacity: 1}, 850, function () {
             $('#line-break').addClass('paragraphBreakAnimationClass');
@@ -221,31 +220,70 @@ function checkDistance(){
             });
         });
         paragraphBool = false;
-
     }
 
     if(differenceBetweenGetInTouch < 615){
         $('#getInTouch p').addClass('getInTouchParagraphAnimationClass');
         $('#getInTouchUnderline').addClass('getInTouchUnderlineAnimationClass');
         $('.glyphicon-arrow-right').addClass('arrowMoveClass');
+
     }
 
     if(differenceBetweenExperience < 400){
         experienceAnimate();
+
     }
 
     if(differenceBetweenContact < 400){
         contactAnimate();
+
     }
     if(differenceBetweenFooter < 697){
-        console.log('whoop!');
         $('footer span').addClass('footerTransition');
+        //$('.nav.navbar-nav li a').
+
     }
 }
 
 function contactAnimate(){
     $('#contact h2').addClass('contactHeaderAnimationClass').css('opacity', 1);
     $('.transition').addClass('formTransition');
+}
+
+function scrollSpy(){
+    var work = $('#work').offset().top;
+    var experience = $('#experience').offset().top;
+    console.log('experience offset', experience);
+    var about = $('#about').offset().top;
+    var contact = $('#contact').offset().top;
+    var scrollTop = $(window).scrollTop()+100;
+    console.log('scrollTop', scrollTop);
+
+
+    if(scrollTop<=work && scrollTop<experience){
+        console.log('work');
+        $('.navbar-nav li a').removeClass('navActive');
+        $('.navbar-nav li:first-child a').addClass('navActive');
+    }
+    if(scrollTop>=experience){
+        console.log('experience');
+
+        $('.navbar-nav li a').removeClass('navActive');
+        $('.navbar-nav li:nth-child(2) a').addClass('navActive');
+    }
+    if(scrollTop>=about && scrollTop<contact){
+        console.log('about');
+
+        $('.navbar-nav li a').removeClass('navActive');
+        $('.navbar-nav li:nth-child(3) a').addClass('navActive');
+    }
+    if(scrollTop>=contact){
+        console.log('contact');
+
+        $('.navbar-nav li a').removeClass('navActive');
+        $('.navbar-nav li:nth-child(4) a').addClass('navActive');
+    }
+
 }
 
 

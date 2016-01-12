@@ -288,6 +288,8 @@ figcaption {
 figure{
     text-align: center;
     margin-bottom: 3%;
+    overflow: hidden;
+    width: 100%;
 }
 
 div#modalParagraphContainer {
@@ -321,6 +323,11 @@ form .btn {
 footer {
     background-color: black;
     color: white;
+}
+
+footer p{
+    margin: 0 !important;
+    padding: 8px;
 }
 
 footer .col-md-4 {
@@ -663,7 +670,7 @@ span#aboutSpan {
 
 .project{
     position: relative;
-    width: 100%;
+    width: 120%;
     height: 250px;
 }
 
@@ -726,8 +733,8 @@ span#contactSpanUnderline {
     -webkit-transform: scale(0);
 }
 
-ul.nav.navbar-nav li:first-child {
-    background-color: rgba(245, 252, 255, 0.53);
+.navActive{
+    background-color: #eeeeee;
 }
 
 
@@ -763,7 +770,7 @@ section#aboutSection {
     /*height: 480px;*/
     font-family: sans-serif;
     font-weight: 300;
-    padding: 12% 0;
+    padding: 8% 0;
 }
 
 div#about .row:first-child {
@@ -1030,32 +1037,35 @@ div#bottomContainer {
     color: white;
     text-shadow: -2px 1px black;
     text-align: center;
+    width: 100vw;
+    padding: 0 15px;
 }
 
 #bottomContainer h2 {
-    font-size: 5vw;
+    font-size: 4.3em;
     position: relative;
     opacity: 0;
-    right: 300px;
-    bottom: 10px;
 }
 
 #bottomContainer p {
-    font-size: 2.4vw;
+    font-size: 1.7em;
     position: relative;
     opacity: 0;
-    left: 200px;
 }
 
 #bottomContainer a .btn {
     opacity: 0;
     color: white;
-    background-color: black;
-    font-size: 2.2vw;
+    background-color: #201F1F;
+    font-size: 2em;
     padding: 1% 4%;
     border-radius: 100px;
     position: relative;
     outline-style: none;
+}
+
+#bottomContainer a .btn:hover{
+    cursor: pointer;
 }
 /*brand circle animation*/
 @-webkit-keyframes boxShrink {
@@ -1149,11 +1159,11 @@ div#bottomContainer {
 
 @-webkit-keyframes introParagraphAnimate {
     from{
-        left: 200px;
+        left: 100%;
         opacity: 0;
     }
     to{
-        left: 0px;
+        left: 0;
         opacity: 1;
     }
 }
@@ -1164,7 +1174,7 @@ div#bottomContainer {
         opacity: 0;
     }
     to{
-        top: 50px;
+        top: 25px;
         opacity: 1;
     }
 }
@@ -1346,34 +1356,36 @@ div#bottomContainer {
     .navbar-brand{
         margin-left: 15px;
     }
+
+    div#landingContainer{
+        background-position: 32%, 50%;
+    }
     div#bottomContainer {
         position: absolute;
-        left: 50%;
-        top: 50%;
         -webkit-transform: translate(-50%, -40%);
         color: white;
         text-shadow: -2px 1px black;
         text-align: center;
-        width: 78vw;
+        width: 100vw;
     }
     #bottomContainer h2 {
-        font-size: 10vw;
+        font-size: 3.7em;
         position: relative;
         opacity: 0;
-        right: 300px;
-        bottom: 20px;
+
     }
     #bottomContainer p {
-        font-size: 3.4vw;
+        font-size: 1.7em;
         position: relative;
         opacity: 0;
-        left: 200px;
+
     }
+
     #bottomContainer a .btn {
         opacity: 0;
         color: white;
-        background-color: black;
-        font-size: 5.2vw;
+        background-color: #201F1F;
+        font-size: 2em;
         padding: 1% 4%;
         border-radius: 100px;
         position: relative;
