@@ -288,8 +288,13 @@ figcaption {
 figure{
     text-align: center;
     margin-bottom: 3%;
-    overflow: hidden;
+    /*overflowY: hidden;*/
     width: 100%;
+}
+
+div#imgDiv {
+    /*border: 1px solid black;*/
+    overflow: hidden;
 }
 
 div#modalParagraphContainer {
