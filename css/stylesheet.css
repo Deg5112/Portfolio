@@ -1294,10 +1294,11 @@ div#bottomContainer {
 @-webkit-keyframes getInTouchParagraphAnimation {
     from{
 
-        bottom: -2em;
+        -webkit-transform: translateY(150%);
         opacity: 0;
     }
     to{
+        -webkit-transform: translateY(0);
 
         bottom: 0em;
         opacity: 1;
