@@ -1,13 +1,12 @@
 <?php
 require_once('email_config.default.php');
 require('phpmailer/PHPMailer/PHPMailerAutoload.php');
+//TODO try ob_start, or whatever, set SMTPDebug to 0;
 $name = $_POST['name'];
 $email = $_POST['email'];
 $message = $_POST['message'];
-$phone1 = $_POST['phone1'];
-$phone2 = $_POST['phone2'];
-$phone3 = $_POST['phone3'];
 
+ob_start();
 $mail = new PHPMailer;
 $mail->SMTPDebug = 3;                               // Enable verbose debug output
 
@@ -59,9 +58,24 @@ $link1 $link2
 $mail->AltBody = $message;
 
 if(!$mail->send()) {
-    echo 'Message could not be sent.';
-    echo 'Mailer Error: ' . $mail->ErrorInfo;
+    $outputBuffer = ob_get_contents();
+    ob_end_clean();
+    $response  = [
+        'success'=>false,
+        'buffer'=>$outputBuffer
+    ];
+
 } else {
-    echo 'Message has been sent';
+    $outputBuffer = ob_get_contents();
+    ob_end_clean();
+    $response  = [
+        'success'=>true,
+        'buffer'=>$outputBuffer
+    ];
+
 }
+
+print(json_encode($response));
+
 ?>
+
