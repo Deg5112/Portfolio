@@ -132,6 +132,8 @@ function experienceAnimate(){
                     $('#experience .col-md-4:nth-child(2) .container-fluid').addClass('addHeight2');
                     $('#experience .col-md-4:nth-child(3) .container-fluid').addClass('addHeight3');
                 }, 770);
+            }else{
+                $('#experience .col-md-4').addClass('bounce');
             }
         });
     });
@@ -201,10 +203,10 @@ function checkDistance(){
 
         $('#about h2').addClass('aboutHeaderAnimationClass');
         $('.paragraphContainer .col-md-6:first-child').addClass('leftParagraphAnimationClass').animate({opacity: 1}, 850, function () {
-            $('#line-break').addClass('paragraphBreakAnimationClass');
 
             $('.paragraphContainer .col-md-6:nth-child(2)').addClass('rightParagraphAnimationClass').animate({opacity: '1'}, 700, function(){
                 $('#aboutSpanUnderline').addClass('aboutHeaderUnderlineClass');
+                $('#line-break').addClass('paragraphBreakAnimationClass');
             });
         });
         paragraphBool = false;

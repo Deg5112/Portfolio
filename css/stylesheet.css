@@ -196,13 +196,13 @@ span.glyphicon.glyphicon-arrow-down {
 
 .transition{
     position: relative;
-    top: 100px;
     opacity: 0;
     transition: 2s;
+    -webkit-transform: translateY(50%);
 }
 
 .formTransition{
-    top: 0;
+    -webkit-transform: translateY(0);
     opacity: 1;
 }
 
@@ -347,7 +347,7 @@ footer span {
     padding: 8px;
     margin: 0 2%;
     position: relative;
-    bottom: 30px;
+    -webkit-transform: translateY(-100%);
     opacity: 0;
     transition: 1s;
 }
@@ -368,7 +368,7 @@ footer span {
 }
 
 .footerTransition{
-    bottom: 0px;
+    -webkit-transform: translateY(0);
     opacity: 1;
 }
 
@@ -461,6 +461,9 @@ h5 {
     }
 }
 
+#experience .row {
+    margin-top: 1%;
+}
 
 .transformClass{
     -webkit-animation: experienceUnderlineAnimation 1.4s forwards;
@@ -506,6 +509,7 @@ h5 {
         height: 195px;
     }
 }
+
 
 .addHeight2{
     -webkit-animation:experienceHeightAnimation2 .5s forwards ;
@@ -671,6 +675,8 @@ span#aboutSpan {
 
 #about h2{
     opacity: 0;
+    left: 0;
+
 }
 
 
@@ -681,13 +687,14 @@ span#aboutSpan {
 }
 
 .slide{
-  position: relative;
     -webkit-transition: 0.7s;
 }
 
+
+
 .slide.ng-enter{
    opacity: 0;
-    left: -100px;
+    -webkit-transform: translateX(-50%);
 }
 
 .slide.ng-enter-stagger{
@@ -697,18 +704,18 @@ span#aboutSpan {
 
 .slide.ng-enter-active{
     opacity: 1;
-    left: 0;
+    -webkit-transform: translateX(0);
     -webkit-transition-timing-function: cubic-bezier(.21,1.28,.71,1.43);
 }
 
 .slide.ng-leave {
     opacity: 1;
-    left: 0;
+    -webkit-transform: translateX(0);
 }
 
 .slide.ng-leave-active{
     opacity: 0;
-    left: -300px;
+    -webkit-transform: translateX(-50%);
 }
 
 #contact .row:nth-child(2) .col-md-6 {
@@ -1186,11 +1193,12 @@ div#bottomContainer {
 
 @-webkit-keyframes aboutHeaderAnimation {
     from{
-        margin-top: 40px;
+        -webkit-transform: translateY(150%);
         opacity: 0;
     }
     to{
-        margin-top: 0;
+        -webkit-transform: translateY(0);
+
         opacity: 1;
     }
 }
@@ -1217,11 +1225,11 @@ div#bottomContainer {
 }
 
 .rightParagraphAnimationClass{
-    -webkit-animation: rightAboutParagraphAnimation 2s forwards;
+    -webkit-animation: rightAboutParagraphAnimation 1.4s forwards;
 }
 
 .leftParagraphAnimationClass{
-    -webkit-animation: leftAboutParagraphAnimation   2s forwards;
+    -webkit-animation: leftAboutParagraphAnimation   1.6s forwards;
 }
 
 
@@ -1235,7 +1243,7 @@ div#bottomContainer {
 }
 
 .leftParagraphAnimationClass{
-    -webkit-animation: leftAboutParagraphAnimation cubic-bezier(.72,1.31,.74,1.35) 2s forwards;
+    -webkit-animation: leftAboutParagraphAnimation cubic-bezier(.72,1.31,.74,1.35) 1.2s forwards;
 }
 
 @-webkit-keyframes lineBreakAnimation {
@@ -1299,11 +1307,11 @@ div#bottomContainer {
 
 @-webkit-keyframes contactHeaderAnimate {
     from{
-        top: 150px;
+        -webkit-transform: translateY(50%);
         opacity: 0;
     }
     to{
-        top: 0px;
+        -webkit-transform: translateY(0);
         opacity: 1;
     }
 }
@@ -1417,6 +1425,10 @@ div#bottomContainer {
         position: relative;
         outline-style: none;
     }
+}
+
+#contact h2{
+    left: 0;
 }
 
 @media screen and (max-width: 992px) {
