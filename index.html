@@ -48,19 +48,23 @@
     $(function(){
         $(window).load(function(){
             $('#loading').fadeOut();
+            introAnimation();
         });
-        introAnimation();
+
     });
 
     function introAnimation(){
-        $('#brandCircle').on('webkitAnimationEnd', function(){
-            console.log('end!');
-            $('#bottomContainer > h2').addClass('introHeaderAnimate');
-            $('#bottomContainer > p').addClass('introParagraphAnimate');
-            $('#bottomContainer > a .btn').addClass('introButtonAnimate');
-        });
+        setTimeout(function(){
+            $('#brandCircle').on('webkitAnimationEnd', function(){
+                console.log('end!');
+                $('#bottomContainer > h2').addClass('introHeaderAnimate');
+                $('#bottomContainer > p').addClass('introParagraphAnimate');
+                $('#bottomContainer > a .btn').addClass('introButtonAnimate');
+            });
 
-        $('#brandCircle').addClass('introAnimate');
+            $('#brandCircle').addClass('introAnimate');
+        },1000);
+
     }
 
 
