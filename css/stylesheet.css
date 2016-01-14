@@ -396,7 +396,7 @@ footer span {
 #experience .col-md-4 {
     position: relative;
     margin-top: 1em;
-    top: 2em;
+    -webkit-transform: translateY(100%);
 }
 
 #experience .col-md-4:nth-child(2){
@@ -411,10 +411,11 @@ footer span {
 
 @-webkit-keyframes experienceBounce {
     from{
-        top: 2em;
+        -webkit-transform: translateY(100%);
+
     }
     to{
-        top: 0em;
+        -webkit-transform: translateY(0);
     }
 }
 
@@ -744,15 +745,14 @@ span#contactSpanUnderline {
 
 
 .paragraphContainer .col-md-6:first-child{
-    left: -100%;
+    transform: translateX(-105%);
     opacity: 0;
 }
 
 .paragraphContainer .col-md-6:nth-child(2){
     /*position: relative;*/
     opacity: 0;
-    right: -100%;
-
+    transform: translateX(105%);
 }
 
 
@@ -1206,15 +1206,36 @@ div#bottomContainer {
     }
 }
 
-@-webkit-keyframes leftAboutParagraphAnimation {
+
+@-webkit-keyframes rightAboutParagraphAnimation {
     from{
-        right: -100px;
-        opacity: 0;
+        transform: translateX(105%);
     }
     to{
-        right: 0px;
-        opacity: 1;
+        transform: translateX(0);
     }
+}
+
+.rightParagraphAnimationClass{
+    -webkit-animation: rightAboutParagraphAnimation 2s forwards;
+}
+
+.leftParagraphAnimationClass{
+    -webkit-animation: leftAboutParagraphAnimation   2s forwards;
+}
+
+
+@-webkit-keyframes leftAboutParagraphAnimation {
+    from{
+        transform: translateX(-105%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+.leftParagraphAnimationClass{
+    -webkit-animation: leftAboutParagraphAnimation cubic-bezier(.72,1.31,.74,1.35) 2s forwards;
 }
 
 @-webkit-keyframes lineBreakAnimation {

@@ -200,10 +200,10 @@ function checkDistance(){
         console.log('about');
 
         $('#about h2').addClass('aboutHeaderAnimationClass');
-        $('.paragraphContainer .col-md-6:first-child').animate({left: '5%', opacity: 1}, 850, function () {
+        $('.paragraphContainer .col-md-6:first-child').addClass('leftParagraphAnimationClass').animate({opacity: 1}, 850, function () {
             $('#line-break').addClass('paragraphBreakAnimationClass');
-            $('.paragraphContainer .col-md-6:first-child').animate({left: '0%'}, 325);
-            $('.paragraphContainer .col-md-6:nth-child(2)').animate({right: '0%', opacity: '1'}, 700, function(){
+
+            $('.paragraphContainer .col-md-6:nth-child(2)').addClass('rightParagraphAnimationClass').animate({opacity: '1'}, 700, function(){
                 $('#aboutSpanUnderline').addClass('aboutHeaderUnderlineClass');
             });
         });
