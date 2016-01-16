@@ -840,7 +840,6 @@ div#about p{
 
 header {
     position: fixed;
-    height: 68px;
     width: 100%;
     z-index: 300;
 }
@@ -920,6 +919,7 @@ div#navDropDown ul {
 
 div#nav-collapse {
     height: 100% !important;
+    position: relative;
 }
 .navbar-toggle{
     border: 1px solid rgb(0, 0, 0);
@@ -939,6 +939,7 @@ nav .container-fluid:first-child{
     float: left;
     height: 100%;
     background-color: black;
+    padding: 14.7px 15px !important;
 
 }
 
@@ -964,7 +965,7 @@ ul.nav.navbar-nav li a:hover {
     font-size: 1.2em;
     height: 100%;
     line-height: 48px;
-    padding: 10px 25px;
+    padding: 7px 25px;
 }
 
 nav#navbar{
@@ -1025,12 +1026,9 @@ div#landingContainer {
     position: relative;
     height: 100%;
     background-size: cover;
-    font-family: sans-serif;
+    font-family: 'Abril Fatface', cursive;
 }
 
-#bottomContainer a .btn:hover {
-    background-color: #fc5a2f;
-}
 
 
 div#bottomContainer {
@@ -1038,7 +1036,7 @@ div#bottomContainer {
     left: 50%;
     top: 50%;
     -webkit-transform: translate(-50%, -26%);
-    color: black;
+    color: #AA9868;
 }
 
 div#bottomContainer {
@@ -1046,7 +1044,7 @@ div#bottomContainer {
     left: 50%;
     top: 50%;
     -webkit-transform: translate(-50%, -40%);
-    color: white;
+    color: #AA9868;
     text-shadow: -2px 1px black;
     text-align: center;
     width: 100vw;
@@ -1063,12 +1061,14 @@ div#bottomContainer {
     font-size: 1.7em;
     position: relative;
     opacity: 0;
+    padding-top: 13%;
+    font-family: Roboto;
 }
 
 #bottomContainer a .btn {
     opacity: 0;
-    color: white;
-    background-color: #201F1F;
+    color: #010204;
+    background-color: #DDD6D3;
     font-size: 2em;
     padding: 1% 4%;
     border-radius: 100px;
@@ -1078,6 +1078,9 @@ div#bottomContainer {
 
 #bottomContainer a .btn:hover{
     cursor: pointer;
+    background-color: #010204;
+    color: white;
+    border-color: #DDD6D3;
 }
 /*brand circle animation*/
 @-webkit-keyframes boxShrink {
@@ -1182,11 +1185,11 @@ div#bottomContainer {
 
 @-webkit-keyframes introButtonAnimate {
     from{
-        top: 100px;
+        -webkit-transform: translateY(0);
         opacity: 0;
     }
     to{
-        top: 25px;
+        -webkit-transform: translateY(-218%);
         opacity: 1;
     }
 }
@@ -1394,11 +1397,12 @@ div#bottomContainer {
 
     div#landingContainer{
         background-position: 32%, 50%;
+        font-family: 'Abril Fatface', cursive;
     }
     div#bottomContainer {
         position: absolute;
         -webkit-transform: translate(-50%, -40%);
-        color: white;
+        color: #AA9868;
         text-shadow: -2px 1px black;
         text-align: center;
         width: 100vw;
@@ -1425,6 +1429,7 @@ div#bottomContainer {
         border-radius: 100px;
         position: relative;
         outline-style: none;
+        transform: translateY(-218%);
     }
 }
 
