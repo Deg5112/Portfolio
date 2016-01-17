@@ -52,14 +52,25 @@ span.glyphicon.glyphicon-remove {
 #modal p {
     color: white;
     line-height: 1.4em;
+    font-family: times;
+    font-size: 1.2em;
 }
 
 #modal .container {
 
 }
 
+::-webkit-scrollbar {
+    background-color: #BFBFBF;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
 #modal .row {
-    max-height: 600px;
+    max-height: 480px;
 }
 
 
@@ -308,8 +319,8 @@ div#imgDiv {
 div#modalParagraphContainer {
     position: relative;
     /*padding-top: 3em;*/
-    width: 85%;
-    margin: 0 auto;
+    width: 70%;
+    margin-left: 5%;
 
 }
 
