@@ -89,7 +89,7 @@ a{
 .workbtn {
     background-color: white;
     color: black;
-    box-shadow: 0px 2px 11px -2px black;
+    box-shadow: 2px 5px 23px -6px rgba(0, 0, 0, 0.63);
     font-family: sans-serif;
     text-align: center;
 }
@@ -102,6 +102,8 @@ a{
 
 .btnthree {
     border-radius: 0 5px 5px 0 !important;
+    color: black !important;
+
 
 }
 
@@ -109,25 +111,40 @@ a{
     border-radius: 0 5px 5px 0 !important;
     background-color: #4ea74e !important;
     border-color: #4ea74e !important;
+    color:white !important;
+
+}
+
+#work .btn-group:nth-child(2) button {
+    width: 32.51%;
+    margin: 0 -.5%;
+}
+#work .btn-group:nth-child(2) {
+    width: 100%;
 }
 
 .btntwo {
     border-radius: 0 0 0 0 !important;
+    color: black !important;
 }
 
 .btntwo:hover {
     background-color: #3db3d7 !important;
     border-color: #3db3d7 !important;
+    color:white !important;
+
+
 }
 
 .btnone {
     border-radius: 5px 0 0 5px !important;
+    color: black !important;
+
 }
 .btnone:hover {
     background-color: rgba(134, 134, 134, 0.7) !important ;
-    color:white;
+    color:white !important;
     border-radius: 5px 0 0 5px !important;
-    border-color: rgba(134, 134, 134, 0.7) !important ;
 }
 
 figcaption .col-xs-4 {
@@ -266,7 +283,6 @@ form{
 #contact p {
     font-size: 1.3em;
     text-align: center;
-    font-family: sans-serif;
     text-align: center;
     margin: 4% auto 3% auto;
     width: 80%;
@@ -279,7 +295,6 @@ a:link {
 
 figcaption {
     color: black;
-    font-family: sans-serif;
     font-size: 1.2em;
     width: 100%;
     margin: 0 auto;
@@ -295,6 +310,7 @@ figure{
 div#imgDiv {
     /*border: 1px solid black;*/
     overflow: hidden;
+    height: 250px;
 }
 
 div#modalParagraphContainer {
@@ -436,7 +452,6 @@ div#smallDiv {
 h5 {
     font-size: 1.45em;
     color: rgba(0, 0, 0, 0.63);
-    font-family: sans-serif;
     width: 200px;
 
 }
@@ -551,17 +566,25 @@ h5 {
     padding-bottom: 1%;
 }
 
+#work h2 {
+    margin-bottom: 2%;
+}
+
 section#work button:hover {
     cursor: pointer;
-    background-color: #fc5a2f;
     color: white;
-    border-color: #fc5a2f;
+    background-color: rgba(4, 77, 90, 0.85);
 }
 
-#work button {
+#work .btn-group button {
     outline: none;
+    width: 25%;
+    color: white;
 }
 
+.btn-group:first-child {
+    width: 100%;
+}
 
 
 #firstButton {
@@ -574,22 +597,31 @@ section#work button:hover {
 
 section#getInTouch {
     background-color: black;
-    padding: 3% 0;
-    font-family: sans-serif;
     color: white;
     position: relative;
 }
 
+#getInTouch .col-xs-7, #getInTouch .col-xs-4 {
+    padding: 3% 0;
+}
+
+
 
 #getInTouch button {
     color: white;
-    width: 39%;
-    padding: 2%;
-    font-family: sans-serif;
+    padding: 1vw;
     border-color: #737373;
     border-radius: 5px;
-    font-size: 1.3em;
+    font-size: 1.2em;
+    top: .3em;
 
+}
+
+#getInTouch .col-xs-4 {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 section#getInTouch span {
@@ -598,25 +630,13 @@ section#getInTouch span {
 
 
 
-span#getInTouchUnderline {
-    position: absolute;
-    background-color: white;
-    border: 1px solid white;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 6.2em;
-    -webkit-transform-origin: 0 0;
-
-}
-
-
 
 section#getInTouch p {
+    font-family: 'Abril Fatface', cursive;
     font-size: 1.5em;
     position: relative;
-    left: 4em;
     opacity: 0;
+    padding-top: .5em;
 
 }
 
@@ -627,12 +647,10 @@ button:focus {
 
 
 .buttonActive{
-    background-color: #fc5a2f;
+    background-color: rgba(4, 77, 90, 0.85);
     color: white;
     width: 100%;
-    padding: 5%;
-    font-family: sans-serif;
-    border-color: #fc5a2f;
+    padding: 2%;
 }
 
 
@@ -640,8 +658,7 @@ button:focus {
     background-color: #171717;
     color: white;
     width: 100%;
-    padding: 5%;
-    font-family: sans-serif;
+    padding: 2%;
     border-color: #737373;
 }
 
@@ -680,10 +697,19 @@ span#aboutSpan {
 }
 
 
+
+
 .project{
     position: relative;
     width: 120%;
-    height: 250px;
+    -webkit-filter: grayscale(.85);
+    height: 110%;
+    transition: .3s;
+}
+
+.projectAnimate{
+    -webkit-filter: grayscale(0);
+    -webkit-transform: translate(-7%, -7%);
 }
 
 .slide{
@@ -747,7 +773,7 @@ span#contactSpanUnderline {
 }
 
 .navActive{
-    background-color: #eeeeee;
+    background-color: rgba(236, 233, 233, 0.5);
 }
 
 
@@ -780,7 +806,6 @@ section#aboutSection {
     background-color: white;
     position: relative;
     /*height: 480px;*/
-    font-family: sans-serif;
     font-weight: 300;
     padding: 10% 0;
 }
@@ -809,7 +834,6 @@ div#about .row .col-md-12 {
 }
 
 h2{
-    font-family: sans-serif;
     position: relative;
     font-weight: 300;
     -webkit-transform: translateX(-50%);
@@ -829,13 +853,12 @@ span#workSpanUnderline {
     -webkit-transform: scale(0);
 }
 
-div#about p{
+div#about p {
     position: relative;
     text-align: left;
-    font-family: sans-serif;
-    font-size: 1.3em;
-    line-height: 1.6em;
-
+    font-size: 1.4em;
+    line-height: 1.4em;
+    font-family: times;
 }
 
 header {
@@ -906,7 +929,7 @@ div#navDropDown ul {
 }
 
 .dropDownActive{
-    top: 100% !important;
+    top: 70% !important;
 }
 
 .dropDownUnactive{
@@ -939,8 +962,9 @@ nav .container-fluid:first-child{
     float: left;
     height: 100%;
     background-color: black;
-    padding: 14.7px 15px !important;
-
+    padding: .92em 1em !important;
+    font-size: 1.3em;
+    font-family: 'Abril Fatface', cursive;
 }
 
 /*TODO left off with fonts and stuff*/
@@ -959,8 +983,8 @@ ul.nav.navbar-nav {
 }
 
 ul.nav.navbar-nav li a:hover {
-    background-color: rgba(15, 33, 33, 0.63);
-    color: #FFFFFF !important;
+    background-color: rgba(236, 233, 233, 0.5);
+    color: black !important;
 }
 
 .navbar-nav>li>a {
@@ -968,7 +992,8 @@ ul.nav.navbar-nav li a:hover {
     font-size: 1.2em;
     height: 100%;
     line-height: 48px;
-    padding: 7px 25px;
+    padding: .5em 2em;
+    font-family: times, sans-serif;
 }
 
 nav#navbar{
@@ -1146,7 +1171,6 @@ div#bottomContainer {
         width: 85px;
         height: 85px;
         font-size: 30px;
-        border: 2px solid rgba(255, 255, 255, 0.5);
     }
 
 
@@ -1157,7 +1181,6 @@ div#bottomContainer {
         width: 85px;
         height: 85px;
         font-size: 30px;
-        border: 2px solid rgba(255, 255, 255, .78);
     }
 }
 
@@ -1462,11 +1485,6 @@ div#bottomContainer {
 
     }
 
-    #work .row:first-child button{
-        padding: 1em;
-        border-radius: 5px !important;
-    }
-
     .filterContainer .row > .col-md-3 {
         margin: 0;
     }
@@ -1477,15 +1495,7 @@ div#bottomContainer {
 
     }
 
-    .btnone, .btnone:hover{
-        border-radius: 0px 0px 5px 5px !important;
-    }
-    .btntwo, .btntwo:hover{
-        border-radius: 0px 0px 5px 5px !important;
-    }
-    .btnthree, .btnthree:hover{
-        border-radius: 0px 0px 5px 5px !important;
-    }
+
 }
 
 @media screen and (max-width: 768px) {

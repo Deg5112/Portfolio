@@ -2,11 +2,15 @@ var paragraphBool = null;
 $(function(){
     checkDistance();
     scrollSpy();
+    $('#navDropDown').fadeOut();
 
     $('.navbar-nav a, #navDropDown a').click(function(){
+
         var text = $(this).text().toLowerCase();
         smoothScroll(text);
     });
+
+
 
 
 
@@ -43,6 +47,7 @@ $(function(){
     });
 
 
+
     $('form button').on('click tap', function(){
        var name = $('form .form-group:first-child input').val();
         var email = $('form .form-group:nth-child(2) input').val();
@@ -75,7 +80,6 @@ $(function(){
     $(window).on('scroll touchmove', function(){
       checkDistance();
         scrollSpy();
-
     });
 
     $(document).on("scrollstop",function(event){
@@ -86,17 +90,19 @@ $(function(){
     $(window).resize(function(){
         var width = window.innerWidth;
         if(width>767){
-            $('#navDropDown').removeClass('dropDownActive').addClass('dropDownUnactive');
+            $('#navDropDown').removeClass('dropDownActive').addClass('dropDownUnactive').fadeOut();
         }
     });
 
 
     $('.navbar-toggle').on('click tap', function(){
+
         var elClass = $('#navDropDown').attr('class');
+
         if(elClass !== 'dropDownActive'){
-            $('#navDropDown').removeClass('dropDownUnactive').addClass('dropDownActive');
+            $('#navDropDown').removeClass('dropDownUnactive').fadeIn().addClass('dropDownActive');
         }else{
-            $('#navDropDown').removeClass('dropDownActive').addClass('dropDownUnactive');
+            $('#navDropDown').removeClass('dropDownActive').addClass('dropDownUnactive').fadeOut();
         }
 
     });
@@ -197,6 +203,7 @@ function checkDistance(){
     var differenceBetweenWork = work - scrollTop;
 
 
+
     if(differenceBetween < 400 && paragraphBool) { //about
 
         console.log('about');
@@ -228,7 +235,7 @@ function checkDistance(){
         contactAnimate();
 
     }
-    if(differenceBetweenFooter < 697){
+    if(differenceBetweenFooter < 900){
         $('footer span').addClass('footerTransition');
         //$('.nav.navbar-nav li a').
 

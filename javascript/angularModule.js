@@ -31,6 +31,26 @@ app.controller('workController', function($scope, $log, getScrollTopService){
         self.modalImg = null;
         self.modalTitle = null;
         self.modalSrc = null;
+        self.dynamicClass = null;
+
+        self.addPicClass = function(event){
+            $('project').removeClass('projectAnimate');
+            $(event.target).addClass('projectAnimate');
+
+        };
+
+        self.removePicClass = function(){
+            $(event.target).removeClass('projectAnimate');
+        };
+
+
+        self.changePicBool = function(){
+            if(self.picAnimateBool){
+                self.picAnimateBool = false;
+            }else{
+                self.picAnimateBool = true;
+            }
+        };
 
         self.modalRemove = function(){
             console.log('span clicked!!');
