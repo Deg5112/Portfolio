@@ -108,48 +108,74 @@
         </div><!--row end-->
 
         <div class="row imgRow" >
+
             <div class="col-xs-12 col-sm-6 col-md-4 imgCol slide" ng-repeat="i in wC.imgArray | filter:wC.filter" >
-                <a ng-href="{{i.href}}" rel="external">
-                <figure>
-                    <h4>{{i.title}}</h4>
-               <div id="imgDiv"> <img class='project' ng-src="images/{{i.src}}" ng-mouseover="wC.addPicClass($event)" ng-mouseleave="wC.removePicClass()" ng-class="wC.dynamicClass"></div>
-                    <figcaption>
-                        <div class="row">
-                            <div class="btn-group">
-                                <a href="{{i.git}}" rel="external"><button class=' btn btnone workbtn' type="button"><span class="fa fa-github btngit"></span>view code</button></a>
+
+                    <a ng-href="{{i.href}}" rel="external">
+                    <figure>
+                        <h4>{{i.title}}</h4>
+                   <div id="imgDiv"> <img class='project' ng-src="images/{{i.src}}" ng-mouseover="wC.addPicClass($event)" ng-mouseleave="wC.removePicClass()" ng-class="wC.dynamicClass"></div>
+                        <figcaption>
+                            <div class="row">
+                                <div class="btn-group">
+                                    <a href="{{i.git}}" rel="external"><button class=' btn btnone workbtn' type="button"><span class="fa fa-github btngit"></span>view code</button></a>
 
 
-                                <a href="#>"><button class=' btn btntwo workbtn' type="button" ng-click="wC.openModal($index)">About</button></a>
+                                    <a href="#>"><button class=' btn btntwo workbtn' type="button" ng-click="wC.openModal($index, $event)">About</button></a>
 
 
-                                <a href="{{i.href}}" rel="external"><button class=' btn btnthree workbtn' type="button">Demo</button></a>
+                                    <a href="{{i.href}}" rel="external"><button class=' btn btnthree workbtn' type="button">Demo</button></a>
+                                </div>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    </a>
+
+                    <div id='modal' class="helloModal" ng-class="wC.modalActive ? 'modalShowClass' : 'modalHideClass'" ng-click="wC.modalRemove()">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img ng-src="{{wC.modalSrc}}">
+                                </div>
+                                <div class="col-md-6">
+
+                                    <div id="modalParagraphContainer">
+                                        <span class="glyphicon glyphicon-remove"></span>
+                                        <h2>{{wC.modalTitle}}</h2>
+                                        <p>{{wC.modalText1}}</p>
+                                        <p>{{wC.modalText2}}</p>
+                                        <p>{{wC.modalText3}}</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </figcaption>
-                </figure>
-                </a>
-            </div>
+                    </div>
+
+            </div><!--repeat end-->
+
+            <!-- hidden modal.. each images gets a hidden modal-->
+
         </div><!--row end-->
 
-        <div id='modal' ng-class="wC.modalActive ? 'modalShowClass' : 'modalHideClass'" ng-click="wC.modalRemove()">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <img ng-src="{{wC.modalSrc}}">
-                    </div>
-                    <div class="col-md-6">
-                        <span class="glyphicon glyphicon-remove"></span>
+        <!--<div id='modal' ng-class="wC.modalActive ? 'modalShowClass' : 'modalHideClass'" ng-click="wC.modalRemove()">-->
+            <!--<div class="container">-->
+                <!--<div class="row">-->
+                    <!--<div class="col-md-6">-->
+                        <!--<img ng-src="{{wC.modalSrc}}">-->
+                    <!--</div>-->
+                    <!--<div class="col-md-6">-->
+                        <!--<span class="glyphicon glyphicon-remove"></span>-->
 
-                        <div id="modalParagraphContainer">
-                            <h2>{{wC.modalTitle}}</h2>
-                            <p>{{wC.modalText1}}</p>
-                            <p>{{wC.modalText2}}</p>
-                            <p>{{wC.modalText3}}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                        <!--<div id="modalParagraphContainer">-->
+                            <!--<h2>{{wC.modalTitle}}</h2>-->
+                            <!--<p>{{wC.modalText1}}</p>-->
+                            <!--<p>{{wC.modalText2}}</p>-->
+                            <!--<p>{{wC.modalText3}}</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
 
 
 
