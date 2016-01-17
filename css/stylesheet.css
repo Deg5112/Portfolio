@@ -492,7 +492,7 @@ h5 {
     -webkit-transform: scale(1);
     -webkit-transform-origin: 50% 0;
     background-color: white;
-    box-shadow: 0px 0px 10px black;
+    box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.3);
     height: 60px;
     overflow: hidden;
     position: relative;
@@ -1005,7 +1005,7 @@ nav#navbar{
 
 ul.nav.navbar-nav li {
     background-color: white;
-    border: 1px solid #dcdcdc;
+    border: 1px solid rgba(220, 220, 220, 0.21);
     height: 100%;
     cursor: pointer;
 }
@@ -1057,6 +1057,15 @@ div#landingContainer {
     font-family: 'Abril Fatface', cursive;
 }
 
+figure h4 {
+    color: rgba(0, 0, 0, 0.74);
+    font-family: 'Roboto';
+}
+
+
+h2 {
+    font-family: 'Abril Fatface', cursive;
+}
 
 
 div#bottomContainer {
