@@ -943,6 +943,8 @@ nav .container-fluid:first-child{
 
 }
 
+/*TODO left off with fonts and stuff*/
+
 .navbar-brand span {
     color: white;
     background-color: black;
@@ -957,7 +959,8 @@ ul.nav.navbar-nav {
 }
 
 ul.nav.navbar-nav li a:hover {
-    background-color: #fc5a2f;
+    background-color: rgba(15, 33, 33, 0.63);
+    color: #FFFFFF !important;
 }
 
 .navbar-nav>li>a {
@@ -998,7 +1001,7 @@ div#brandCircle {
     left: 50%;
     top: 50%;
     -webkit-transform: translate(-50%,-50%);
-    box-shadow: 1px 1px 1px 800px black;
+    box-shadow: 1px 1px 1px 100vw black;
     background-color: black;
     font-size: 50px;
 }
@@ -1042,7 +1045,7 @@ div#bottomContainer {
 div#bottomContainer {
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 53%;
     -webkit-transform: translate(-50%, -40%);
     color: #AA9868;
     text-shadow: -2px 1px black;
@@ -1055,14 +1058,15 @@ div#bottomContainer {
     font-size: 4.3em;
     position: relative;
     opacity: 0;
+    margin-bottom: .5em;
 }
 
 #bottomContainer p {
     font-size: 1.7em;
     position: relative;
     opacity: 0;
-    padding-top: 13%;
     font-family: Roboto;
+    top: 2.7em;
 }
 
 #bottomContainer a .btn {
@@ -1070,7 +1074,7 @@ div#bottomContainer {
     color: #010204;
     background-color: #DDD6D3;
     font-size: 2em;
-    padding: 1% 4%;
+    padding: 0.5% 3%;
     border-radius: 100px;
     position: relative;
     outline-style: none;
@@ -1086,7 +1090,7 @@ div#bottomContainer {
 @-webkit-keyframes boxShrink {
     0%{
         top: 50%;
-        box-shadow: 1px 1px 1px 800px black;
+        box-shadow: 1px 1px 1px 100vw black;
         background-color: black;
         width: 145px;
         height: 145px;
@@ -1095,7 +1099,7 @@ div#bottomContainer {
 
     10%{
         top: 50%;
-        box-shadow: 1px 1px 1px 800px black;
+        box-shadow: 1px 1px 1px 100vw black;
         background-color: black;
         width: 145px;
         height: 145px;
@@ -1104,7 +1108,7 @@ div#bottomContainer {
 
     15%{
         top: 50%;
-        box-shadow: 1px 1px 1px 300px black;
+        box-shadow: 1px 1px 1px 30vw black;
         background-color: black;
         width: 145px;
         height: 145px;
@@ -1113,11 +1117,12 @@ div#bottomContainer {
 
     25%{
         top: 50%;
-        box-shadow: 1px 1px 1px 0 black;
+        box-shadow: 1px 1px 1px 0vw black;
         background-color: black;
         width: 145px;
         height: 145px;
         font-size: 50px;
+
     }
 
 
@@ -1129,6 +1134,7 @@ div#bottomContainer {
         width: 145px;
         height: 145px;
         font-size: 50px;
+        border: 2px solid rgba(255, 255, 255, 0.2);
     }
 
 
@@ -1140,6 +1146,7 @@ div#bottomContainer {
         width: 85px;
         height: 85px;
         font-size: 30px;
+        border: 2px solid rgba(255, 255, 255, 0.5);
     }
 
 
@@ -1150,6 +1157,7 @@ div#bottomContainer {
         width: 85px;
         height: 85px;
         font-size: 30px;
+        border: 2px solid rgba(255, 255, 255, .78);
     }
 }
 
@@ -1175,6 +1183,7 @@ div#bottomContainer {
 @-webkit-keyframes introParagraphAnimate {
     from{
         left: 100%;
+        top: 2em
         opacity: 0;
     }
     to{
@@ -1185,11 +1194,11 @@ div#bottomContainer {
 
 @-webkit-keyframes introButtonAnimate {
     from{
-        -webkit-transform: translateY(0);
+        -webkit-transform: translateY(200%);
         opacity: 0;
     }
     to{
-        -webkit-transform: translateY(-218%);
+        -webkit-transform: translateY(25%);
         opacity: 1;
     }
 }
