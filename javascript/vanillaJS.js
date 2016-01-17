@@ -128,20 +128,20 @@ function experienceAnimate(){
         opacity: 1
     }, 2000,function(){
         $('#experienceUnderline').addClass('transformClass');
-        $('#smallDiv').animate({width: '15em'}, 800, function(){
-            var width = window.outerWidth;
-            console.log('width', width);
-            if(width>992){
-                $('#experience .col-md-4').addClass('bounce');
-                setTimeout(function(){
-                    $('#experience .col-md-4:first-child .container-fluid').addClass('addHeight');
-                    $('#experience .col-md-4:nth-child(2) .container-fluid').addClass('addHeight2');
-                    $('#experience .col-md-4:nth-child(3) .container-fluid').addClass('addHeight3');
-                }, 770);
-            }else{
-                $('#experience .col-md-4').addClass('bounce');
-            }
-        });
+        
+        var width = window.outerWidth;
+        console.log('width', width);
+        if(width>992){
+            $('#experience .col-md-4').addClass('bounce');
+            setTimeout(function(){
+                $('#experience .col-md-4:first-child .container-fluid').addClass('addHeight');
+                $('#experience .col-md-4:nth-child(2) .container-fluid').addClass('addHeight2');
+                $('#experience .col-md-4:nth-child(3) .container-fluid').addClass('addHeight3');
+            }, 770);
+        }else{
+            $('#experience .col-md-4').addClass('bounce');
+        }
+
     });
     //cards bounce up, and on bounce down, the other animation happens
 }

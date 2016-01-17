@@ -431,7 +431,7 @@ footer span {
 
     }
     to{
-        -webkit-transform: translateY(0);
+        -webkit-transform: translateY(0%);
     }
 }
 
@@ -477,7 +477,7 @@ h5 {
 }
 
 #experience .row {
-    margin-top: 1%;
+    margin-top: -1%;
 }
 
 .transformClass{
@@ -636,7 +636,7 @@ section#getInTouch p {
     font-size: 1.5em;
     position: relative;
     opacity: 0;
-    padding-top: .5em;
+    min-width: 241px;
 
 }
 
@@ -1498,8 +1498,10 @@ div#bottomContainer {
 
 }
 
-@media screen and (max-width: 768px) {
-
+@media screen and (max-width: 430px) {
+    section#getInTouch p {
+        margin-top: 0.43em;
+    }
 
 }
 
