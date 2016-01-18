@@ -264,14 +264,12 @@ section#contact {
 #contact .row{
     height: 100%;
 }
-#contact .col-md-6:nth-child(2) {
+.contactPic {
     background-image: url("../images/jumbo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: 0;
+    height: 350px;
+    background-position: -9% 55%;
 }
 
 #jumbo2 {
