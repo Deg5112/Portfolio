@@ -4,8 +4,8 @@ $(function(){
     scrollSpy();
     $('#navDropDown').fadeOut();
 
-    $('.navbar-nav a, #navDropDown a').click(function(){
-
+    $('.navbar-nav a, #navDropDown a').click(function(e){
+        e.preventDefault();
         var text = $(this).text().toLowerCase();
         smoothScroll(text);
     });
