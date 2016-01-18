@@ -1498,6 +1498,10 @@ div#bottomContainer {
         overflow-x: hidden;
     }
 
+    #work h2 {
+        margin: 5% 0;
+    }
+
 
     #modal .row .col-md-6 {
         overflow: auto;
