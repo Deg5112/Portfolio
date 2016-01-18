@@ -100,7 +100,7 @@ $(function(){
     $('#workSpanUnderline').addClass('aboutHeaderUnderlineClass');
 
 
-    $(window).on('scroll touchmove mousewheel', function(){
+    $(window).on('scroll touchmove', function(){
       checkDistance();
         scrollSpy();
         parralax();
@@ -137,17 +137,23 @@ $(function(){
 
 
 function parralax(){
-    var jumbo = $('.jumbotron').position().top;
+    var width = window.innerWidth;
+    console.log(width);
+    console.log('parralax');
+    var jumbo = $('.jumbotron').offset().top; //top
+    var contactOffset = $('#contact').offset().top;//bottom
+    var windowScroll = $(window).scrollTop();//scrollTop
+    var differenceJumboTop = (windowScroll)*(3/10);
+    $('.jumbotron').css('background-position', '0% '+ differenceJumboTop+'px');
+    $('#work').css('margin-top', '-' +differenceJumboTop+'px');
+    var contactDif = null;
+
+        contactDif = (contactOffset - windowScroll)*(3/10);
+        $('.contactPic').css('margin-top',  '-' + contactDif+'px');
 
 
-    var elOffset = $('.contactPic').position().top;
-    var windowScroll = $(window).scrollTop();
-    var difference = (elOffset - windowScroll)*(3/10);
-     difference = difference + 60;
-    var jumboDif = (windowScroll - jumbo);
-    console.log('jumbodif', jumboDif);
-    $('.contactPic').css('margin-top', '-' + difference+'px');
-    $('.jumbotron').css('background-position', '50% ' + jumboDif +'px');
+
+
 }
 //Docready end
 function getInTouchButtonScroll(){
