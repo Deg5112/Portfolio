@@ -4,10 +4,20 @@ $(function(){
     scrollSpy();
     $('#navDropDown').fadeOut();
 
+    var bool = true;
+
     $('.navbar-nav a, #navDropDown a').click(function(e){
         e.preventDefault();
-        var text = $(this).text().toLowerCase();
-        smoothScroll(text);
+        if(bool){
+            var text = $(this).text().toLowerCase();
+            smoothScroll(text);
+            bool = false;
+            setTimeout(function(){
+                bool = true;
+                console.log(bool);
+            }, 2);
+
+        }
     });
 
     $('.btntwo').on('click tap', function(){
@@ -214,8 +224,7 @@ function checkDistance(){
     var differenceBetweenContact = contact - scrollTop;
     var differenceBetweenFooter = footer - scrollTop;
     var differenceBetweenWork = work - scrollTop;
-    console.log('footer offset', footer);
-    console.log('scrolltop', scrollTop);
+
 
 
 
