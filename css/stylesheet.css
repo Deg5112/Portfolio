@@ -272,6 +272,8 @@ section#contact {
     background-position: -9% 55%;
 }
 
+
+
 #jumbo2 {
     height: 400px;
 }
@@ -572,6 +574,7 @@ h5 {
 
 #work{
     padding-bottom: 1%;
+    background-color: white;
 }
 
 #work h2 {

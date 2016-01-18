@@ -100,14 +100,13 @@ $(function(){
     $('#workSpanUnderline').addClass('aboutHeaderUnderlineClass');
 
 
-    $(window).on('scroll touchmove', function(){
+    $(window).on('scroll touchmove mousewheel', function(){
       checkDistance();
         scrollSpy();
+        parralax();
     });
 
-    $(document).on("scrollstop",function(event){
 
-    });
 
 
     $(window).resize(function(){
@@ -136,6 +135,20 @@ $(function(){
 
 });
 
+
+function parralax(){
+    var jumbo = $('.jumbotron').position().top;
+
+
+    var elOffset = $('.contactPic').position().top;
+    var windowScroll = $(window).scrollTop();
+    var difference = (elOffset - windowScroll)*(3/10);
+     difference = difference + 60;
+    var jumboDif = (windowScroll - jumbo);
+    console.log('jumbodif', jumboDif);
+    $('.contactPic').css('margin-top', '-' + difference+'px');
+    $('.jumbotron').css('background-position', '50% ' + jumboDif +'px');
+}
 //Docready end
 function getInTouchButtonScroll(){
     var offset = $('#contact').offset().top;
