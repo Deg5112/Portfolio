@@ -195,6 +195,8 @@ function smallExperienceAnimate(element){
             $('#experience .col-md-4:nth-child(3)  .container-fluid .glyphicon.glyphicon-arrow-down').css('display', 'none');
 
         }
+    }else{
+        $('.glyphicon.glyphicon-arrow-down').hide();
     }
 }
 
