@@ -113,7 +113,10 @@ app.controller('workController', function($scope, $log, getScrollTopService){
         ];
 
         self.clearArray = function(){
-
+            $('a[rel="external"]').click(function() {
+                window.open($(this).attr('href'));
+                return false;
+            });
             self.imgArray = [];
             self.imgArray = [
                 {src: 'mboutique.png', alt:'WEBSITE', title: 'MBoutique', message: 'small business website', href:'http://deg5112.github.io/Mboutique_Project/', features: '', git: 'https://github.com/Deg5112/Mboutique_Project.git', modalText1: "This was the first Project of LearningFuze bootcamp.", modalText2: "The idea was to code out and emulate a small business website, after being given the wireframe from a design team."},
