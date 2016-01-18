@@ -125,6 +125,11 @@ a{
     width: 100%;
 }
 
+.imgCol button {
+    width: 32% !important;
+    margin: 0 -.55%;
+}
+
 .btntwo {
     border-radius: 0 0 0 0 !important;
     color: black !important;
