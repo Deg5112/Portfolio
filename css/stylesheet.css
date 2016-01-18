@@ -1090,7 +1090,7 @@ div#bottomContainer {
     left: 50%;
     top: 53%;
     -webkit-transform: translate(-50%, -40%);
-    color: #AA9868;
+    color: rgb(236, 210, 138) !important;
     text-shadow: -2px 1px black;
     text-align: center;
     width: 100vw;
