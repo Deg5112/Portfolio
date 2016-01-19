@@ -265,11 +265,12 @@ section#contact {
     height: 100%;
 }
 .jumbotron2 {
-    background-image: url("../images/jumbo.jpg");
+    background-image: url("../images/jumbo.jpg") !important;
     background-repeat: no-repeat;
     background-size: cover;
     height: 400px;
     z-index: 500;
+    margin: 0;
 }
 
 
