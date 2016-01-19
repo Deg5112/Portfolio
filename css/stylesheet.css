@@ -265,13 +265,12 @@ section#contact {
     height: 100%;
 }
 .jumbotron2 {
-    background-image: url("../images/jumbo.jpg") !important;
-    background-repeat: no-repeat;
-    background-size: cover;
+
     height: 400px;
     z-index: 500;
     margin: 0;
     width: 100%;
+    padding: 0;
 }
 
 
@@ -1564,8 +1563,15 @@ div#bottomContainer {
     }
 
 }
+@media screen and (max-width: 768px) {
+    .jumbotron.jumbotron2 img {
+        width: 150%;
+        height: 100%;
+    }
 
-@media (max-width: 992px)  {
+}
+
+@media screen and (max-width: 992px)  {
 
 
     div#modalParagraphContainer {
@@ -1574,6 +1580,17 @@ div#bottomContainer {
         width: 94%;
         margin-top: 9%;
 
+    }
+    .jumbotron.jumbotron2 img {
+        width: 150%;
+        height: 100%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .jumbotron.jumbotron2 img {
+        width: 100%;
+        height: 100%;
     }
 }
 
