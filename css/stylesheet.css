@@ -1563,13 +1563,7 @@ div#bottomContainer {
     }
 
 }
-@media screen and (max-width: 768px) {
-    .jumbotron.jumbotron2 img {
-        width: 150%;
-        height: 100%;
-    }
 
-}
 
 @media screen and (max-width: 992px)  {
 
@@ -1582,7 +1576,7 @@ div#bottomContainer {
 
     }
     .jumbotron.jumbotron2 img {
-        width: 150%;
+        width: 74em;
         height: 100%;
     }
 }
