@@ -264,7 +264,7 @@ section#contact {
 #contact .row{
     height: 100%;
 }
-.contactPic {
+.jumbotron2 {
     background-image: url("../images/jumbo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -882,7 +882,7 @@ header {
     z-index: 300;
 }
 
-.jumbotron{
+.jumbotron1{
     background-image: url("../images/homeBanner.jpeg");
     background-repeat: no-repeat;
     background-size: cover;

@@ -147,12 +147,12 @@ function parralax(){
     var contactOffset = $('#contact').offset().top;//bottom
     var windowScroll = $(window).scrollTop();//scrollTop
     var differenceJumboTop = (windowScroll)*(3/10);
-    $('.jumbotron').css('background-position', '0% '+ differenceJumboTop+'px');
+    $('.jumbotron.jumbotron1').css('background-position', '0% '+ differenceJumboTop+'px');
     $('#work').css('margin-top', '-' +differenceJumboTop+'px');
     var contactDif = null;
 
         contactDif = (contactOffset - windowScroll)*(3/10);
-        $('.contactPic').css('margin-top',  '-' + contactDif+'px');
+        $('.jumbotron.jumbotron2').css('margin-top',  '-' + contactDif+'px');
 
 
 
