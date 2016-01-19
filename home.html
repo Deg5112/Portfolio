@@ -111,7 +111,7 @@
 
             <div class="col-xs-12 col-sm-6 col-md-4 imgCol slide" ng-repeat="i in wC.imgArray | filter:wC.filter" >
 
-                    <a ng-href="{{i.href}}" rel="external" target="_blank">
+
                     <figure>
                         <h4>{{i.title}}</h4>
                    <div id="imgDiv"> <img class='project' ng-src="images/{{i.src}}" ng-mouseover="wC.addPicClass($event)" ng-mouseleave="wC.removePicClass()" ng-class="wC.dynamicClass"></div>
@@ -129,7 +129,7 @@
                             </div>
                         </figcaption>
                     </figure>
-                    </a>
+
 
                     <div id='modal' class="helloModal" ng-class="wC.modalActive ? 'modalShowClass' : 'modalHideClass'" ng-click="wC.modalRemove()">
                         <div class="container">
