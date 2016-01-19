@@ -269,6 +269,7 @@ section#contact {
     background-repeat: no-repeat;
     background-size: cover;
     height: 400px;
+    z-index: 500;
 }
 
 
