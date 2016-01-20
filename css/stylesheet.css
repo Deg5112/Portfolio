@@ -624,6 +624,7 @@ section#getInTouch {
     border-radius: 5px;
     font-size: 1.2em;
     top: .3em;
+    margin: 5%;
 
 }
 
@@ -647,6 +648,7 @@ section#getInTouch p {
     position: relative;
     opacity: 0;
     min-width: 241px;
+    padding: 5%;
 
 }
 
