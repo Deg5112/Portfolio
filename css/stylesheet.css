@@ -1085,9 +1085,7 @@ h2 {
 
 
 div#bottomContainer {
-    position: absolute;
-    left: 50%;
-    top: 50%;
+
     -webkit-transform: translate(-50%, -26%);
     color: #AA9868;
 }
@@ -1095,7 +1093,7 @@ div#bottomContainer {
 div#bottomContainer {
     position: absolute;
     left: 50%;
-    top: 53%;
+    top: 48%;
     -webkit-transform: translate(-50%, -40%);
     color: rgb(236, 210, 138) !important;
     text-shadow: -2px 1px black;
@@ -1564,8 +1562,17 @@ div#bottomContainer {
         margin-left: 0;
     }
 
+    #work span:first-child {
+        position: relative;
+        z-index: 10000;
+    }
+
 }
 
+#work span:first-child {
+    position: relative;
+    z-index: 10000;
+}
 
 @media screen and (max-width: 992px)  {
 

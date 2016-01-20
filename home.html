@@ -133,7 +133,7 @@
                     </figure>
 
 
-                    <div id='modal' class="helloModal" ng-class="wC.modalActive ? 'modalShowClass' : 'modalHideClass'" ng-click="wC.modalRemove()">
+                    <div id='modal' class="helloModal" ng-class="wC.modalActive ? 'modalShowClass' : 'modalHideClass'">
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-6">
@@ -142,7 +142,7 @@
                                 <div class="col-md-6">
 
                                     <div id="modalParagraphContainer">
-                                        <span class="glyphicon glyphicon-remove"></span>
+                                        <a ng-click="wC.modalRemove()"><span class="glyphicon glyphicon-remove" ></span></a>
                                         <h2>{{wC.modalTitle}}</h2>
                                         <p>{{wC.modalText1}}</p>
                                         <p>{{wC.modalText2}}</p>
