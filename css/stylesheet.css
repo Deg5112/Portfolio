@@ -625,6 +625,8 @@ section#getInTouch {
     font-size: 1.2em;
     top: .3em;
     margin: 5%;
+    position: absolute;
+    right: 0;
 
 }
 
