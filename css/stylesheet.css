@@ -270,13 +270,19 @@ section#contact {
     margin: 0;
     width: 100%;
     padding: 0;
+    overflow: hidden;
+}
+
+
+section#getInTouch .col-xs-6 {
+    height: 100%;
 }
 
 
 
 #jumbo2 {
     height: 400px;
-    overflow: hidden;
+
 }
 
 
@@ -609,12 +615,20 @@ section#getInTouch {
     background-color: black;
     color: white;
     position: relative;
+    height: 150px;
 }
 
 #getInTouch .col-xs-7, #getInTouch .col-xs-4 {
     padding: 3% 0;
 }
 
+section#getInTouch .container {
+    height: 100%;
+}
+
+section#getInTouch .col-xs-12 {
+    height: 100%;
+}
 
 
 #getInTouch button {
@@ -623,10 +637,11 @@ section#getInTouch {
     border-color: #737373;
     border-radius: 5px;
     font-size: 1.2em;
-    top: .3em;
-    margin: 5%;
     position: absolute;
     right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
 
 }
 
@@ -647,10 +662,11 @@ section#getInTouch span {
 section#getInTouch p {
     font-family: 'Abril Fatface', cursive;
     font-size: 1.5em;
-    position: relative;
+    position: absolute;
     opacity: 0;
     min-width: 241px;
-    padding: 5%;
+    /*transform: translateY(-50%);*/
+    top: 50%;
 
 }
 
@@ -1365,9 +1381,9 @@ div#bottomContainer {
         opacity: 0;
     }
     to{
-        -webkit-transform: translateY(0);
+        -webkit-transform: translateY(-50%);
 
-        bottom: 0em;
+
         opacity: 1;
 
     }
@@ -1605,6 +1621,9 @@ div#bottomContainer {
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 700px) {
+    #getInTouch button {
 
+        margin-top: 15%;
+    }
 }
