@@ -138,9 +138,9 @@ $(function(){
 
 function parralax(){
     var width = window.innerWidth;
-    if(width<992){
-        return;
-    }
+    //if(width<992){
+    //    return;
+    //}
 
 
     var jumbo = $('.jumbotron').offset().top; //top
