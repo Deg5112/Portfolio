@@ -892,7 +892,7 @@ div#about p {
     text-align: left;
     font-size: 1.4em;
     line-height: 1.4em;
-    font-family: times;
+    font-family: arial,verdana;
 }
 
 header {
@@ -1032,7 +1032,7 @@ ul.nav.navbar-nav li a:hover {
     height: 100%;
     line-height: 48px;
     padding: .5em 2em;
-    font-family: times, sans-serif;
+    font-family: arial,verdana, sans-serif;
 }
 
 nav#navbar{
