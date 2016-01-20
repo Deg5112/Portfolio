@@ -266,7 +266,6 @@ section#contact {
 }
 .jumbotron2 {
 
-    height: 400px;
     z-index: 500;
     margin: 0;
     width: 100%;
@@ -277,11 +276,10 @@ section#contact {
 
 #jumbo2 {
     height: 400px;
+    overflow: hidden;
 }
 
-#jumbo2 img {
-    height: 100%;
-}
+
 
 form{
     margin-bottom: 9vh;
@@ -891,6 +889,11 @@ header {
     height: 420px;
     z-index: -1;
     margin-bottom: 0;
+}
+
+.jumbotron.jumbotron2 img {
+    width: 100%;
+    max-width: 1920px;
 }
 
 
@@ -1590,12 +1593,7 @@ div#bottomContainer {
     }
 }
 
-@media screen and (min-width: 992px) {
-    .jumbotron.jumbotron2 img {
-        width: 100%;
-        height: 100%;
-    }
-}
+
 
 @media screen and (max-width: 508px) {
     section#aboutSection {
