@@ -1,5 +1,6 @@
 <!--TODO if view width is greater than a certain size, take the active class off the collapse navbar you made-->
 <!--TODO connect get in touch button with smooth scroll function, also, add a contact button and demo button on modal-->
+<!--TODO fix width of pictures in work section so they aren't stretched-->
 <!doctype html>
 <html lang="en" ng-app="portfolio">
 <head>
@@ -20,11 +21,7 @@
 
     <link rel="stylesheet" href="css/stylesheet.css">
 </head>
-<body scroll>
-
-<div id="loading">
-    <img src="images/portfolioGif.gif">
-</div>
+<body scroll ng-cloak>
 
 <header id="header"><!--header-->
     <nav class="navbar navbar-fixed-top" id="navbar"><!--nav-->
@@ -120,13 +117,19 @@
                         <figcaption>
                             <div class="row">
                                 <div class="btn-group">
-                                    <a href="{{i.git}}" rel="external"><button class=' btn btnone workbtn' type="button"><span class="fa fa-github btngit"></span>view code</button></a>
+
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <a href="{{i.git}}" rel="external"> <button type="button" class="btn btn-secondary btnone workbtn btn-default"><span class="fa fa-github btngit"></span>view code</button></a>
+                                        <a href="#>"> <button type="button" class="btn btn-secondary btntwo workbtn btn-default" ng-click="wC.openModal($index, $event)">About</button></a>
+                                        <a href="{{i.href}}" target="_blank" rel="external"><button type="button" class="btn btn-secondary btnthree workbtn btn-default">Demo</button></a>
+                                    </div>
+                                    <!--<a href="{{i.git}}" rel="external"><button class=' btn btnone workbtn btn-default' type="button"><span class="fa fa-github btngit"></span>view code</button></a>-->
 
 
-                                    <a href="#>"><button class=' btn btntwo workbtn' type="button" ng-click="wC.openModal($index, $event)">About</button></a>
+                                    <!--<a href="#>"><button class=' btn btntwo workbtn btn-default' type="button" ng-click="wC.openModal($index, $event)">About</button></a>-->
 
 
-                                    <a href="{{i.href}}" target="_blank" rel="external"><button class=' btn btnthree workbtn' type="button">Demo</button></a>
+                                    <!--<button class=' btn btnthree workbtn btn-default' type="button">Demo</button></a>-->
                                 </div>
                             </div>
                         </figcaption>

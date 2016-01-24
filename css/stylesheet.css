@@ -78,6 +78,9 @@ span.glyphicon.glyphicon-remove {
     display: none;
 }
 
+.btn-default{
+    background-image: none !important;
+}
 
 
 html{
@@ -91,7 +94,6 @@ a{
 .workbtn {
     background-color: white;
     color: black;
-    box-shadow: 2px 5px 23px -6px rgba(0, 0, 0, 0.63);
     font-family: sans-serif;
     text-align: center;
 }
@@ -111,8 +113,8 @@ a{
 
 .btnthree:hover {
     border-radius: 0 5px 5px 0 !important;
-    background-color: #4ea74e !important;
-    border-color: #4ea74e !important;
+    background-color: #07171A !important;
+    border-color: #07171A !important;
     color:white !important;
 
 }
@@ -125,10 +127,10 @@ a{
     width: 100%;
 }
 
-.imgCol button {
-    width: 32% !important;
-    margin: 0 -.55%;
-}
+/*.imgCol .btn-group button {*/
+    /*width: 32% !important;*/
+    /*margin: 0 -.7%;*/
+/*}*/
 
 .btntwo {
     border-radius: 0 0 0 0 !important;
@@ -136,8 +138,8 @@ a{
 }
 
 .btntwo:hover {
-    background-color: #3db3d7 !important;
-    border-color: #3db3d7 !important;
+    background-color: #194851  !important;
+    border-color: #194851  !important;
     color:white !important;
 
 
@@ -149,7 +151,7 @@ a{
 
 }
 .btnone:hover {
-    background-color: rgba(134, 134, 134, 0.7) !important ;
+    background-color: #BBB9B9  !important ;
     color:white !important;
     border-radius: 5px 0 0 5px !important;
 }
@@ -303,6 +305,11 @@ form{
 a:link {
     text-decoration: none;
     color: black;
+}
+
+#work .imgRow .btn-group button {
+    width: 32.5%;
+    margin: .5% 0;
 }
 
 figcaption {
@@ -734,9 +741,8 @@ span#aboutSpan {
 
 .project{
     position: relative;
-    width: 120%;
+    width: 150%;
     -webkit-filter: grayscale(.85);
-    height: 110%;
     -webkit-transition: .3s;
 }
 
