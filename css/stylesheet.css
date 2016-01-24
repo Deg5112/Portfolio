@@ -102,7 +102,6 @@ a{
 .btngit {
     font-size: 1.3em;
     padding-right: 5%;
-    margin-top: 1%;
 }
 
 .btnthree {
@@ -115,7 +114,6 @@ a{
 .btnthree:hover {
     border-radius: 0 5px 5px 0 !important;
     background-color: #07171A !important;
-    border-color: #07171A !important;
     color:white !important;
 
 }
@@ -140,7 +138,6 @@ a{
 
 .btntwo:hover {
     background-color: #194851  !important;
-    border-color: #194851  !important;
     color:white !important;
 
 
@@ -307,6 +304,14 @@ form{
 a:link {
     text-decoration: none;
     color: black;
+}
+
+.aboutWell {
+    background-color: white !important;
+    box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.76);
+    padding: 3%;
+    border-radius: 5px;
+    margin-top: 1.5%;
 }
 
 #work .imgRow .btn-group button {
@@ -835,7 +840,7 @@ span#line-break {
     border: 1px solid #BDBDBD;
     height: 50vh;
     right: 50%;
-    top: 232%;
+    top: 252%;
     opacity: 0;
     -webkit-transform-origin: 0 0 ;
 }
@@ -1236,7 +1241,7 @@ div#bottomContainer {
 }
 
 .introAnimate{
-    -webkit-animation: boxShrink 4s linear forwards;
+    -webkit-animation: boxShrink 1.7s linear forwards;
 }
 
 
