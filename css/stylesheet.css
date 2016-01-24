@@ -101,7 +101,7 @@ a{
 
 .btngit {
     font-size: 1.3em;
-    padding-right: 2%;
+    padding-right: 5%;
     margin-top: 1%;
 }
 
@@ -311,7 +311,7 @@ a:link {
 
 #work .imgRow .btn-group button {
     width: 32%;
-    margin: .5% 0;
+    margin: .5% -.8%;
 }
 
 figcaption {
