@@ -1,7 +1,6 @@
 /*TODO max width vs max device width... viewport meta tag*/
 body{
     position: relative;
-    overflow-x: hidden;
 }
 
 .modalShowClass {
@@ -330,7 +329,6 @@ div#imgDiv {
     /*border: 1px solid black;*/
     overflow: hidden;
     height: 250px;
-    padding: 1%;
 }
 
 div#modalParagraphContainer {
@@ -423,6 +421,7 @@ footer span {
     border-radius: 5px;
     margin-right: 2%;
     margin-top: 1%;
+    -webkit-filter: grayscale(.1);
 }
 
 #experienceSpan{
@@ -833,9 +832,9 @@ span#contactSpanUnderline {
 span#line-break {
     position: absolute;
     border: 1px solid #BDBDBD;
-    height: 41vh;
+    height: 50vh;
     right: 50%;
-    top: 200%;
+    top: 232%;
     opacity: 0;
     -webkit-transform-origin: 0 0 ;
 }
@@ -1538,7 +1537,6 @@ div#bottomContainer {
 
 
     #modal .row .col-md-6 {
-        overflow: auto;
         height: 50vh;
         position: relative;
         top: 25% !important;
