@@ -137,7 +137,7 @@ $(function(){
 
 
 function parralax(){
-    var width = window.innerWidth;
+    var width = $(window).innerWidth();
     console.log(width);
     if(width<992){
         console.log('less');
