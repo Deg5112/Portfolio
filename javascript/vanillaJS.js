@@ -138,11 +138,13 @@ $(function(){
 
 function parralax(){
     var width = window.innerWidth;
+    console.log(width);
     if(width<992){
+        console.log('less');
         return;
     }
 
-
+    console.log('notLess');
     var jumbo = $('.jumbotron').offset().top; //top
     var contactOffset = $('#contact').offset().top;//bottom
     var windowScroll = $(window).scrollTop();//scrollTop
