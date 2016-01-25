@@ -2,7 +2,7 @@
 <!--TODO connect get in touch button with smooth scroll function, also, add a contact button and demo button on modal-->
 <!--TODO fix width of pictures in work section so they aren't stretched-->
 <!doctype html>
-<html lang="en" ng-app="portfolio">
+<html lang="en" ng-app="portfolio" ng-cloak>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -120,7 +120,7 @@
 
                                     <div class="btn-group" role="group" aria-label="Basic example">
                                         <a href="{{i.git}}" rel="external"> <button type="button" class="btn btn-secondary btnone workbtn btn-default"><span class="fa fa-github btngit"></span>view code</button></a>
-                                        <a href="#>" class="hidden-xs"> <button type="button" class="btn btn-secondary btntwo workbtn btn-default" ng-click="wC.openModal($index, $event)">About</button></a>
+                                        <a href="#>" class=""> <button type="button" class="btn btn-secondary btntwo workbtn btn-default" ng-click="wC.openModal($index, $event)">About</button></a>
                                         <a href="{{i.href}}" target="_blank" rel="external"><button type="button" class="btn btn-secondary btnthree workbtn btn-default">Demo</button></a>
                                     </div>
                                     <!--<a href="{{i.git}}" rel="external"><button class=' btn btnone workbtn btn-default' type="button"><span class="fa fa-github btngit"></span>view code</button></a>-->

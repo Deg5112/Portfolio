@@ -251,7 +251,6 @@ function checkDistance(){
 
 
 
-
     if(differenceBetween < 400 && paragraphBool) { //about
 
 
