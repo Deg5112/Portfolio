@@ -919,6 +919,8 @@ header {
     height: 420px;
     z-index: -1;
     margin-bottom: 0;
+    background-attachment:fixed;
+    background-position: left top;
 }
 
 .jumbotron.jumbotron2 img {
