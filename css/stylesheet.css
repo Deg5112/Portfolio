@@ -491,7 +491,7 @@ h5 {
 
 #experienceUnderline {
     position: absolute;
-    border: 2px solid #638389;
+    border: 2px solid rgba(99, 131, 137, 0.45);
     bottom: 0;
     left: 0;
     right: 0;
@@ -616,7 +616,8 @@ section#work button:hover {
 }
 
 .btn-group:first-child {
-    width: 100%;
+    width: 99%;
+    margin: 0 1%;
 }
 
 
@@ -800,7 +801,7 @@ span#aboutSpan {
 
 span#aboutSpanUnderline {
     position: absolute;
-    border: 2px solid #638389;
+    border: 2px solid rgba(99, 131, 137, 0.45);
     top: 100%;
     left: 0;
     right: 0;
@@ -813,7 +814,7 @@ span#aboutSpanUnderline {
 
 span#contactSpanUnderline {
     position: absolute !important;
-    border: 2px solid #638389;
+    border: 2px solid rgba(99, 131, 137, 0.45);
     top: 100%;
     left: 0;
     right: 0;
@@ -894,7 +895,7 @@ h2{
 
 span#workSpanUnderline {
     position: absolute !important;
-    border: 2px solid #638389;
+    border: 2px solid rgba(99, 131, 137, 0.45);
     top: 100%;
     left: 0;
     right: 0;
