@@ -320,7 +320,7 @@ a:link {
 
 #work .imgRow .btn-group button {
     width: 32%;
-    margin: .5% -.8%;
+    margin: 0 -.8%;
 }
 
 figcaption {
@@ -433,7 +433,12 @@ footer span {
     border-radius: 5px;
     margin-right: 2%;
     margin-top: 1%;
-    -webkit-filter: grayscale(.1);
+    -webkit-filter: grayscale(.7);
+    transition: 1s;
+}
+
+#aboutSection img:hover{
+    -webkit-filter: grayscale(.3);
 }
 
 #experienceSpan{
