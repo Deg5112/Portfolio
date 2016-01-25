@@ -287,7 +287,7 @@ function checkDistance(){
         contactAnimate();
 
     }
-    if(scrollTop>2250){
+    if(scrollTop>2000){
         $('footer span').addClass('footerTransition');
         //$('.nav.navbar-nav li a').
 
