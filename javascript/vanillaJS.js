@@ -103,10 +103,7 @@ $(function(){
     $(window).on('scroll touchmove', function(){
       checkDistance();
         scrollSpy();
-        var width = window.innerWidth;
-        if(width>767) {
-            parralax();
-        }
+        parralax();
     });
 
 
@@ -141,9 +138,9 @@ $(function(){
 
 function parralax(){
     var width = window.innerWidth;
-    //if(width<992){
-    //    return;
-    //}
+    if(width<992){
+        return;
+    }
 
 
     var jumbo = $('.jumbotron').offset().top; //top
