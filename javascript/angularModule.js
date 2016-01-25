@@ -61,6 +61,8 @@ app.controller('workController', function($scope, $log, getScrollTopService){
             self.modalActive = false;
             //$('.imgCol').removeClass('col-xs-12').addClass('col-xs-12 col-sm-6 col-md-4');
             self.modalSrc = null;
+            var width = $(window).width();
+
             $(".helloModal").hide();
             $(".aboutActive").removeClass('aboutActive');
 
