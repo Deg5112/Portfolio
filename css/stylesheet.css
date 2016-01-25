@@ -439,6 +439,7 @@ footer span {
 
 #aboutSection img:hover{
     -webkit-filter: grayscale(.3);
+    cursor: pointer;
 }
 
 #experienceSpan{
