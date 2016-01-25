@@ -1478,9 +1478,7 @@ div#bottomContainer {
 
 
 @media screen and (max-device-width : 767px) {
-    .navbar-brand{
-        margin-left: 15px;
-    }
+
 
     div#landingContainer{
         background-position: 32%, 50%;
