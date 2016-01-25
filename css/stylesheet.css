@@ -71,7 +71,7 @@ span.glyphicon.glyphicon-remove {
 }
 
 #modal .row {
-    max-height: 480px;
+
     overflow-y: scroll;
 }
 
@@ -1592,7 +1592,7 @@ div#bottomContainer {
     }
     .modalShowClass {
 
-        max-height: 500px;
+
     }
 
     #modal .container{

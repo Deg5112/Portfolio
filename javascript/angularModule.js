@@ -67,6 +67,7 @@ app.controller('workController', function($scope, $log, getScrollTopService){
         };
 
         self.openModal = function(index){
+            var width = $(window).innerWidth();
 
             var $colClicked = $($('.imgCol')[index]);  //self current modal is an index
 
