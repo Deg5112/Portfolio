@@ -139,24 +139,22 @@ $(function(){
 function parralax(){
     var width = $(window).innerWidth();
     console.log(width);
-    if(width<992){
-        console.log('less');
-        return;
+    if(width>992) {
+
+
+        console.log('notLess');
+        var jumbo = $('.jumbotron').offset().top; //top
+        var contactOffset = $('#contact').offset().top;//bottom
+        var windowScroll = $(window).scrollTop();//scrollTop
+        var differenceJumboTop = (windowScroll) * (3 / 10);
+        $('.jumbotron.jumbotron1').css('background-position', '0% ' + differenceJumboTop + 'px');
+        $('#work').css('margin-top', '-' + differenceJumboTop + 'px');
+        var contactDif = null;
+
+        contactDif = (contactOffset - windowScroll) * (3 / 10);
+        $('.jumbotron.jumbotron2').css('margin-top', '-' + contactDif + 'px');
+
     }
-
-    console.log('notLess');
-    var jumbo = $('.jumbotron').offset().top; //top
-    var contactOffset = $('#contact').offset().top;//bottom
-    var windowScroll = $(window).scrollTop();//scrollTop
-    var differenceJumboTop = (windowScroll)*(3/10);
-    $('.jumbotron.jumbotron1').css('background-position', '0% '+ differenceJumboTop+'px');
-    $('#work').css('margin-top', '-' +differenceJumboTop+'px');
-    var contactDif = null;
-
-        contactDif = (contactOffset - windowScroll)*(3/10);
-        $('.jumbotron.jumbotron2').css('margin-top',  '-' + contactDif+'px');
-
-
 
 
 }
