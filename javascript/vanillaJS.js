@@ -14,7 +14,7 @@ $(function(){
             bool = false;
             setTimeout(function(){
                 bool = true;
-                console.log(bool);
+
             }, 2);
 
         }
@@ -49,7 +49,7 @@ $(function(){
     });
 
     var width = window.outerWidth;
-    $('#contactSpanUnderline').addClass('aboutHeaderUnderlineClass'); //TODO still need to make the scroll function for this
+    $('#contactSpanUnderline').addClass('aboutHeaderUnderlineClass');
 
     if(width>992){
         $('.glyphicon.glyphicon-arrow-down').hide();
@@ -71,7 +71,6 @@ $(function(){
     });
 
 
-
     $('form button').on('click tap', function(){
        var name = $('form .form-group:first-child input').val();
         var email = $('form .form-group:nth-child(2) input').val();
@@ -83,10 +82,10 @@ $(function(){
             url: 'http://localhost:8888/lfz/Portfolio/php_mailer/mail_example/mail_withmailer.php',
             data: {name: name, email: email, message: message},
             success: function(response){
-                console.log(response);
+
             },
             error: function(response){
-                console.log(response);
+
             }
         });
         name = $('form .form-group:first-child input').val('');

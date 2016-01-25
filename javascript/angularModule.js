@@ -57,7 +57,7 @@ app.controller('workController', function($scope, $log, getScrollTopService){
         };
 
         self.modalRemove = function(){
-            console.log('span clicked!!');
+
             self.modalActive = false;
             //$('.imgCol').removeClass('col-xs-12').addClass('col-xs-12 col-sm-6 col-md-4');
             self.modalSrc = null;
@@ -79,12 +79,12 @@ app.controller('workController', function($scope, $log, getScrollTopService){
             $('.helloModal').hide();
             var distanceFromLeft = $($('.imgCol')[index]).position().left;
 
-            console.log(distanceFromLeft, 'DISTANCEFROMLEFT');
+
             //THEN WE NEED TO SHOW THE ONE FOR WHICH FIGURE WAS CLICKED ON..
             //is an array of column objects find the one.. and then jquery method it to show
             var modalEl = $($('.imgCol')[index]).find('#modal');
             var pixels = '-' + distanceFromLeft + 'px';
-            console.log(pixels, 'PIXELS');
+
 
             modalEl.show();
             $('html, body').animate({scrollTop: offset}, 10);
@@ -96,7 +96,7 @@ app.controller('workController', function($scope, $log, getScrollTopService){
             //
             //you're going to have to get the distance of the left side of the modal from the left side of the sreen, and then push that to the left by the difference.
 
-            //TODO you need to write the logic that pushes the other two columsn if it's the first or second in the row
+
 
             self.modalText1 = self.imgArray[index].modalText1;
             self.modalText2 = self.imgArray[index].modalText2;
