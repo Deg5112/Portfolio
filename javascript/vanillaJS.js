@@ -55,10 +55,11 @@ $(function(){
         $('.glyphicon.glyphicon-arrow-down').hide();
     }
     $(window).resize(function(){
-        $('.helloModal').hide();
+
         var width = window.outerWidth;
         if(width>992){
             $('.glyphicon.glyphicon-arrow-down').hide();
+            $('.helloModal').hide();
         }
     });
     $(window).load(function(){
