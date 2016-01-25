@@ -1,6 +1,7 @@
 /*TODO max width vs max device width... viewport meta tag*/
 body{
     position: relative;
+    overflow-x: hidden;
 }
 
 .modalShowClass {
