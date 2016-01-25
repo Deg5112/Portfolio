@@ -1627,3 +1627,29 @@ span.glyphicon.glyphicon-remove {
     }
 }
 
+@media screen and (max-width: 1130px) {
+    .jumbotron1 {
+
+        background-size: 115%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .jumbotron1 {
+
+        background-size: 140%;
+    }
+}
+
+@media screen and (max-width: 810px) {
+    .jumbotron1 {
+        background-size: 195%;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .jumbotron1 {
+        background-size: 302%;
+    }
+}
+
