@@ -14,8 +14,9 @@ body{
     width: 97.7vw;
 }
 
-#modal .row .col-md-6 {
+#modal .row .col-sm-6 {
     position: relative;
+    overflow: hidden;
 
 }
 
@@ -45,10 +46,7 @@ span.glyphicon.glyphicon-remove {
 
 
 #modal img {
-    width: 125%;
-    height: 115%;
-    padding: 0%;
-}
+    width: 175%;}
 
 #modal p {
     color: white;
@@ -70,10 +68,7 @@ span.glyphicon.glyphicon-remove {
     border-radius: 5px;
 }
 
-#modal .row {
 
-    overflow-y: scroll;
-}
 
 
 .modalHideClass{
@@ -1544,12 +1539,10 @@ div#bottomContainer {
     }
 
 
-    #modal .row .col-md-6:first-child {
-        height: 50vh;
+    #modal .row .col-sm-6:first-child {
         position: relative;
-        top: 25% !important;
-        transform: translateY(-50%);
-
+        overflow: hidden !important;
+        padding: 1%;
     }
 
     #modal .row .col-md-6:nth-child(2) {
@@ -1606,6 +1599,14 @@ div#bottomContainer {
 
 }
 
+span.glyphicon.glyphicon-remove {
+    top: 5%;
+}
+#modal .row .col-sm-6:first-child {
+
+    padding: 2%;
+}
+
 #work span:first-child {
     position: relative;
     z-index: 10000;
@@ -1618,8 +1619,7 @@ div#bottomContainer {
         position: relative;
         /* padding-top: 3em; */
         width: 94%;
-        padding: 5%;
-
+        padding: 1%;
     }
     .jumbotron.jumbotron2 img {
         width: 74em;
