@@ -103,7 +103,7 @@ $(function(){
     $(window).on('scroll touchmove', function(){
       checkDistance();
         scrollSpy();
-        parralax();
+
     });
 
 
