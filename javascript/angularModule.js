@@ -57,6 +57,10 @@ app.controller('workController', function($scope, $log, getScrollTopService){
         };
 
         self.modalRemove = function(){
+            var width = $(window).innerWidth();
+            if(width<772){
+                return;
+            }
             console.log('span clicked!!');
             self.modalActive = false;
             //$('.imgCol').removeClass('col-xs-12').addClass('col-xs-12 col-sm-6 col-md-4');
