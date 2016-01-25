@@ -231,6 +231,14 @@ span.glyphicon.glyphicon-arrow-down {
     -webkit-transition-delay: .2s;
 }
 
+.btn-success{
+    background-image: linear-gradient(to bottom,#638389 0,#638389 100%) !important;
+    border: none !important;
+}
+.btn-success:hover{
+    background-color: #638389 !important;
+}
+
 .form-group:nth-child(2){
     -webkit-transition-delay: .4s;
 }
@@ -255,7 +263,7 @@ span.glyphicon.glyphicon-arrow-down {
 
 section#contact {
     position: relative;
-    background: -webkit-linear-gradient(white, rgba(121, 81, 25, 0.51));
+    background: -webkit-linear-gradient(rgba(213, 213, 213, 0.88), rgba(255, 255, 255, 0.51));
 }
 
 #contact .row{
@@ -304,7 +312,7 @@ a:link {
 
 .aboutWell {
     background-color: white !important;
-    box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.76);
+    border: 1px solid black;
     padding: 3%;
     border-radius: 5px;
     margin-top: 1.5%;
@@ -483,7 +491,7 @@ h5 {
 
 #experienceUnderline {
     position: absolute;
-    border: 2px solid #FFB84D;
+    border: 2px solid #638389;
     bottom: 0;
     left: 0;
     right: 0;
@@ -517,7 +525,7 @@ h5 {
     -webkit-transform: scale(1);
     -webkit-transform-origin: 50% 0;
     background-color: white;
-    box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.3);
+    border: 1px solid black;
     height: 60px;
     overflow: hidden;
     position: relative;
@@ -792,7 +800,7 @@ span#aboutSpan {
 
 span#aboutSpanUnderline {
     position: absolute;
-    border: 2px solid #FFB84D;
+    border: 2px solid #638389;
     top: 100%;
     left: 0;
     right: 0;
@@ -805,7 +813,7 @@ span#aboutSpanUnderline {
 
 span#contactSpanUnderline {
     position: absolute !important;
-    border: 2px solid #FFB84D;
+    border: 2px solid #638389;
     top: 100%;
     left: 0;
     right: 0;
@@ -886,7 +894,7 @@ h2{
 
 span#workSpanUnderline {
     position: absolute !important;
-    border: 2px solid #FFB84D;
+    border: 2px solid #638389;
     top: 100%;
     left: 0;
     right: 0;
