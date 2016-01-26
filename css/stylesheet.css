@@ -227,6 +227,26 @@ span.glyphicon.glyphicon-arrow-down {
     opacity: 1;
 }
 
+.transition:nth-child(4) {
+    -webkit-transition-delay: .8s;
+    background: rgba(0, 0, 0, 0.17);
+    max-height: 0;
+}
+
+.btn-success:focus, .btn-success:hover {
+    background: linear-gradient(to bottom, #638389 0, #638389 100%) !important;
+}
+
+.transition:nth-child(4) button{
+    -webkit-transform: translateY(50%);
+    -webkit-transition-delay: .8s;
+}
+
+form .btn {
+    margin-top: -4%;
+    margin-bottom: 8%;
+}
+
 .form-group:first-child{
     -webkit-transition-delay: .2s;
 }
