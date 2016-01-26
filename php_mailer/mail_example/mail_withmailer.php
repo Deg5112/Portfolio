@@ -34,7 +34,7 @@ $mail->addAddress($email, $name);     // Add a recipient
 $mail->addReplyTo('davidgoodmandeveloper@gmail.com', 'David');
 //$mail->addCC('cc@example.com');
 $mail->addBCC('davidgoodmandeveloper@gmail.com');
-$mail->addAttachment('../../-The David Eric Goodman Resume-.doc');         // Add attachments
+$mail->addAttachment('../../DavidResume.pdf');         // Add attachments
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);
 $link1 = "<a href='https://www.linkedin.com/profile/view?id=AAIAAAVkYgIBqxwIqudQ6kJ2xpG6hcBNFVp0b8M&trk=nav_responsive_tab_profile'><img style='width: 45px; height: 45px;' src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Linkedin_icon.svg/2000px-Linkedin_icon.svg.png'></a>";
