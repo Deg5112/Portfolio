@@ -72,9 +72,14 @@ $(function(){
 
 
     $('form button').on('click tap', function(){
+        $('#formMessage').text('Error, please try your request again');
        var name = $('form .form-group:first-child input').val();
         var email = $('form .form-group:nth-child(2) input').val();
         var message = $('#textArea').val();
+        if(name === '' || email === '' || message === ''){
+            $('#formMessage').text('All Fields Must Be Filled In').css('color', 'red');
+            return;
+        }
 
         $.ajax({
             method: 'POST',
@@ -82,16 +87,16 @@ $(function(){
             url: 'http://localhost:8888/lfz/Portfolio/php_mailer/mail_example/mail_withmailer.php',
             data: {name: name, email: email, message: message},
             success: function(response){
-
+                name = $('form .form-group:first-child input').val('');
+                email = $('form .form-group:nth-child(2) input').val('');
+                message = $('#textArea').val('');
+                $('#formMessage').text('Thank you, your message has been sent');
             },
             error: function(response){
-
+                $('#formMessage').text('Error, please try your request again');
             }
         });
-        name = $('form .form-group:first-child input').val('');
-        email = $('form .form-group:nth-child(2) input').val('');
-        message = $('#textArea').val('');
-        $('#formMessage').text('Thank you, your message has been sent');
+
     });
 
 
