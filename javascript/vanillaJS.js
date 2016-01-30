@@ -261,6 +261,7 @@ function checkDistance(){
 
 
 
+
     if(differenceBetween < 400 && paragraphBool) { //about
 
 
@@ -283,7 +284,8 @@ function checkDistance(){
 
     }
 
-    if(differenceBetweenExperience < 400){
+    if(differenceBetweenExperience < 900){
+
         experienceAnimate();
 
     }

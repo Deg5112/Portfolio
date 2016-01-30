@@ -213,7 +213,11 @@ span.glyphicon.glyphicon-arrow-down {
 .input-group-addon {
     top: 0;
 }
-
+div#brandCircle:hover {
+    background-color: #DDD6D3;
+    border: black;
+    color: black;
+}
 
 .transition{
     position: relative;
@@ -869,9 +873,9 @@ span#contactSpanUnderline {
 span#line-break {
     position: absolute;
     border: 1px solid #BDBDBD;
-    height: 50vh;
     right: 50%;
-    top: 252%;
+    top: 4.5em;
+    height: 90%;
     opacity: 0;
     -webkit-transform-origin: 0 0 ;
 }
