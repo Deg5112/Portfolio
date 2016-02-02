@@ -825,6 +825,7 @@ span#aboutSpan {
     -moz-transition: .3s;
     -webkit-filter: grayscale(.85);
     -webkit-transition: .3s;
+    filter: grayscale(.85);
 }
 
 .projectAnimate{
@@ -832,6 +833,7 @@ span#aboutSpan {
     -moz-transform: translate(-7%, -7%);
     -webkit-filter: grayscale(0);
     -webkit-transform: translate(-7%, -7%);
+    filter: grayscale(0);
 }
 
 .slide{
