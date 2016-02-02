@@ -44,7 +44,7 @@ app.controller('workController', function($scope, $log, getScrollTopService){
 
         };
 
-        self.removePicClass = function(){
+        self.removePicClass = function(event){
             $(event.target).removeClass('projectAnimate');
         };
 
