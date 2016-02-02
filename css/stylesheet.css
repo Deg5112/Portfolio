@@ -1473,32 +1473,61 @@ div#bottomContainer {
     }
     to{
         -moz-transform: translateY(25%);
-        opacity: 1;
-    }
-}
-@-webkit-keyframes introButtonAnimate {
-    from{
-        -webkit-transform: translateY(200%);
-        opacity: 0;
-    }
-    to{
         -webkit-transform: translateY(25%);
         opacity: 1;
     }
 }
 
-@-webkit-keyframes aboutHeaderAnimation {
+@-webkit-keyframes introButtonAnimate {
     from{
+        -moz-transform: translateY(200%);
+        -webkit-transform: translateY(200%);
+        opacity: 0;
+    }
+    to{
+        -moz-transform: translateY(25%);
+        -webkit-transform: translateY(25%);
+        opacity: 1;
+    }
+}
+
+
+@-moz-keyframes aboutHeaderAnimation {
+    from{
+        -moz-transform: translateY(150%);
         -webkit-transform: translateY(150%);
         opacity: 0;
     }
     to{
+        -moz-transform: translateY(-100%);
         -webkit-transform: translateY(-100%);
 
         opacity: 1;
     }
 }
+@-webkit-keyframes aboutHeaderAnimation {
+    from{
+        -moz-transform: translateY(150%);
+        -webkit-transform: translateY(150%);
+        opacity: 0;
+    }
+    to{
+        -moz-transform: translateY(-100%);
+        -webkit-transform: translateY(-100%);
 
+        opacity: 1;
+    }
+}
+@-moz-keyframes aboutParagraphAnimation {
+    from{
+        top: 100%;
+        opacity: 0;
+    }
+    to{
+        top: 30%;
+        opacity: 1;
+    }
+}
 @-webkit-keyframes aboutParagraphAnimation {
     from{
         top: 100%;
@@ -1510,171 +1539,291 @@ div#bottomContainer {
     }
 }
 
-
-@-webkit-keyframes rightAboutParagraphAnimation {
+@-moz-keyframes rightAboutParagraphAnimation {
     from{
+        -moz-transform: translateX(105%);
         -webkit-transform: translateX(105%);
     }
     to{
+        -moz-transform: translateX(0);
+        -webkit-transform: translateX(0);
+    }
+}
+@-webkit-keyframes rightAboutParagraphAnimation {
+    from{
+        -moz-transform: translateX(105%);
+        -webkit-transform: translateX(105%);
+    }
+    to{
+        -moz-transform: translateX(0);
         -webkit-transform: translateX(0);
     }
 }
 
 .rightParagraphAnimationClass{
+    -moz-animation: rightAboutParagraphAnimation 1.4s forwards;
     -webkit-animation: rightAboutParagraphAnimation 1.4s forwards;
 }
 
 .leftParagraphAnimationClass{
+    -moz-animation: leftAboutParagraphAnimation   1.6s forwards;
     -webkit-animation: leftAboutParagraphAnimation   1.6s forwards;
 }
 
-
-@-webkit-keyframes leftAboutParagraphAnimation {
+@-moz-keyframes leftAboutParagraphAnimation {
     from{
+        -moz-transform: translateX(-105%);
         -webkit-transform: translateX(-105%);
     }
     to{
+        -moz-transform: translateX(0);
+        -webkit-transform: translateX(0);
+    }
+}
+@-webkit-keyframes leftAboutParagraphAnimation {
+    from{
+        -moz-transform: translateX(-105%);
+        -webkit-transform: translateX(-105%);
+    }
+    to{
+        -moz-transform: translateX(0);
         -webkit-transform: translateX(0);
     }
 }
 
 .leftParagraphAnimationClass{
+    -moz-animation: leftAboutParagraphAnimation cubic-bezier(.72,1.31,.74,1.35) 1.2s forwards;
     -webkit-animation: leftAboutParagraphAnimation cubic-bezier(.72,1.31,.74,1.35) 1.2s forwards;
 }
 
-@-webkit-keyframes lineBreakAnimation {
+@-moz-keyframes lineBreakAnimation {
     from{
+        -moz-transform: scale(0);
         -webkit-transform: scale(0);
         opacity: 0;
     }
     to{
+        -moz-transform: scale(1);
         -webkit-transform: scale(1);
         opacity: 1;
     }
 }
 
-@-webkit-keyframes aboutUnderlineAnimation{
+@-webkit-keyframes lineBreakAnimation {
     from{
+        -moz-transform: scale(0);
+        -webkit-transform: scale(0);
+        opacity: 0;
+    }
+    to{
+        -moz-transform: scale(1);
+        -webkit-transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes aboutUnderlineAnimation{
+    from{
+        -moz-transform: scale(0);
         -webkit-transform: scale(0);
 
 
     }
     to{
+        -moz-transform: scale(1);
         -webkit-transform: scale(1);
+    }
+}
+@-webkit-keyframes aboutUnderlineAnimation{
+    from{
+        -moz-transform: scale(0);
+        -webkit-transform: scale(0);
 
+
+    }
+    to{
+        -moz-transform: scale(1);
+        -webkit-transform: scale(1);
+    }
+}
+
+@-moz-keyframes arrowMove {
+    from{
+        left: -60%;
+        -moz-transform: scale(0) rotateZ(0deg);
+        -webkit-transform: scale(0) rotateZ(0deg);
+    }
+    to{
+        left: 55%;
+        -moz-transform: scale(1) rotateZ(360deg);
+        -webkit-transform: scale(1) rotateZ(360deg);
     }
 }
 
 @-webkit-keyframes arrowMove {
     from{
         left: -60%;
+        -moz-transform: scale(0) rotateZ(0deg);
         -webkit-transform: scale(0) rotateZ(0deg);
 
     }
     to{
         left: 55%;
+        -moz-transform: scale(1) rotateZ(360deg);
         -webkit-transform: scale(1) rotateZ(360deg);
     }
 }
-
-@-webkit-keyframes getInTouchUnderline {
+@-moz-keyframes getInTouchUnderline {
     from{
+        -moz-transform: scale(0);
         -webkit-transform: scale(0);
-
     }
     to{
+        -moz-transform: scale(1);
         -webkit-transform: scale(1);
     }
 }
-
-@-webkit-keyframes getInTouchParagraphAnimation {
+@-webkit-keyframes getInTouchUnderline {
     from{
-
+        -moz-transform: scale(0);
+        -webkit-transform: scale(0);
+    }
+    to{
+        -moz-transform: scale(1);
+        -webkit-transform: scale(1);
+    }
+}
+@-moz-keyframes getInTouchParagraphAnimation {
+    from{
+        -moz-transform: translateY(150%);
         -webkit-transform: translateY(150%);
         opacity: 0;
     }
     to{
+        -moz-transform: translateY(-50%);
         -webkit-transform: translateY(-50%);
-
-
         opacity: 1;
 
     }
 }
-
-@-webkit-keyframes contactHeaderAnimate {
+@-webkit-keyframes getInTouchParagraphAnimation {
     from{
+        -moz-transform: translateY(150%);
+        -webkit-transform: translateY(150%);
+        opacity: 0;
+    }
+    to{
+        -moz-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        opacity: 1;
+
+    }
+}
+@-moz-keyframes contactHeaderAnimate {
+    from{
+        -moz-transform: translateY(50%);
         -webkit-transform: translateY(50%);
         opacity: 0;
     }
     to{
+        -moz-transform: translateY(0);
         -webkit-transform: translateY(0);
         opacity: 1;
     }
 }
-
-@-webkit-keyframes footerAnimation {
+@-webkit-keyframes contactHeaderAnimate {
     from{
-
+        -moz-transform: translateY(50%);
+        -webkit-transform: translateY(50%);
+        opacity: 0;
+    }
+    to{
+        -moz-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        opacity: 1;
+    }
+}
+@-moz-keyframes footerAnimation {
+    from{
         top: 30px;
         opacity: 0;
     }
     to{
-
         bottom: 0px;
         opacity: 1;
-
+    }
+}
+@-webkit-keyframes footerAnimation {
+    from{
+        top: 30px;
+        opacity: 0;
+    }
+    to{
+        bottom: 0px;
+        opacity: 1;
     }
 }
 
 
 
 .contactHeaderAnimationClass{
+    -moz-animation: contactHeaderAnimate 1.5s forwards;
     -webkit-animation: contactHeaderAnimate 1.5s forwards;
 }
 
 .getInTouchParagraphAnimationClass{
+    -moz-animation: getInTouchParagraphAnimation 1.2s cubic-bezier(.21,1.28,.71,1.43) forwards;
     -webkit-animation: getInTouchParagraphAnimation 1.2s cubic-bezier(.21,1.28,.71,1.43) forwards;
 }
 
 .getInTouchUnderlineAnimationClass{
+    -moz-animation: getInTouchUnderline 2s  forwards;
     -webkit-animation: getInTouchUnderline 2s  forwards;
 }
 
 .arrowMoveClass{
+    -moz-animation: arrowMove 3s forwards;
     -webkit-animation: arrowMove 3s forwards;
 }
 
 .aboutHeaderUnderlineClass{
+    -moz-animation: aboutUnderlineAnimation 1s forwards;
     -webkit-animation: aboutUnderlineAnimation 1s forwards;
 }
 
 .paragraphBreakAnimationClass{
+    -moz-animation: lineBreakAnimation 1.7s forwards;
     -webkit-animation: lineBreakAnimation 1.7s forwards;
 }
 
 .leftAboutAnimationClass{
+    -moz-animation: leftAbout;
     -webkit-animation: leftAbout;
 }
 
 .aboutHeaderAnimationClass{
+    -moz-animation: aboutHeaderAnimation  .8s ease-out forwards;
     -webkit-animation: aboutHeaderAnimation  .8s ease-out forwards;
 }
 
 .aboutParagraphAnimationClass{
+    -moz-animation: aboutParagraphAnimation 1.3s ease-out forwards;
     -webkit-animation: aboutParagraphAnimation 1.3s ease-out forwards;
 }
 
 
 .introHeaderAnimate{
+    -moz-animation: introHeaderAnimate .9s ease-out forwards;
     -webkit-animation: introHeaderAnimate .9s ease-out forwards;
 }
 
 .introParagraphAnimate{
+    -moz-animation: introParagraphAnimate  .9s ease-out forwards;
     -webkit-animation: introParagraphAnimate  .9s ease-out forwards;
 }
 
 .introButtonAnimate{
+    -moz-animation: introButtonAnimate .9s ease-out forwards;
     -webkit-animation: introButtonAnimate .9s ease-out forwards;
 }
 
@@ -1692,6 +1841,7 @@ div#bottomContainer {
     }
     div#bottomContainer {
         position: absolute;
+        -moz-transform: translate(-50%, -40%);
         -webkit-transform: translate(-50%, -40%);
         color: #AA9868;
         text-shadow: -2px 1px black;
