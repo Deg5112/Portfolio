@@ -594,7 +594,14 @@ h5 {
     overflow: hidden;
     position: relative;
 }
-
+@-moz-keyframes experienceHeightAnimation{
+    from{
+        height: 60px;
+    }
+    to{
+        height: 235px;
+    }
+}
 @-webkit-keyframes experienceHeightAnimation{
     from{
         height: 60px;
@@ -603,7 +610,14 @@ h5 {
         height: 235px;
     }
 }
-
+@-moz-keyframes experienceHeightAnimation2{
+    from{
+        height: 60px;
+    }
+    to{
+        height: 150px;
+    }
+}
 @-webkit-keyframes experienceHeightAnimation2{
     from{
         height: 60px;
@@ -612,7 +626,14 @@ h5 {
         height: 150px;
     }
 }
-
+@-moz-keyframes experienceHeightAnimation3{
+    from{
+        height: 60px;
+    }
+    to{
+        height: 195px;
+    }
+}
 @-webkit-keyframes experienceHeightAnimation3{
     from{
         height: 60px;
