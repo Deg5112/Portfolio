@@ -475,6 +475,7 @@ footer span {
     margin-top: 1%;
     -moz-filter: grayscale(.7);
     -webkit-filter: grayscale(.7);
+    filter: grayscale(.7);
     transition: 1s;
 }
 
