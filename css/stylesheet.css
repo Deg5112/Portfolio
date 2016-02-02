@@ -175,6 +175,7 @@ span#mobileSpan {
     z-index: 4;
     left: 50%;
     top: 50%;
+    -moz-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     color: rgba(27, 26, 26, 0.47);
 }
@@ -198,6 +199,7 @@ div#loading {
     width: 15%;
     left: 50%;
     top: 50%;
+    -moz-transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
 }
 
@@ -206,6 +208,7 @@ span.glyphicon.glyphicon-arrow-down {
     position: absolute;
     right: 0;
     top: 50%;
+    -moz-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     font-size: .8em;
 }
@@ -222,16 +225,20 @@ div#brandCircle:hover {
 .transition{
     position: relative;
     opacity: 0;
+    -moz-transition: 2s;
     -webkit-transition: 2s;
+    -moz-transform: translateY(50%);
     -webkit-transform: translateY(50%);
 }
 
 .formTransition{
+    -moz-transform: translateY(0);
     -webkit-transform: translateY(0);
     opacity: 1;
 }
 
 .transition:nth-child(4) {
+    -moz-transition-delay: .8s;
     -webkit-transition-delay: .8s;
     background: rgba(0, 0, 0, 0.17);
     max-height: 0;
@@ -242,7 +249,9 @@ div#brandCircle:hover {
 }
 
 .transition:nth-child(4) button{
+    -moz-transform: translateY(50%);
     -webkit-transform: translateY(50%);
+    -moz-transition-delay: .8s;
     -webkit-transition-delay: .8s;
 }
 
@@ -252,6 +261,7 @@ form .btn {
 }
 
 .form-group:first-child{
+    -moz-transition-delay: .2s;
     -webkit-transition-delay: .2s;
 }
 
@@ -264,14 +274,17 @@ form .btn {
 }
 
 .form-group:nth-child(2){
+    -moz-transition-delay: .4s;
     -webkit-transition-delay: .4s;
 }
 
 .transition:nth-child(3){
+    -moz-transition-delay: .6s;
     -webkit-transition-delay: .6s;
 }
 
 .transition:nth-child(4){
+    -moz-transition-delay: .8s;
     -webkit-transition-delay: .8s;
 }
 
@@ -287,6 +300,7 @@ form .btn {
 
 section#contact {
     position: relative;
+    background: -moz-linear-gradient(rgba(213, 213, 213, 0.88), rgba(255, 255, 255, 0.51));
     background: -webkit-linear-gradient(rgba(213, 213, 213, 0.88), rgba(255, 255, 255, 0.51));
 }
 
@@ -419,27 +433,29 @@ footer span {
     padding: 8px;
     margin: 0 2%;
     position: relative;
+    -moz-transform: translateY(-100%);
     -webkit-transform: translateY(-100%);
     opacity: 0;
-    -webkit-transition: 1s;
+    -moz-transition: 1s;
 }
 
 #footerSpan1{
-
+    -moz-transition-delay: .1s;
     -webkit-transition-delay: .1s;
 }
 
 #footerSpan2{
-
+    -moz-transition-delay: .3s;
     -webkit-transition-delay: .3s;
 }
 
 #footerSpan3{
-
+    -moz-transition-delay: .6s;
     -webkit-transition-delay: .6s;
 }
 
 .footerTransition{
+    -moz-transform: translateY(0);
     -webkit-transform: translateY(0);
     opacity: 1;
 }
@@ -457,11 +473,13 @@ footer span {
     border-radius: 5px;
     margin-right: 2%;
     margin-top: 1%;
+    -moz-filter: grayscale(.7);
     -webkit-filter: grayscale(.7);
     transition: 1s;
 }
 
 #aboutSection img:hover{
+    -moz-filter: grayscale(.3);
     -webkit-filter: grayscale(.3);
     cursor: pointer;
 }
@@ -475,14 +493,17 @@ footer span {
 #experience .col-md-4 {
     position: relative;
     margin-top: 1em;
+    -moz-transform: translateY(100%);
     -webkit-transform: translateY(100%);
 }
 
 #experience .col-md-4:nth-child(2){
+    -moz-animation-delay: .3s;
     -webkit-animation-delay: .3s;
 }
 
 #experience .col-md-4:nth-child(3){
+    -moz-animation-delay: .5s;
     -webkit-animation-delay: .5s;
 }
 
@@ -490,10 +511,12 @@ footer span {
 
 @-webkit-keyframes experienceBounce {
     from{
+        -moz-transform: translateY(100%);
         -webkit-transform: translateY(100%);
 
     }
     to{
+        -moz-transform: translateY(0%);
         -webkit-transform: translateY(0%);
     }
 }
@@ -501,6 +524,7 @@ footer span {
 
 
 .bounce{
+    -moz-animation: experienceBounce .5s cubic-bezier(.42,0,.2,2) forwards;
     -webkit-animation: experienceBounce .5s cubic-bezier(.42,0,.2,2) forwards;
 }
 
@@ -509,6 +533,7 @@ div#smallDiv {
     overflow: hidden;
     position: relative;
     left: 50%;
+    -moz-transform: translate(-48%, 36%);
     -webkit-transform: translate(-48%, 36%);
 }
 
@@ -525,16 +550,21 @@ h5 {
     bottom: 0;
     left: 0;
     right: 0;
+    -moz-transition: 2s;
     -webkit-transition: 2s;
+    -moz-transform: scale(0);
     -webkit-transform: scale(0);
+    -moz-transform-origin: 50% 50%;
     -webkit-transform-origin: 50% 50%;
 }
 
 @-webkit-keyframes experienceUnderlineAnimation{
     from{
+        -moz-transform: scale(0);
         -webkit-transform: scale(0);
     }
     to{
+        -moz-transform: scale(1);
         -webkit-transform: scale(1);
     }
 }
@@ -544,6 +574,7 @@ h5 {
 }
 
 .transformClass{
+    -moz-animation: experienceUnderlineAnimation 1.4s forwards;
     -webkit-animation: experienceUnderlineAnimation 1.4s forwards;
 }
 
@@ -551,8 +582,11 @@ h5 {
     text-align: center;
     border: 1px solid black;
     border-radius: 5px;
+    -moz-transition: 1.5s;
     -webkit-transition: 1.5s;
+    -moz-transform: scale(1);
     -webkit-transform: scale(1);
+    -moz-transform-origin: 50% 0;
     -webkit-transform-origin: 50% 0;
     background-color: white;
     border: 1px solid black;
@@ -590,12 +624,15 @@ h5 {
 
 
 .addHeight2{
+    -moz-animation:experienceHeightAnimation2 .5s forwards ;
     -webkit-animation:experienceHeightAnimation2 .5s forwards ;
 }
 .addHeight3{
+    -moz-animation:experienceHeightAnimation3 .5s forwards ;
     -webkit-animation:experienceHeightAnimation3 .5s forwards ;
 }
 .addHeight{
+    -moz-animation:experienceHeightAnimation .5s forwards ;
     -webkit-animation:experienceHeightAnimation .5s forwards ;
 }
 
@@ -608,6 +645,7 @@ h5 {
 
 
 #experience {
+    background: -moz-linear-gradient(#dcdcdc, rgba(228, 228, 228, 0.15));
     background: -webkit-linear-gradient(#dcdcdc, rgba(228, 228, 228, 0.15));
 }
 
@@ -697,6 +735,7 @@ section#getInTouch .col-xs-12 {
     position: absolute;
     right: 0;
     top: 50%;
+    -moz-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
 }
 
@@ -782,44 +821,55 @@ span#aboutSpan {
 .project{
     position: relative;
     width: 150%;
+    -moz-filter: grayscale(.85);
+    -moz-transition: .3s;
     -webkit-filter: grayscale(.85);
     -webkit-transition: .3s;
 }
 
 .projectAnimate{
+    -moz-filter: grayscale(0);
+    -moz-transform: translate(-7%, -7%);
     -webkit-filter: grayscale(0);
     -webkit-transform: translate(-7%, -7%);
 }
 
 .slide{
+    -moz-transition: 0.7s;
     -webkit-transition: 0.7s;
 }
 
 
-
 .slide.ng-enter{
    opacity: 0;
+    -moz-transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
 }
 
 .slide.ng-enter-stagger{
+    -moz-transition-delay:.2s;
+    -moz-transition-duration: 0s;
     -webkit-transition-delay:.2s;
     -webkit-transition-duration: 0s;
 }
 
 .slide.ng-enter-active{
     opacity: 1;
+    -moz-transform: translateX(0);
+    -moz-transition-timing-function: cubic-bezier(.21,1.28,.71,1.43);
     -webkit-transform: translateX(0);
     -webkit-transition-timing-function: cubic-bezier(.21,1.28,.71,1.43);
 }
 
 .slide.ng-leave {
     opacity: 1;
+    -moz-transform: translateX(0);
     -webkit-transform: translateX(0);
 }
 
 .slide.ng-leave-active{
     opacity: 0;
+    -moz-transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
 }
 
@@ -835,6 +885,7 @@ span#aboutSpanUnderline {
     top: 100%;
     left: 0;
     right: 0;
+    -moz-transform: scale(0);
     -webkit-transform: scale(0);
 }
 
@@ -848,6 +899,7 @@ span#contactSpanUnderline {
     top: 100%;
     left: 0;
     right: 0;
+    -moz-transform: scale(0);
     -webkit-transform: scale(0);
 }
 
@@ -857,6 +909,7 @@ span#contactSpanUnderline {
 
 
 .paragraphContainer .col-md-6:first-child{
+    -moz-transform: translateX(-105%);
     -webkit-transform: translateX(-105%);
     opacity: 0;
 }
@@ -864,11 +917,9 @@ span#contactSpanUnderline {
 .paragraphContainer .col-md-6:nth-child(2){
     /*position: relative;*/
     opacity: 0;
+    -moz-transform: translateX(105%);
     -webkit-transform: translateX(105%);
 }
-
-
-
 
 span#line-break {
     position: absolute;
@@ -877,6 +928,7 @@ span#line-break {
     top: 4.5em;
     height: 90%;
     opacity: 0;
+    -moz-transform-origin: 0 0 ;
     -webkit-transform-origin: 0 0 ;
 }
 
@@ -915,6 +967,7 @@ div#about .row .col-md-12 {
 h2{
     position: relative;
     font-weight: 300;
+    -moz-transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     left: 50%;
 }
@@ -929,6 +982,7 @@ span#workSpanUnderline {
     top: 100%;
     left: 0;
     right: 0;
+    -moz-transform: scale(0);
     -webkit-transform: scale(0);
 }
 
@@ -974,6 +1028,7 @@ ul.iconNav {
     position: absolute;
     right: 0%;
     top: 50%;
+    -moz-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     width: 150px;
     padding-left: 0;
@@ -991,6 +1046,7 @@ div#navDropDown {
     width: 100%;
     height: 202px;
     top: -195% ;
+    -moz-transition: .8s;
     -webkit-transition: .8s;
     text-align: center;
     background-color: black;
@@ -1010,6 +1066,7 @@ div#navDropDown ul {
     list-style-type: none;
     position: relative;
     top: 50%;
+    -moz-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
 }
 
@@ -1110,6 +1167,7 @@ div#brandCircle {
     position: relative;
     left: 50%;
     top: 50%;
+    -moz-transform: translate(-50%,-50%);
     -webkit-transform: translate(-50%,-50%);
     box-shadow: 1px 1px 1px 100vw black;
     background-color: black;
@@ -1120,6 +1178,7 @@ div#brandCircle {
 div#inner {
     position: relative;
     top: 50%;
+    -moz-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
 }
 
@@ -1154,7 +1213,7 @@ h2 {
 
 
 div#bottomContainer {
-
+    -moz-transform: translate(-50%, -26%);
     -webkit-transform: translate(-50%, -26%);
     color: #AA9868;
 }
@@ -1163,6 +1222,7 @@ div#bottomContainer {
     position: absolute;
     left: 50%;
     top: 48%;
+    -moz-transform: translate(-50%, -40%);
     -webkit-transform: translate(-50%, -40%);
     color: rgb(236, 210, 138) !important;
     text-shadow: -2px 1px black;
@@ -1203,6 +1263,81 @@ div#bottomContainer {
     color: white;
     border-color: #DDD6D3;
 }
+
+/*brand circle animation*/
+@-moz-keyframes boxShrink {
+    0%{
+        top: 50%;
+        box-shadow: 1px 1px 1px 100vw black;
+        background-color: black;
+        width: 145px;
+        height: 145px;
+        font-size: 50px;
+    }
+
+    10%{
+        top: 50%;
+        box-shadow: 1px 1px 1px 100vw black;
+        background-color: black;
+        width: 145px;
+        height: 145px;
+        font-size: 50px;
+    }
+
+    15%{
+        top: 50%;
+        box-shadow: 1px 1px 1px 30vw black;
+        background-color: black;
+        width: 145px;
+        height: 145px;
+        font-size: 50px;
+    }
+
+    25%{
+        top: 50%;
+        box-shadow: 1px 1px 1px 0vw black;
+        background-color: black;
+        width: 145px;
+        height: 145px;
+        font-size: 50px;
+
+    }
+
+
+
+    60%{
+        top: 50%;
+        box-shadow: 1px 1px 1px 0 black;
+        background-color: black;
+        width: 145px;
+        height: 145px;
+        font-size: 50px;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+
+
+    80%{
+        top: 20%;
+        box-shadow: 1px 1px 1px 0 black;
+        background-color: black;
+        width: 85px;
+        height: 85px;
+        font-size: 30px;
+    }
+
+
+    100%{
+        box-shadow: 1px 1px 1px 0 black;
+        top: 20%;
+        background-color: black;
+        width: 85px;
+        height: 85px;
+        font-size: 30px;
+    }
+}
+
+
 /*brand circle animation*/
 @-webkit-keyframes boxShrink {
     0%{
@@ -1277,10 +1412,22 @@ div#bottomContainer {
 }
 
 .introAnimate{
+    -moz-animation: boxShrink 1.7s linear forwards;
     -webkit-animation: boxShrink 1.7s linear forwards;
 }
 
+@-moz-keyframes introHeaderAnimate {
+    from{
+        left: 0%;
+        opacity: 0;
+    }
 
+    to{
+        left: 50%;
+        opacity: 1;
+
+    }
+}
 
 @-webkit-keyframes introHeaderAnimate {
     from{
@@ -1294,7 +1441,17 @@ div#bottomContainer {
 
     }
 }
-
+@-moz-keyframes introParagraphAnimate {
+    from{
+        left: 100%;
+        top: 2em
+    opacity: 0;
+    }
+    to{
+        left: 0;
+        opacity: 1;
+    }
+}
 @-webkit-keyframes introParagraphAnimate {
     from{
         left: 100%;
@@ -1308,7 +1465,17 @@ div#bottomContainer {
 }
 
 
-
+@-moz-keyframes introButtonAnimate {
+    from{
+        -moz-transform: translateY(200%);
+        -webkit-transform: translateY(200%);
+        opacity: 0;
+    }
+    to{
+        -moz-transform: translateY(25%);
+        opacity: 1;
+    }
+}
 @-webkit-keyframes introButtonAnimate {
     from{
         -webkit-transform: translateY(200%);
