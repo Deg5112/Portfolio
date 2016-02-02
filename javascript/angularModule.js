@@ -35,6 +35,7 @@ app.controller('workController', function($scope, $log, getScrollTopService){
         self.currentModal = null;
 
         self.addPicClass = function(event){
+            console.log(event);
             var width = window.innerWidth;
             if(width>992){
                 $('project').removeClass('projectAnimate');
