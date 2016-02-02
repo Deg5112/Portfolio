@@ -186,7 +186,9 @@ function experienceAnimate(){
         var width = window.outerWidth;
         if(width>992){
             $('#experience .col-md-4').addClass('bounce');
+            console.log('bounce');
             setTimeout(function(){
+                console.log('addHeight');
                 $('#experience .col-md-4:first-child .container-fluid').addClass('addHeight');
                 $('#experience .col-md-4:nth-child(2) .container-fluid').addClass('addHeight2');
                 $('#experience .col-md-4:nth-child(3) .container-fluid').addClass('addHeight3');
