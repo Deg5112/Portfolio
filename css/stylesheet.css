@@ -482,6 +482,7 @@ footer span {
 #aboutSection img:hover{
     -moz-filter: grayscale(.3);
     -webkit-filter: grayscale(.3);
+    filter: grayscale(.3);
     cursor: pointer;
 }
 
