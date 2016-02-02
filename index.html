@@ -60,7 +60,7 @@
 
     function introAnimation(){
         setTimeout(function(){
-            $('#brandCircle').on('webkitAnimationEnd', function(){
+            $('#brandCircle').on('webkitAnimationEnd animationend', function(){
                 console.log('end!');
                 $('#bottomContainer > h2').addClass('introHeaderAnimate');
                 $('#bottomContainer > p').addClass('introParagraphAnimate');
