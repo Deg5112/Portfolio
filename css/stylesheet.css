@@ -656,7 +656,7 @@ h5 {
 
 
 .bounce{
-    -moz-animation: experienceBounce .5s cubic-bezier(.42,0,.2,2) forwards;
+    -moz-animation: experienceBounce .5s  forwards;
     -webkit-animation: experienceBounce .5s cubic-bezier(.42,0,.2,2) forwards;
 }
 
