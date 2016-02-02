@@ -1444,8 +1444,8 @@ div#bottomContainer {
 @-moz-keyframes introParagraphAnimate {
     from{
         left: 100%;
-        top: 2em
-    opacity: 0;
+        top: 2em;
+        opacity: 0;
     }
     to{
         left: 0;
@@ -1455,7 +1455,7 @@ div#bottomContainer {
 @-webkit-keyframes introParagraphAnimate {
     from{
         left: 100%;
-        top: 2em
+        top: 2em;
         opacity: 0;
     }
     to{
