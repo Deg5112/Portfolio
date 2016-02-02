@@ -1012,6 +1012,7 @@ h2{
 
 #work span:first-child {
     position: relative;
+
 }
 
 span#workSpanUnderline {
@@ -2001,6 +2002,7 @@ span.glyphicon.glyphicon-remove {
 #work span:first-child {
     position: relative;
     z-index: 10000;
+    margin: -5% 0;
 }
 
 @media screen and (max-width: 992px)  {
