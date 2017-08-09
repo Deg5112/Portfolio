@@ -18,14 +18,11 @@ app.all('/', function(req, res, next) {
 app.use(bodyParser.json());   //including bodyParser dependency method
 app.use(bodyParser.urlencoded({extended: false}));  //parses out ?name=
 
-
-
 app.post('/send', function(req,res){
     console.log(req.body);
     var name = req.body.name;
     var email = req.body.email;
     var message = req.body.message;
-    
     
     var html =
          '<p>'
@@ -58,7 +55,7 @@ app.post('/send', function(req,res){
     });
 });
 
-app.set('port', (process.env.PORT || 3000));
+app.set('port', (process.env.PORT || 3002));
 
 server.listen(app.get('port'), function(){
     console.log('Server started on port '+ app.get('port'));
