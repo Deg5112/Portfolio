@@ -4,6 +4,10 @@ body{
     padding: 0 !important;
 }
 
+[ng-cloak] {
+    display: none;
+}
+
 p.modal-p {
     font-size: 16px;
     margin-top: 1em;
@@ -1099,12 +1103,13 @@ span#aboutSpan {
 
 .project{
     position: relative;
-    width: 150%;
+    width: 175%;
     -moz-filter: grayscale(.85);
     -moz-transition: .3s;
     -webkit-filter: grayscale(.85);
     -webkit-transition: .3s;
     filter: grayscale(.85);
+    left: -103px;
 }
 
 .projectAnimate{
