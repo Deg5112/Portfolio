@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en" ng-app="portfolio" ng-cloak>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>David's Portfolio</title>
+    <meta name="description" content="portolio">
+    <meta name="keywords" content="David Goodman, Portfolio, Developer">
+    <meta name="author" content="David Goodman">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400italic|Abril+Fatface' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="icon" href="https://www.google.com/search?q=favicon+black+white&espv=2&biw=1122&bih=962&site=webhp&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjA4ee896HOAhUB4CYKHZbHAsAQ_AUIBigB#imgrc=nTiODBda0ObViM%3A">
+
+</head>
+<body scroll ng-cloak>
+<!---->
+<header id="header"><!--header-->
+    <nav class="navbar navbar-fixed-top" id="navbar"><!--nav-->
+        <div class="navbar-inner">
+            <div class="container">
+                <div class="navbar-header"><!--navbar header for button and brand-->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <a href="index.html" class="navbar-brand active"><span>DG</span></a>
+                </div><!--navheader end-->
+                <div class="collapse navbar-collapse" id="nav-collapse">
+                    <!--navbar navigation-->
+                    <ul class="nav navbar-nav">
+                        <li ><a href="#">Work</a></li>
+                        <li ><a href="#">Experience</a></li>
+                        <li ><a href="#">About</a></li>
+                        <li ><a href="#">Contact</a></li>
+                    </ul>
+
+                    <ul class="iconNav">
+                        <li>
+                            <a href='https://www.linkedin.com/in/deg5112'  rel="external" class="btn btn-social-icon btn-linkedin">
+                                <span class="fa fa-linkedin"></span>
+                            </a>
+                        </li>
+                        &nbsp;|&nbsp;
+                        <li>
+                            <a href='https://github.com/Deg5112' rel="external" class="btn btn-social-icon btn-github">
+                                <span class="fa fa-github"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </nav><!--nav end-->
+    <div id="navDropDown">
+        <ul>
+            <li ><a href="#">Work</a></li>
+            <li ><a href="#">Experience</a></li>
+            <li ><a href="#">About</a></li>
+            <li ><a href="#">Contact</a></li>
+        </ul>
+    </div>
+</header><!--header End-->
+<!--jumbotron-->
+<section id="thejumbo">
+<div class="jumbotron jumbotron1 text-center"><!--jumbotron begin-->
+    <div class="container">
+        <h1></h1>
+        <p></p>
+    </div><!--end container begin-->
+</div><!--end jumbotron-->
+</section>
+
+<!--work section-->
+<section id="work" ng-controller="workController as wC" ng-init="modalBool = false" >
+    <!--<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>-->
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" id="modal-header">{{wC.modalTitle}}</h4>
+                </div>
+                <div class="modal-body">
+                    <img id="modal-img" ng-src="{{wC.modalSrc}}">
+                    <p class="modal-p">{{wC.modalText1}}</p>
+                    <p class="modal-p">{{wC.modalText2}}</p>
+                    <p class="modal-p">{{wC.modalText3}}</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class = 'row'>
+            <h2 class="text-center"><span>Work<span id="workSpanUnderline"></span></span></h2>
+                <div class="col-md-4 col-md-offset-4 filterContainer">
+                    <div class="row">
+                        <div class="btn-group">
+                            <button  class='btn' id= 'firstButton' type="button"   ng-click=" wC.filter=null; wC.updateActiveButton(1); wC.clearArray();" ng-class="1===wC.activeButton ? 'buttonActive' : 'notActive'">All</button>
+                            <button   class='btn' type="button" ng-click=" wC.filter='APP'; wC.updateActiveButton(2); wC.clearArray();" ng-class="2===wC.activeButton ? 'buttonActive' : 'notActive'">APP</button>
+                            <button  class='btn' type="button" ng-click=" wC.filter='GAME'; wC.updateActiveButton(3); wC.clearArray();" ng-class="3===wC.activeButton ? 'buttonActive' : 'notActive'">GAME</button>
+                            <button  class='btn' id="lastButton" type="button"  ng-click=" wC.filter='WEBSITE'; wC.updateActiveButton(4); wC.clearArray();" ng-class="4===wC.activeButton ? 'buttonActive' : 'notActive'">WEBSITE</button>
+                        </div>
+                    </div><!--row end-->
+                </div>
+        </div><!--row end-->
+
+        <div class="row imgRow" >
+
+            <div class="col-xs-12 col-sm-6 col-md-4 imgCol slide" ng-repeat="i in wC.imgArray | filter:wC.filter" >
+                    <figure>
+                        <h4>{{i.title}}</h4>
+                   <div id="imgDiv"> <img class='project' ng-src="images/{{i.src}}" ng-mouseover="wC.addPicClass($event)" ng-mouseleave="wC.removePicClass($event)" ng-class="wC.dynamicClass"></div>
+                        <figcaption>
+                            <div class="row">
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <a ng-if="i.title !== 'Tarantool.io Site'" href="{{i.git}}" rel="external"> <button type="button" class="btn btn-secondary btnone workbtn btn-default"><span class="fa fa-github btngit"></span>view code</button></a>
+                                        <a href="#>" class=""> <button type="button" class="btn btn-secondary btntwo workbtn btn-default" ng-click="wC.openModal($index, $event)">About</button></a>
+                                        <a href="{{i.href}}" target="_blank" rel="external"><button type="button" class="btn btn-secondary btnthree workbtn btn-default">Demo</button></a>
+                                    </div>
+                                    <!--<a href="{{i.git}}" rel="external"><button class=' btn btnone workbtn btn-default' type="button"><span class="fa fa-github btngit"></span>view code</button></a>-->
+
+
+                                    <!--<a href="#>"><button class=' btn btntwo workbtn btn-default' type="button" ng-click="wC.openModal($index, $event)">About</button></a>-->
+
+
+                                    <!--<button class=' btn btnthree workbtn btn-default' type="button">Demo</button></a>-->
+                                </div>
+
+                        </figcaption>
+                    </figure>
+
+
+                    <div id='modal' class="helloModal" ng-class="wC.modalActive ? 'modalShowClass' : 'modalHideClass'">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-6 hidden-xs">
+                                    <img ng-src="{{wC.modalSrc}}">
+                                </div>
+                                <div class="col-sm-6">
+
+                                    <div id="modalParagraphContainer">
+                                        <a ng-click="wC.modalRemove()"><span class="glyphicon glyphicon-remove" ></span></a>
+                                        <h2>{{wC.modalTitle}}</h2>
+                                        <p>{{wC.modalText1}}</p>
+                                        <p>{{wC.modalText2}}</p>
+                                        <p>{{wC.modalText3}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+            </div><!--repeat end-->
+
+            <!-- hidden modal.. each images gets a hidden modal-->
+
+        </div><!--row end-->
+
+        <!--<div id='modal' ng-class="wC.modalActive ? 'modalShowClass' : 'modalHideClass'" ng-click="wC.modalRemove()">-->
+            <!--<div class="container">-->
+                <!--<div class="row">-->
+                    <!--<div class="col-md-6">-->
+                        <!--<img ng-src="{{wC.modalSrc}}">-->
+                    <!--</div>-->
+                    <!--<div class="col-md-6">-->
+                        <!--<span class="glyphicon glyphicon-remove"></span>-->
+
+                        <!--<div id="modalParagraphContainer">-->
+                            <!--<h2>{{wC.modalTitle}}</h2>-->
+                            <!--<p>{{wC.modalText1}}</p>-->
+                            <!--<p>{{wC.modalText2}}</p>-->
+                            <!--<p>{{wC.modalText3}}</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+
+
+
+    </div>
+
+</section>
+
+<section id="getInTouch">
+    <div class="container">
+        <div class="col-xs-6"><p>Looking for a developer? <span id="getInTouchUnderline" class=""></span></p></div>
+        <div class="col-xs-6 text-right"></span><button type="button" class=" btn btn-success">Get In Touch</button></div>
+    </div>
+</section>
+
+
+
+<section id="experience">
+
+    <h2 class="text-center"><span id="experienceSpan">Technical Skills<span id="experienceUnderline"></span></span></h2>
+    <div id="smallDiv" class="text-center">
+        <h5>-Technical Skills</h5>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+                <div class="container-fluid">
+                    <h3>Front-End <i class="fa fa-television fa-md"></i><span class="glyphicon glyphicon-arrow-down"></span></h3>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>SASS</li>
+                        <li>BOOTSTRAP</li>
+                        <li>Materialize</li>
+                        <li>Javascript</li>
+                        <li>Jquery</li>
+                        <li>Ajax</li>
+                        <li>AngularJS</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <div class="container-fluid">
+                    <h3>Back-End <i class="fa fa-server fa-md"></i><span class="glyphicon glyphicon-arrow-down "></span></h3>
+                    <ul>
+                        <li>PHP</li>
+                        <li>Laravel</li>
+                        <li>Node.js</li>
+                        <li>Express</li>
+                        <li>CodeIgniter</li>
+                        <li>MySQL</li>
+                        <li>Firebase</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <div class="container-fluid">
+                    <h3>Developer-Tools <i class="fa fa-wrench fa-md"></i><span class="glyphicon glyphicon-arrow-down "></span></h3>
+                    <ul>
+                        <li>Chrome DevTools</li>
+                        <li>PHPStorm</li>
+                        <li>XDebug</li>
+                        <li>MAMP</li>
+                        <li>Git</li>
+                        <li>Coda</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<section id="aboutSection">
+    <div class="container" id="about">
+        <div class="row">
+            <div class="col-md-12">
+                <span id="line-break" class="hidden-xs hidden-sm"></span>
+                <h2 class="text-center "><span id="aboutSpan">About <span id="aboutSpanUnderline"></span></span></h2>
+
+                <div class="row paragraphContainer">
+                    <div class="col-md-6">
+                        <div class="well">
+                            <p><img src="images/david.jpg">
+                                I am a Full Stack Software Engineer. I can build highly technical solutions, and debug/solve any problem that I face.
+                                To me, software development is both a game, hobby, and a competitive challenge. My favorite part about programming is learning,
+                                growing, and being the best that I can be. I believe strong logical reasoning, is the reason for my ability to learn anything, fast.
+                                I know when to ask questions, and how to ask questions in an efficient, clear cut manor to get the answer that I need, whether it'd be from a fellow colleague, or from google.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="well">
+                            <p>
+                                I am proficient in several front and backend scripting languages, as well as many frameworks, pre-processors, databases, debuggers, and of course, the terminal. I am hungry
+                                to get my hands on the newest, modern tools to help me be as efficient and productive as possible. I am a team player, I enjoy helping others as well as learning from others, but most of all, I love to code.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--<div class="jumbotron jumbotron2 text-center">&lt;!&ndash;jumbotron begin&ndash;&gt;-->
+    <!--<img src="images/jumbo.jpg">-->
+<!--</div>&lt;!&ndash;end jumbotron&ndash;&gt;-->
+
+
+<section id="contact" class="" >
+    <div class="container">
+            <div class="row ">
+                    <div class="col-xs-12 col-md-8 col-md-offset-2 ">
+                        <div class="row">
+                            <h2 class="text-center"><span>Contact<span id="contactSpanUnderline"></span></span></h2>
+                        </div>
+
+                        <p>
+                            If you have questions or would like to get in touch, please feel free to reach out, and lets get to work
+                        </p>
+
+                        <form class="form-horizontal" role="form">
+
+                            <div class="form-group transition">
+                                <div class="col-sm-10 col-sm-offset-1">
+                                    <div class="input-group">
+                                        <span class="input-group-addon glyphicon glyphicon-user" id="sizing-addon1"></span>
+                                        <input type="text" class="form-control" id="name" placeholder="Name" >
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group transition">
+                                <div class="col-sm-10 col-sm-offset-1">
+                                    <div class="input-group">
+                                        <span class="input-group-addon glyphicon glyphicon-envelope" id="sizing-addon1"></span>
+                                        <input type="email" class="form-control" id="email" placeholder="E-mail" >
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-sm-10 col-sm-offset-1 transition">
+                                <div class="form-group input-group">
+                                        <span class="input-group-addon glyphicon glyphicon-pencil" id="sizing-addon1"></span>
+                                        <textarea rows='7' id='textArea' type="text" class="form-control" id="" placeholder="Your Message"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group transition">
+                                <div class="col-sm-offset-1 col-sm-10">
+                                    <button type="button" class="btn btn-success ">Send</button>
+                                </div>
+                            </div>
+
+                            <p id="formMessage"></p>
+
+                        </form>
+
+                    </div>
+            </div>
+    </div>
+</section>
+<footer id="footer">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-4">
+                <a rel='external' href="https://github.com/deg5112"> <span id='footerSpan1' class="fa fa-github"></span></a>
+                <a rel='external' href="resume.pdf"><span id='footerSpan2' class="fa fa-file-text-o"></span></a>
+                <a rel='external' href="https://www.linkedin.com/in/deg5112"> <span id='footerSpan3' class="fa fa-linkedin"></span></a>
+            </div>
+            <div class="col-md-4">
+                <p>&copy; David Goodman All Rights Reserved</p>
+            </div>
+            <div class="col-md-4">
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-animate.min.js"></script>
+<script src="javascript/vanillaJS.js"></script>
+<script src="javascript/angularModule.js"></script>
+<script src="javascript/smoothScroll.js"></script>
+</body>
+</html>
