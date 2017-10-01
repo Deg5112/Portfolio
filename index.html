@@ -48,12 +48,18 @@
                                 <span class="fa fa-linkedin"></span>
                             </a>
                         </li>
-                        &nbsp;|&nbsp;
+                        &nbsp;|
                         <li>
-                            <a href='https://github.com/Deg5112' rel="external" class="btn btn-social-icon btn-github">
-                                <span class="fa fa-github"></span>
+                            <a href='resume.pdf'  rel="external" class="btn btn-social-icon btn-github">
+                                <span class="fa fa-file-text-o"></span>
                             </a>
                         </li>
+                        <!--&nbsp;|&nbsp;&nbsp;-->
+                        <!--<li>-->
+                            <!--<a href='https://github.com/Deg5112' rel="external" class="btn btn-social-icon btn-github">-->
+                                <!--<span class="fa fa-github"></span>-->
+                            <!--</a>-->
+                        <!--</li>-->
                     </ul>
                 </div>
             </div>
@@ -111,10 +117,10 @@
                 <div class="col-md-4 col-md-offset-4 filterContainer">
                     <div class="row">
                         <div class="btn-group">
-                            <button  class='btn' id= 'firstButton' type="button"   ng-click=" wC.filter=null; wC.updateActiveButton(1); wC.clearArray();" ng-class="1===wC.activeButton ? 'buttonActive' : 'notActive'">All</button>
-                            <button   class='btn' type="button" ng-click=" wC.filter='APP'; wC.updateActiveButton(2); wC.clearArray();" ng-class="2===wC.activeButton ? 'buttonActive' : 'notActive'">APP</button>
-                            <button  class='btn' type="button" ng-click=" wC.filter='GAME'; wC.updateActiveButton(3); wC.clearArray();" ng-class="3===wC.activeButton ? 'buttonActive' : 'notActive'">GAME</button>
-                            <button  class='btn' id="lastButton" type="button"  ng-click=" wC.filter='WEBSITE'; wC.updateActiveButton(4); wC.clearArray();" ng-class="4===wC.activeButton ? 'buttonActive' : 'notActive'">WEBSITE</button>
+                            <button  class='btn' id= 'firstButton' type="button"   ng-click="wC.updateActiveButton(1); wC.filterArray('ALL');" ng-class="1===wC.activeButton ? 'buttonActive' : 'notActive'">All</button>
+                            <button   class='btn' type="button" ng-click="wC.updateActiveButton(2); wC.filterArray('APP');" ng-class="2===wC.activeButton ? 'buttonActive' : 'notActive'">APP</button>
+                            <button  class='btn' type="button" ng-click="wC.updateActiveButton(3); wC.filterArray('GAME');" ng-class="3===wC.activeButton ? 'buttonActive' : 'notActive'">GAME</button>
+                            <button  class='btn' id="lastButton" type="button"  ng-click="wC.updateActiveButton(4); wC.filterArray('WEBSITE');" ng-class="4===wC.activeButton ? 'buttonActive' : 'notActive'">WEBSITE</button>
                         </div>
                     </div><!--row end-->
                 </div>
@@ -122,50 +128,49 @@
 
         <div class="row imgRow" >
 
-            <div class="col-xs-12 col-sm-6 col-md-4 imgCol slide" ng-repeat="i in wC.imgArray | filter:wC.filter" >
-                    <figure>
-                        <h4>{{i.title}}</h4>
-                   <div id="imgDiv"> <img class='project' ng-src="images/{{i.src}}" ng-mouseover="wC.addPicClass($event)" ng-mouseleave="wC.removePicClass($event)" ng-class="wC.dynamicClass"></div>
-                        <figcaption>
-                            <div class="row">
-                                    <div class="btn-group" role="group" aria-label="Basic example">
-                                        <a ng-if="i.title !== 'Tarantool.io Site'" href="{{i.git}}" rel="external"> <button type="button" class="btn btn-secondary btnone workbtn btn-default"><span class="fa fa-github btngit"></span>view code</button></a>
-                                        <a href="#>" class=""> <button type="button" class="btn btn-secondary btntwo workbtn btn-default" ng-click="wC.openModal($index, $event)">About</button></a>
-                                        <a href="{{i.href}}" target="_blank" rel="external"><button type="button" class="btn btn-secondary btnthree workbtn btn-default">Demo</button></a>
-                                    </div>
-                                    <!--<a href="{{i.git}}" rel="external"><button class=' btn btnone workbtn btn-default' type="button"><span class="fa fa-github btngit"></span>view code</button></a>-->
-
-
-                                    <!--<a href="#>"><button class=' btn btntwo workbtn btn-default' type="button" ng-click="wC.openModal($index, $event)">About</button></a>-->
-
-
-                                    <!--<button class=' btn btnthree workbtn btn-default' type="button">Demo</button></a>-->
+            <div class="col-xs-12 col-sm-6 col-md-4 imgCol slide" ng-repeat="i in wC.imgArray" >
+                <figure>
+                    <h4>{{i.title}}</h4>
+                <div id="imgDiv"> <img class='project' ng-src="images/{{i.src}}" ng-mouseover="wC.addPicClass($event)" ng-mouseleave="wC.removePicClass($event)" ng-class="wC.dynamicClass"></div>
+                    <figcaption>
+                        <div class="row">
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <a ng-if="i.title !== 'Tarantool.io Site'" href="{{i.git}}" rel="external"> <button type="button" class="btn btn-secondary btnone workbtn btn-default"><span class="fa fa-github btngit"></span>view code</button></a>
+                                    <a href="#>" class=""> <button type="button" class="btn btn-secondary btntwo workbtn btn-default" ng-click="wC.openModal($index, $event)">About</button></a>
+                                    <a href="{{i.href}}" target="_blank" rel="external"><button type="button" class="btn btn-secondary btnthree workbtn btn-default">Demo</button></a>
                                 </div>
-
-                        </figcaption>
-                    </figure>
+                                <!--<a href="{{i.git}}" rel="external"><button class=' btn btnone workbtn btn-default' type="button"><span class="fa fa-github btngit"></span>view code</button></a>-->
 
 
-                    <div id='modal' class="helloModal" ng-class="wC.modalActive ? 'modalShowClass' : 'modalHideClass'">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-sm-6 hidden-xs">
-                                    <img ng-src="{{wC.modalSrc}}">
-                                </div>
-                                <div class="col-sm-6">
+                                <!--<a href="#>"><button class=' btn btntwo workbtn btn-default' type="button" ng-click="wC.openModal($index, $event)">About</button></a>-->
 
-                                    <div id="modalParagraphContainer">
-                                        <a ng-click="wC.modalRemove()"><span class="glyphicon glyphicon-remove" ></span></a>
-                                        <h2>{{wC.modalTitle}}</h2>
-                                        <p>{{wC.modalText1}}</p>
-                                        <p>{{wC.modalText2}}</p>
-                                        <p>{{wC.modalText3}}</p>
-                                    </div>
+
+                                <!--<button class=' btn btnthree workbtn btn-default' type="button">Demo</button></a>-->
+                            </div>
+
+                    </figcaption>
+                </figure>
+
+
+                <div id='modal' class="helloModal" ng-class="wC.modalActive ? 'modalShowClass' : 'modalHideClass'">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6 hidden-xs">
+                                <img ng-src="{{wC.modalSrc}}">
+                            </div>
+                            <div class="col-sm-6">
+
+                                <div id="modalParagraphContainer">
+                                    <a ng-click="wC.modalRemove()"><span class="glyphicon glyphicon-remove" ></span></a>
+                                    <h2>{{wC.modalTitle}}</h2>
+                                    <p>{{wC.modalText1}}</p>
+                                    <p>{{wC.modalText2}}</p>
+                                    <p>{{wC.modalText3}}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-
+                </div>
             </div><!--repeat end-->
 
             <!-- hidden modal.. each images gets a hidden modal-->
