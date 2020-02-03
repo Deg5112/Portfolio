@@ -1,1 +1,3 @@
 email_config.default.php
+/node_modules
+/bower_components
